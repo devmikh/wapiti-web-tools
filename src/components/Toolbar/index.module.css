@@ -1,0 +1,7 @@
+.toolbar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 16rem;
+    border-right: 1px solid var(--lightgrey);
+}
