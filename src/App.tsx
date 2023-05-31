@@ -2,9 +2,9 @@ import { Route, Routes } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Toolbar from './components/Toolbar'
-import LetterCounter from './components/tools/LetterCounter'
+import CharacterCounter from './components/tools/CharacterCounter'
 
-function App() {
+export default function App() {
     return (
         <div className='app-container'>
             <Navbar />
@@ -12,7 +12,7 @@ function App() {
                 <Toolbar />
                 <Routes>
                     <Route path='/' element={<h1>Home</h1>}/>
-                    <Route path='/letter-counter' element={<LetterCounter />}/>
+                    <Route path='/character-counter' element={<CharacterCounter />}/>
                     <Route path='/dummy-text-generator' element={<h1>Dummy Text Generator</h1>}/>
                     <Route path='/case-converter' element={<h1>Case Converter</h1>}/>
                     <Route path='/password-generator' element={<h1>Password Generator</h1>}/>
@@ -22,5 +22,3 @@ function App() {
         </div>
     )
 }
-
-export default App
