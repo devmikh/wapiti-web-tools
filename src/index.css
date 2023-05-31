@@ -4,6 +4,7 @@
     --black: #1b1b1b;
     --lightgrey: #cfcfcf;
     --blue: #2676B6;
+    --lightblue: #a4c8e6;
 }
 
 * {
@@ -27,7 +28,7 @@ html {
 }
 
 .main-container {
-    display: flex;
     width: 95%;
     height: 100%;
+    display: flex;
 }
