@@ -7,8 +7,8 @@ const Toolbar = () => {
         <div className={styles['toolbar-container']}>
             <ToolCategory title='Text'>
                 <ToolLink name='Character Counter' link='/character-counter' />
-                <ToolLink name='Dummy Text Generator' link='/dummy-text-generator' />
                 <ToolLink name='Case Converter' link='/case-converter' />
+                <ToolLink name='Dummy Text Generator' link='/dummy-text-generator' />
             </ToolCategory>
             <ToolCategory title='Other'>
                 <ToolLink name='Password Generator' link='/password-generator' />
