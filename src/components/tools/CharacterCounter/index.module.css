@@ -6,20 +6,6 @@
     gap: 1rem;
 }
 
-.textarea {
-    width: 70%;
-    height: 50%;
-    padding: 1rem;
-    border: 1px solid var(--lightgrey);
-    border-radius: 0.5rem;
-    resize: none;
-    font-size: 1.3rem;
-}
-
-.textarea:focus {
-    outline-color: var(--lightblue);
-}
-
 .counters-container {
     display: flex;
     gap: 1rem;

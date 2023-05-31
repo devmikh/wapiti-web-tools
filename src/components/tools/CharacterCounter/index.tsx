@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
-import Button from '../../Button';
+import Button from '../../core/Button';
+import Textarea from '../../core/Textarea';
 import { countWords } from "../../../utils/text"
 import styles from './index.module.css'
 
@@ -24,13 +25,12 @@ export default function CharacterCounter() {
     return (
         <div className={styles['container']}>
             <h1>Character Counter</h1>
-            <Button label='Clear Text' clickHandler={() => setText(() => '')} />
-            <textarea value={text} onChange={handleChange} className={styles['textarea']} />
+            <Button label='Clear Text' onClick={() => setText(() => '')} />
+            <Textarea value={text} onChange={handleChange} />
             <div className={styles['counters-container']}>
                 <div className={styles['counter']}><span>characters</span><div className={styles['counter-number']}>{characterCounter}</div></div>
                 <div className={styles['counter']}><span>words</span><div className={styles['counter-number']}>{wordCounter}</div></div>
             </div>
-            
         </div>
     )
 }
