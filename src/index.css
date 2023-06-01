@@ -2,10 +2,17 @@
 
 :root {
     --black: #1b1b1b;
-    --lightgrey: hsl(0, 0%, 81%);
-    --blue: #2676B6;
-    --lightblue: #a4c8e6;
-    --blue-svg: invert(41%) sepia(47%) saturate(874%) hue-rotate(165deg) brightness(90%) contrast(89%);
+
+    --blue-100: hsl(207, 100%, 90%);
+    --blue-200: hsl(207, 100%, 83%);
+    --blue-300: hsl(207, 100%, 72%);
+    --blue-400: hsl(207, 100%, 65%);
+    --blue-500: hsl(207, 100%, 54%);
+    --blue-600: hsl(207, 100%, 46%);
+    --blue-700: hsl(207, 100%, 38%);
+    --blue-800: hsl(207, 100%, 29%);
+    --blue-900: hsl(207, 100%, 22%);
+
     --grey-100: hsl(0, 0%, 90%);
     --grey-200: hsl(0, 0%, 80%);
     --grey-300: hsl(0, 0%, 70%);
@@ -15,6 +22,9 @@
     --grey-700: hsl(0, 0%, 30%);
     --grey-800: hsl(0, 0%, 20%);
     --grey-900: hsl(0, 0%, 10%);
+
+    /* Logo Filter */
+    --blue-700-svg: invert(32%) sepia(60%) saturate(1908%) hue-rotate(185deg) brightness(88%) contrast(106%);
 }
 
 * {

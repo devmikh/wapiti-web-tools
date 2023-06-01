@@ -3,10 +3,10 @@
     align-items: center;
     height: 5rem;
     width: 95%;
-    border-bottom: 1px solid var(--lightgrey);
+    border-bottom: 1px solid var(--grey-200);
 }
 
 .logo {
     margin-right: 1rem;
-    filter: invert(41%) sepia(47%) saturate(874%) hue-rotate(165deg) brightness(90%) contrast(89%);
+    filter: var(--blue-700-svg);
 }

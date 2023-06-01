@@ -3,7 +3,7 @@
     height: 2.4rem;
     background-color: var(--grey-100);
     border-radius: 0.3rem;
-    border: 1px solid var(--lightgrey);
+    border: 1px solid var(--grey-300);
     cursor: pointer;
     transition: 0.45s;
     font-size: 1rem;
@@ -23,5 +23,5 @@
 }
 
 .button:focus {
-    outline-color: var(--lightblue);
+    outline-color: var(--blue-200);
 }
