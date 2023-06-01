@@ -2,10 +2,19 @@
 
 :root {
     --black: #1b1b1b;
-    --lightgrey: #cfcfcf;
+    --lightgrey: hsl(0, 0%, 81%);
     --blue: #2676B6;
     --lightblue: #a4c8e6;
     --blue-svg: invert(41%) sepia(47%) saturate(874%) hue-rotate(165deg) brightness(90%) contrast(89%);
+    --grey-100: hsl(0, 0%, 90%);
+    --grey-200: hsl(0, 0%, 80%);
+    --grey-300: hsl(0, 0%, 70%);
+    --grey-400: hsl(0, 0%, 60%);
+    --grey-500: hsl(0, 0%, 50%);
+    --grey-600: hsl(0, 0%, 40%);
+    --grey-700: hsl(0, 0%, 30%);
+    --grey-800: hsl(0, 0%, 20%);
+    --grey-900: hsl(0, 0%, 10%);
 }
 
 * {
