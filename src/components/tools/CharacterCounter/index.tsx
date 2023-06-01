@@ -14,6 +14,10 @@ export default function CharacterCounter() {
     }
 
     useEffect(() => {
+        document.title = 'Character Counter'
+    }, []);
+
+    useEffect(() => {
         setCharacterCounter(text.length)
         if (text.length === 0) {
             setWordCounter(0) 

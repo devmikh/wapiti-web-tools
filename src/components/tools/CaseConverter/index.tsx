@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Button from '../../core/Button'
 import Textarea from '../../core/Textarea'
 import { toTitleCase, copyToClipboard } from '../../../utils/text'
@@ -11,6 +11,10 @@ export default function CaseConverter() {
     const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setText(() => e.target.value)
     }
+
+    useEffect(() => {
+        document.title = 'Case Converter'
+    }, []);
 
     return (
         <div className={styles['container']}>
