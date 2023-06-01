@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
 import Toolbar from './components/Toolbar'
+import HomePage from './components/HomePage'
 import CharacterCounter from './components/tools/CharacterCounter'
 import CaseConverter from './components/tools/CaseConverter'
 import DummyTextGenerator from './components/tools/DummyTextGenerator'
@@ -13,7 +14,7 @@ export default function App() {
             <div className='main-container'>
                 <Toolbar />
                 <Routes>
-                    <Route path='/' element={<h1>Home</h1>}/>
+                    <Route path='/' element={<HomePage />}/>
                     <Route path='/character-counter' element={<CharacterCounter />}/>
                     <Route path='/case-converter' element={<CaseConverter />}/>
                     <Route path='/dummy-text-generator' element={<DummyTextGenerator />}/>
