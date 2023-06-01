@@ -1,0 +1,28 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amount {
+    font-size: 1.8rem;
+}
+
+.format-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.format-container div label {
+    margin-left: 0.6rem;
+}
