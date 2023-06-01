@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="520"
+   height="520"
+   viewBox="0 0 137.58333 137.58333"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   sodipodi:docname="wapiti.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.70710678"
+     inkscape:cx="205.06097"
+     inkscape:cy="124.45079"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid132"
+       originx="0"
+       originy="0" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#000000;stroke-width:0.26559"
+       d="M 39.393521,15.875 46.743059,23.553099 17.344907,54.265488 39.393519,77.299782 68.79167,46.587393 76.141207,54.265492 39.39352,92.655976 2.6458333,54.265484 Z"
+       id="path390" />
+    <path
+       style="fill:#000000;stroke-width:0.26559"
+       d="M 61.442134,54.265495 68.79167,46.587399 98.189818,77.299792 120.23843,54.265495 90.840286,23.553104 98.189818,15.875008 134.9375,54.265496 98.189818,92.655985 Z"
+       id="path390-0" />
+    <path
+       style="fill:#000000;stroke-width:0.26559"
+       d="m 54.092594,92.655986 -7.349536,7.678094 22.048615,23.03429 22.048608,-23.03428 -7.349542,-7.678105 -14.699072,15.356195 z"
+       id="path414" />
+  </g>
+</svg>

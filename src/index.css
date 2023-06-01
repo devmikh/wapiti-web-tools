@@ -5,6 +5,7 @@
     --lightgrey: #cfcfcf;
     --blue: #2676B6;
     --lightblue: #a4c8e6;
+    --blue-svg: invert(41%) sepia(47%) saturate(874%) hue-rotate(165deg) brightness(90%) contrast(89%);
 }
 
 * {
