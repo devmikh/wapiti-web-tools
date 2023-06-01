@@ -19,7 +19,7 @@ export default function CaseConverter() {
                 <Button label='Copy Text' onClick={() => copyToClipboard(text)} />
                 <Button label='Clear Text' onClick={() => setText(() => '')} />
             </div>
-            <Textarea value={text} onChange={handleChange} />
+            <Textarea value={text} readOnly={false} onChange={handleChange} />
             <div className={styles['button-container']}>
                 <Button label='UPPERCASE' onClick={() => setText(() => text.toUpperCase())} />
                 <Button label='lowercase' onClick={() => setText(() => text.toLowerCase())} />

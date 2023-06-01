@@ -26,7 +26,7 @@ export default function CharacterCounter() {
         <div className={styles['container']}>
             <h1>Character Counter</h1>
             <Button label='Clear Text' onClick={() => setText(() => '')} />
-            <Textarea value={text} onChange={handleChange} />
+            <Textarea value={text} readOnly={false} onChange={handleChange} />
             <div className={styles['counters-container']}>
                 <div className={styles['counter']}><span>characters</span><div className={styles['counter-number']}>{characterCounter}</div></div>
                 <div className={styles['counter']}><span>words</span><div className={styles['counter-number']}>{wordCounter}</div></div>
