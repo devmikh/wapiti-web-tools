@@ -10,9 +10,8 @@ export default function Toolbar() {
                 <ToolLink name='Case Converter' link='/case-converter' />
                 <ToolLink name='Dummy Text Generator' link='/dummy-text-generator' />
             </ToolCategory>
-            <ToolCategory title='Other'>
-                <ToolLink name='Password Generator' link='/password-generator' />
-                <ToolLink name='CSS Gradient Generator' link='/css-gradient-generator' />
+            <ToolCategory title='Color'>
+                <ToolLink name='Color Format Converter' link='/color-format-converter' />
             </ToolCategory>
         </div>
     )
