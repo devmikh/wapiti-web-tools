@@ -2,7 +2,7 @@ import ToolCategory from '../ToolCategory'
 import ToolLink from '../ToolLink'
 import styles from './index.module.css'
 
-const Toolbar = () => {
+export default function Toolbar() {
     return (
         <div className={styles['toolbar-container']}>
             <ToolCategory title='Text'>
@@ -17,5 +17,3 @@ const Toolbar = () => {
         </div>
     )
 }
-
-export default Toolbar

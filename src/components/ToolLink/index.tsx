@@ -1,7 +1,7 @@
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 import styles from './index.module.css'
 
-const ToolLink = (props: { link: string, name: string }) => {
+export default function ToolLink(props: { link: string, name: string }) {
     const { link, name } = props
 
     const resolvedPath = useResolvedPath(link)
@@ -15,5 +15,3 @@ const ToolLink = (props: { link: string, name: string }) => {
         </div>
     )
 }
-
-export default ToolLink

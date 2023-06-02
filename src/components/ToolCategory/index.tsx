@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 
-const ToolCategory = (props: { title: string, children: string | JSX.Element | JSX.Element[] }) => {
+export default function ToolCategory(props: { title: string, children: string | JSX.Element | JSX.Element[] }) {
     const { title, children } = props
     return (
         <div>
@@ -12,5 +12,3 @@ const ToolCategory = (props: { title: string, children: string | JSX.Element | J
         
     )
 }
-
-export default ToolCategory
