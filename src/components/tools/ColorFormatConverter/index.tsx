@@ -26,12 +26,11 @@ export default function ColorFormatConverter() {
                 hsv: t.toHsvString()
             }
         })
-        
     }
 
     useEffect(() => {
         document.title = 'Color Format Converter'
-    }, []);
+    }, [])
 
     return (
         <div className={styles['container']}>
@@ -62,7 +61,6 @@ export default function ColorFormatConverter() {
                     </div>
                 </div>
             </div>
-            
         </div>
     )
 }
