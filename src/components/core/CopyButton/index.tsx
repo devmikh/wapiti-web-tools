@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import styles from './index.module.css'
 
-export default function CopyButton(props: { label: string, onClick: Function }) {
+export default function CopyButton(props: { label: string, onClick: Function, isSmall?: boolean }) {
 
-    const { label, onClick } = props
+    const { label, onClick, isSmall } = props
     const [ copied, setCopied ] = useState(false)
 
     const handleClick = () => {
@@ -19,6 +19,6 @@ export default function CopyButton(props: { label: string, onClick: Function }) 
     }
 
     return (
-        <button onClick={handleClick} className={styles['button']}>{copied ? 'Copied!' : label}</button>
+        <button onClick={handleClick} className={`${styles['button']} ${isSmall ? styles['small'] : ''}`}>{copied ? 'Copied!' : label}</button>
     )
 }

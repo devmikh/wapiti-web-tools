@@ -25,3 +25,8 @@
 .button:focus {
     outline-color: var(--blue-200);
 }
+
+.small {
+    width: 4rem;
+    height: 2rem;
+}
