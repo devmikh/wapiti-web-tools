@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { LoremIpsum } from 'lorem-ipsum'
-import Button from '../../core/Button'
+import CopyButton from '../../core/CopyButton'
 import Textarea from '../../core/Textarea'
 import { copyToClipboard } from '../../../utils/text'
 import styles from './index.module.css'
@@ -85,7 +85,7 @@ export default function DummyTextGenerator() {
     return (
         <div className={styles['container']}>
             <h1>Dummy Text Generator</h1>
-            <Button label='Copy Text' onClick={() => copyToClipboard(state.text)} />
+            <CopyButton label='Copy Text' onClick={() => copyToClipboard(state.text)} />
             <Textarea value={state.text} readOnly={true} />
             <form className={styles['form']}>
                 <span className={styles['amount']}>{state.amount}</span>
