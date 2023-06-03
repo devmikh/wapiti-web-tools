@@ -1,9 +1,17 @@
+.link-container {
+    width: 90%;
+    padding: 0.4rem 1rem;
+    border-radius: 0.4rem;
+    color: var(--grey-700);
+}
+
 .link {
     text-decoration: none;
-    font-size: 1.2rem;
-    color: var(--blue-700);
+    font-size: 1.1rem;
+    color: inherit;
 }
 
 .active {
-    font-weight: bold;
+    background-color: var(--blue-600);
+    color: var(--white);
 }

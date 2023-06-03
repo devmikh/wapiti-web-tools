@@ -8,8 +8,8 @@ export default function ToolLink(props: { link: string, name: string }) {
     const isActive = useMatch({ path: resolvedPath.pathname, end: true })
 
     return (
-        <div>
-            <Link to={link} className={`${styles['link']} ${isActive ? styles['active'] : ''}`}>
+        <div className={`${styles['link-container']} ${isActive ? styles['active'] : ''}`}>
+            <Link to={link} className={styles['link']}>
                 {name}
             </Link>
         </div>

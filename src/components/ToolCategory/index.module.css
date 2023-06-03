@@ -1,5 +1,15 @@
+.category-title-container {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 0.6rem;
+}
+
+.icon {
+    filter: var(--blue-700-svg);
+}
+
 .category-title {
-    margin-bottom: 0.5rem;
     font-size: 1.4rem;
 }
 
@@ -7,5 +17,5 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
 }
