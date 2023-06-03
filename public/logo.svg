@@ -8,7 +8,7 @@
    version="1.1"
    id="svg5"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="wapiti.svg"
+   sodipodi:docname="wapitinew.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -23,10 +23,10 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     showgrid="true"
+     showgrid="false"
      inkscape:zoom="0.70710678"
-     inkscape:cx="205.06097"
-     inkscape:cy="124.45079"
+     inkscape:cx="320.31937"
+     inkscape:cy="267.28636"
      inkscape:window-width="1920"
      inkscape:window-height="1017"
      inkscape:window-x="-8"
@@ -46,16 +46,16 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       style="fill:#000000;stroke-width:0.26559"
-       d="M 39.393521,15.875 46.743059,23.553099 17.344907,54.265488 39.393519,77.299782 68.79167,46.587393 76.141207,54.265492 39.39352,92.655976 2.6458333,54.265484 Z"
-       id="path390" />
+       style="fill:#1a1a1a;stroke-width:0.264583"
+       d="M 42.428688,17.673349 53.654008,28.89867 23.71982,58.832857 38.686913,73.79995 68.621101,43.865763 79.846421,55.091083 38.686913,96.250584 1.2691799,58.832857 Z"
+       id="path352" />
     <path
-       style="fill:#000000;stroke-width:0.26559"
-       d="M 61.442134,54.265495 68.79167,46.587399 98.189818,77.299792 120.23843,54.265495 90.840286,23.553104 98.189818,15.875008 134.9375,54.265496 98.189818,92.655985 Z"
-       id="path390-0" />
+       style="fill:#1a1a1a;stroke-width:0.264583"
+       d="M 57.395781,55.091084 68.621101,43.865764 98.555288,73.799952 113.52238,58.832859 83.588194,28.898671 94.813514,17.673351 135.97302,58.832856 98.555286,96.250584 Z"
+       id="path352-9" />
     <path
-       style="fill:#000000;stroke-width:0.26559"
-       d="m 54.092594,92.655986 -7.349536,7.678094 22.048615,23.03429 22.048608,-23.03428 -7.349542,-7.678105 -14.699072,15.356195 z"
-       id="path414" />
+       style="fill:#1a1a1a;stroke-width:0.264583"
+       d="M 79.846421,92.508816 91.07174,103.73415 68.621099,126.18479 46.17046,103.73415 57.39578,92.508816 68.6211,103.73415 Z"
+       id="path378" />
   </g>
 </svg>
