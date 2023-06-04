@@ -45,7 +45,7 @@ export default function DummyTextGenerator() {
 
     useEffect(() => {
         document.title = 'Dummy Text Generator'
-    }, []);
+    }, [])
 
     useEffect(() => {
         const lorem = new LoremIpsum({

@@ -12,10 +12,10 @@
 }
 
 .input {
-    padding: 0.4rem 0.8rem;
     margin-bottom: 2rem;
-    border: 1px solid var(--grey-200);
+    padding: 0.4rem 0.8rem;
     border-radius: 0.5rem;
+    border: 1px solid var(--grey-200);
     font-size: 1.2rem;
 }
 

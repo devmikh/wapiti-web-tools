@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react"
-import Button from '../../core/Button';
-import Textarea from '../../core/Textarea';
-import { countWords } from "../../../utils/text"
+import { useState, useEffect } from 'react'
+import Button from '../../core/Button'
+import Textarea from '../../core/Textarea'
+import { countWords } from '../../../utils/text'
 import styles from './index.module.css'
 
 export default function CharacterCounter() {
-    const [ text, setText ] = useState('')
+    const [text, setText] = useState('')
     const [characterCounter, setCharacterCounter] = useState(0)
     const [wordCounter, setWordCounter] = useState(0)
 
@@ -15,7 +15,7 @@ export default function CharacterCounter() {
 
     useEffect(() => {
         document.title = 'Character Counter'
-    }, []);
+    }, [])
 
     useEffect(() => {
         setCharacterCounter(text.length)
