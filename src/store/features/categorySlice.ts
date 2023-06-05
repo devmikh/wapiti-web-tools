@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import textIcon from '../../../public/icons/text.svg'
-import colorIcon from '../../../public/icons/color.svg'
+import textIcon from '../../assets/icons/text.svg'
+import colorIcon from '../../assets/icons/color.svg'
 
 const initialState = {
     categories: [

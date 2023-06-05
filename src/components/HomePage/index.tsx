@@ -1,5 +1,5 @@
 import styles from './index.module.css'
-import logo from '../../../public/logo.svg'
+import logo from '../../assets/icons/logo.svg'
 
 export default function HomePage() {
     return (

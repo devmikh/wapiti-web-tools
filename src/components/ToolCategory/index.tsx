@@ -1,7 +1,7 @@
 import { useAppDispatch } from '../../hooks/useAppDispatch'
 import { expandCollapseCategory } from '../../store/features/categorySlice'
-import upArrow from '../../../public/icons/angle-up.svg'
-import downArrow from '../../../public/icons/angle-down.svg'
+import upArrow from '../../assets/icons/angle-up.svg'
+import downArrow from '../../assets/icons/angle-down.svg'
 import styles from './index.module.css'
 
 export default function ToolCategory(props: { id: number, expanded: boolean, title: string, icon: string, children: string | JSX.Element | JSX.Element[] }) {
