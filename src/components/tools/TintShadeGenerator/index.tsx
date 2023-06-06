@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react'
 import { HexColorPicker } from 'react-colorful'
+import Textfield from '../../core/Textfield'
+import Range from '../../core/Range'
+import Radio from '../../core/Radio'
 import { generateTintsAndShades, formatColor } from '../../../utils/color'
 import styles from './index.module.css'
 
 export default function TintShadeGenerator() {
 
     const [state, setState] = useState({
-        inputColor: 'ff0000',
+        inputColor: '#ff0000',
         hex: '#ff0000',
         quantity: '7',
         percentage: '10',
@@ -45,30 +48,31 @@ export default function TintShadeGenerator() {
 
     return (
         <div className={styles['container']}>
-            <h1>Tint & Shade Generator</h1>
-            <input value={state.inputColor} onChange={(e) => handleColorChange(e.target.value)} />
-            <div>
-                <label>Number of Tints & Shades</label>
-                <input type='range' min={3} max={9} step={2} value={state.quantity} onChange={(e) => handleQuantityChange(e.target.value)}/>
-                <span>{state.quantity}</span>
+            <h1 className='tool-title'>Tint & Shade Generator</h1>
+            <Textfield
+                value={state.inputColor}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleColorChange(e.target.value)}
+                prompt='Base color' />
+            <div className={styles['form']}>
+                <HexColorPicker color={state.hex} onChange={color => handleColorChange(color)} />
+                <div className={styles['ranges-container']}>
+                    <Range
+                        prompt='Number of Tints and Shades:'
+                        min={3}
+                        max={9}
+                        step={2}
+                        value={state.quantity}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(e.target.value)}
+                    />
+                    <Range
+                        prompt='Tint %:'
+                        min={5}
+                        max={20}
+                        value={state.percentage}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePercentageChange(e.target.value)}
+                    />
+                </div>
             </div>
-            <div>
-                <label>Tint Percentage</label>
-                <input type='range' min={5} max={20} value={state.percentage} onChange={(e) => handlePercentageChange(e.target.value)} />
-                <span>{state.percentage}%</span>
-            </div>
-            <div>
-                <input id='hex' type='radio' name='format' value='hex' checked={state.format === 'hex'} onChange={(e) => handleFormatChange(e.target.value)}/>
-                <label htmlFor='hex'>Hex</label>
-                <input id='rgb' type='radio' name='format' value='rgb' checked={state.format === 'rgb'} onChange={(e) => handleFormatChange(e.target.value)}/>
-                <label htmlFor='rgb'>RGB</label>
-                <input id='hsl' type='radio' name='format' value='hsl' checked={state.format === 'hsl'} onChange={(e) => handleFormatChange(e.target.value)}/>
-                <label htmlFor='hsl'>HSL</label>
-                <input id='hsv' type='radio' name='format' value='hsv' checked={state.format === 'hsv'} onChange={(e) => handleFormatChange(e.target.value)}/>
-                <label htmlFor='hsv'>HSV</label>
-            </div>
-            
-            <HexColorPicker color={state.hex} onChange={color => handleColorChange(color)} />
             <div className={styles['colors-container']}>
                 {state.resultArray.map((color: { value: string, displayValue: string}) => {
                     return (
@@ -78,6 +82,36 @@ export default function TintShadeGenerator() {
                         </div>   
                     )
                 })}
+            </div>
+            <div className={styles['radios-container']}>
+                <Radio
+                    id="hex"
+                    name="format"
+                    value="hex"
+                    checked={state.format === 'hex'}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFormatChange(e.target.value)}
+                    label='Hex' />
+                <Radio
+                    id="rgb"
+                    name="format"
+                    value="rgb"
+                    checked={state.format === 'rgb'}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFormatChange(e.target.value)}
+                    label='RGB' />
+                <Radio
+                    id="hsl"
+                    name="format"
+                    value="hsl"
+                    checked={state.format === 'hsl'}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFormatChange(e.target.value)}
+                    label='HSL' />
+                <Radio
+                    id="hsv"
+                    name="format"
+                    value="hsv"
+                    checked={state.format === 'hsv'}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleFormatChange(e.target.value)}
+                    label='HSV' />
             </div>
         </div>
     )

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { LoremIpsum } from 'lorem-ipsum'
 import CopyButton from '../../core/CopyButton'
 import Textarea from '../../core/Textarea'
+import Range from '../../core/Range'
 import { copyToClipboard } from '../../../utils/text'
 import styles from './index.module.css'
 
@@ -84,12 +85,16 @@ export default function DummyTextGenerator() {
 
     return (
         <div className={styles['container']}>
-            <h1>Dummy Text Generator</h1>
+            <h1 className='tool-title'>Dummy Text Generator</h1>
             <CopyButton label='Copy Text' onClick={() => copyToClipboard(state.text)} />
             <Textarea value={state.text} readOnly={true} />
             <form className={styles['form']}>
-                <span className={styles['amount']}>{state.amount}</span>
-                <input type='range' id='amount' min="1" max={state.maxAmount} value={state.amount} onChange={handleAmountChange} />
+                <Range
+                    prompt='Quantity'
+                    min={1}
+                    max={state.maxAmount}
+                    value={state.amount}
+                    onChange={handleAmountChange} />
                 <div className={styles['format-container']}>
                     <div>
                         <input type='radio' id='p' name='format' value='p' checked={state.format === 'p'} onChange={handleFormatChange} />

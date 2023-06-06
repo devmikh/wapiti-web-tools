@@ -19,7 +19,7 @@ export default function CaseConverter() {
 
     return (
         <div className={styles['container']}>
-            <h1>Case Converter</h1>
+            <h1 className='tool-title'>Case Converter</h1>
             <div className={styles['button-container']}>
                 <CopyButton label='Copy Text' onClick={() => copyToClipboard(text)} />
                 <Button label='Clear Text' onClick={() => setText(() => '')} />

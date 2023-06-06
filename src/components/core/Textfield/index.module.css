@@ -1,0 +1,32 @@
+.textfield {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.3rem;
+    border: 1px solid var(--grey-200);
+    background-color: var(--white);
+}
+
+.textfield:focus-within {
+    outline: 2px solid var(--blue-500);
+}
+
+.textfield:focus-within .prompt {
+    color: var(--blue-600);
+}
+
+.prompt {
+    padding: 0.2rem 0.8rem 0 0.8rem;
+    color: var(--grey-600);
+}
+
+.input {
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    border-radius: inherit;
+    border: none;
+    background-color: inherit;
+}
+
+.input:focus {
+    outline: none;
+}

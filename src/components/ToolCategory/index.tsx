@@ -4,7 +4,15 @@ import upArrow from '../../assets/icons/angle-up.svg'
 import downArrow from '../../assets/icons/angle-down.svg'
 import styles from './index.module.css'
 
-export default function ToolCategory(props: { id: number, expanded: boolean, title: string, icon: string, children: string | JSX.Element | JSX.Element[] }) {
+type ToolCategoryPropsType = {
+    id: number,
+    expanded: boolean,
+    title: string,
+    icon: string,
+    children: string | JSX.Element | JSX.Element[]
+}
+
+export default function ToolCategory(props: ToolCategoryPropsType) {
     const { id, expanded, title, icon, children } = props
 
     const dispatch = useAppDispatch();
@@ -16,14 +24,13 @@ export default function ToolCategory(props: { id: number, expanded: boolean, tit
     return (
         <div>
             <div className={styles['category-title-container']} onClick={handleClick}>
-                <img src={icon} height={28} className={styles['icon']} />
+                <img src={icon} height={16} className={styles['icon']} />
                 <h3 className={styles['category-title']}>{title}</h3>
-                <img src={expanded ? upArrow : downArrow} height={16} className={styles['collapse-icon']}/>
+                <img src={expanded ? upArrow : downArrow} height={10} className={styles['collapse-icon']}/>
             </div>
             <div className={`${styles['links-container']} ${expanded ? '' : styles['collapsed']}`}>
                 {children}
             </div>
         </div>
-        
     )
 }

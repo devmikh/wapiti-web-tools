@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { HexAlphaColorPicker } from 'react-colorful'
 import tinycolor from 'tinycolor2'
 import CopyButton from '../../core/CopyButton'
+import Textfield from '../../core/Textfield'
 import { copyToClipboard } from '../../../utils/text'
 
 import styles from './index.module.css'
@@ -9,7 +10,7 @@ import styles from './index.module.css'
 export default function ColorFormatConverter() {
 
     const [state, setState] = useState({
-        inputColor: 'ff0000',
+        inputColor: '#ff0000',
         rgb: 'rgb(255, 0, 0)',
         hex: '#ff0000',
         hsl: 'hsl(0, 100%, 50%)',
@@ -35,10 +36,11 @@ export default function ColorFormatConverter() {
 
     return (
         <div className={styles['container']}>
-            <h1>Color Format Converter</h1>
-            
-            <span className={styles['prompt']}>Enter color in any format</span>
-            <input value={state.inputColor} onChange={(e) => handleChange(e.target.value)} className={styles['input']} placeholder='Color...'/>
+            <h1 className='tool-title'>Color Format Converter</h1>
+            <Textfield
+                value={state.inputColor}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e.target.value)}
+                prompt='Color' />
             <div className={styles['bottom-container']}>
                 <HexAlphaColorPicker color={state.hex} onChange={color => handleChange(color)} />
                 <div className={styles['colors-container']}>

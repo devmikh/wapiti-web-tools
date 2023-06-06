@@ -4,7 +4,14 @@ import { useAppDispatch } from '../../hooks/useAppDispatch'
 import { setActiveLink } from '../../store/features/categorySlice'
 import styles from './index.module.css'
 
-export default function ToolLink(props: { id: number, categoryId: number, name: string, link: string }) {
+type ToolLinkPropsType = {
+    id: number,
+    categoryId: number,
+    name: string,
+    link: string
+}
+
+export default function ToolLink(props: ToolLinkPropsType) {
     const { id, categoryId, name, link } = props
 
     const dispatch = useAppDispatch()
