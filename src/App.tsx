@@ -10,6 +10,7 @@ import CharacterCounter from './components/tools/CharacterCounter'
 import CaseConverter from './components/tools/CaseConverter'
 import DummyTextGenerator from './components/tools/DummyTextGenerator'
 import ColorFormatConverter from './components/tools/ColorFormatConverter'
+import TintShadeGenerator from './components/tools/TintShadeGenerator'
 
 export default function App() {
     return (
@@ -24,6 +25,7 @@ export default function App() {
                         <Route path='/case-converter' element={<CaseConverter />}/>
                         <Route path='/dummy-text-generator' element={<DummyTextGenerator />}/>
                         <Route path='/color-format-converter' element={<ColorFormatConverter />}/>
+                        <Route path='/tint-shade-generator' element={<TintShadeGenerator />}/>
                     </Routes>
                 </div>
             </div>

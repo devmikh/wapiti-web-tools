@@ -41,6 +41,12 @@ const initialState = {
                     name: 'Color Format Converter',
                     link: '/color-format-converter',
                     active: false
+                },
+                {
+                    id: 1,
+                    name: 'Tint & Shade Generator',
+                    link: '/tint-shade-generator',
+                    active: false
                 }
             ]
         }

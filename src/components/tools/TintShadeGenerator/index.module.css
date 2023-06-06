@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.colors-container {
+    display: flex;
+    gap: 0.3rem;
+}
+
+.color-container {
+    border: 1px solid var(--grey-300);
+}
+
+.color-square {
+    width: 8rem;
+    height: 4rem;
+}
+
+.color-value-container {
+    display: flex;
+    justify-content: center;
+    padding: 0.2rem;
+    border-top: 1px solid var(--grey-300);
+    font-size: 0.8rem;
+}
