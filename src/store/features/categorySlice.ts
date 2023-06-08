@@ -49,6 +49,20 @@ const initialState = {
                     active: false
                 }
             ]
+        },
+        {
+            id: 2,
+            title: 'Image',
+            expanded: false,
+            icon: colorIcon,
+            tools: [
+                {
+                    id: 0,
+                    name: 'Image Cropper',
+                    link: '/image-cropper',
+                    active: false
+                }
+            ]
         }
     ]
 }

@@ -11,6 +11,7 @@ import CaseConverter from './components/tools/CaseConverter'
 import DummyTextGenerator from './components/tools/DummyTextGenerator'
 import ColorFormatConverter from './components/tools/ColorFormatConverter'
 import TintShadeGenerator from './components/tools/TintShadeGenerator'
+import ImageCropper from './components/tools/ImageCropper'
 
 export default function App() {
     return (
@@ -26,6 +27,7 @@ export default function App() {
                         <Route path='/dummy-text-generator' element={<DummyTextGenerator />}/>
                         <Route path='/color-format-converter' element={<ColorFormatConverter />}/>
                         <Route path='/tint-shade-generator' element={<TintShadeGenerator />}/>
+                        <Route path='/image-cropper' element={<ImageCropper />}/>
                     </Routes>
                 </div>
             </div>
