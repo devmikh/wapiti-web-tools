@@ -1,13 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 import textIcon from '../../assets/icons/text.svg'
 import colorIcon from '../../assets/icons/color.svg'
+import imageIcon from '../../assets/icons/image.svg'
 
 const initialState = {
+    active: false,
     categories: [
         {
             id: 0,
             title: 'Text',
             expanded: false,
+            active: false,
             icon: textIcon,
             tools: [
                 {
@@ -34,6 +37,7 @@ const initialState = {
             id: 1,
             title: 'Color',
             expanded: false,
+            active: false,
             icon: colorIcon,
             tools: [
                 {
@@ -54,7 +58,8 @@ const initialState = {
             id: 2,
             title: 'Image',
             expanded: false,
-            icon: colorIcon,
+            active: false,
+            icon: imageIcon,
             tools: [
                 {
                     id: 0,
@@ -67,10 +72,21 @@ const initialState = {
     ]
 }
 
-const categoriesSlice = createSlice({
-    name: 'categories',
+const toolbarSlice = createSlice({
+    name: 'toolbar',
     initialState: initialState,
     reducers: {
+        switchActive: (state) => {
+            if (state.active) {
+                state.categories.forEach(category => {
+                    category.expanded = false
+                })
+                state.active = false
+            } else {
+                
+                state.active = true
+            }
+        },
         setActiveLink: (state, action) => {
             // Set all links to inactive
             state.categories.forEach(category => {
@@ -87,6 +103,12 @@ const categoriesSlice = createSlice({
             // Expand category to which given link is related
             state.categories[action.payload.categoryId].expanded = true
 
+            // Make this category active (while making all other categories inactive)
+            state.categories.forEach(category => {
+                category.active = false
+            })
+            state.categories[action.payload.categoryId].active = true
+
             // Make given link active
             state.categories[action.payload.categoryId].tools[action.payload.toolId].active = true
         },
@@ -101,6 +123,6 @@ const categoriesSlice = createSlice({
     
 })
 
-export const { setActiveLink, expandCollapseCategory } = categoriesSlice.actions
+export const { switchActive, setActiveLink, expandCollapseCategory } = toolbarSlice.actions
 
-export default categoriesSlice.reducer
+export default toolbarSlice.reducer

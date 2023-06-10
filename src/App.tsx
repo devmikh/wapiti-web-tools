@@ -18,8 +18,8 @@ export default function App() {
         <Provider store={store}>
             <div className='app-container'>
                 <Navbar />
+                <Toolbar />
                 <div className='main-container'>
-                    <Toolbar />
                     <Routes>
                         <Route path='/' element={<HomePage />}/>
                         <Route path='/character-counter' element={<CharacterCounter />}/>

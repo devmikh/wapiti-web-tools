@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link, useMatch, useResolvedPath } from 'react-router-dom'
 import { useAppDispatch } from '../../hooks/useAppDispatch'
-import { setActiveLink } from '../../store/features/categorySlice'
+import { setActiveLink } from '../../store/features/toolbarSlice'
 import styles from './index.module.css'
 
 type ToolLinkPropsType = {
@@ -26,7 +26,7 @@ export default function ToolLink(props: ToolLinkPropsType) {
     }, [])
 
     return (
-        <div className={`${styles['link-container']} ${isActive ? styles['active'] : ''}`}
+        <div className={`${styles['link-container']} ${isActive && styles['active']}`}
             onClick={() => dispatch(setActiveLink({ toolId: id, categoryId: categoryId }))}>
             <Link to={link} className={styles['link']}>
                 {name}

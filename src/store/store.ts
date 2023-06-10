@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import categoriesReducer from './features/categorySlice'
+import toolbarReducer from './features/toolbarSlice'
 
 export function makeStore() {
     return configureStore({
         reducer: {
-            categories: categoriesReducer
+            toolbar: toolbarReducer
         }
     })
 }

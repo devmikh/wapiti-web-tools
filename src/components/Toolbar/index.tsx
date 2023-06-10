@@ -1,13 +1,18 @@
 import { useSelector } from 'react-redux'
+import { useAppDispatch } from '../../hooks/useAppDispatch'
+import { switchActive } from '../../store/features/toolbarSlice'
 import ToolCategory from '../ToolCategory'
 import ToolLink from '../ToolLink'
 import styles from './index.module.css'
 
 export default function Toolbar() {
 
-    const categories = useSelector((state: any) => state.categories)
+    const categories = useSelector((state: any) => state.toolbar.categories)
+    const toolbarIsActive = useSelector((state: any) => state.toolbar.active)
 
-    const toolCategories = categories.categories.map((category: any) => {
+    const dispatch = useAppDispatch()
+
+    const toolCategories = categories.map((category: any) => {
         return (
         <ToolCategory id={category.id} expanded={category.expanded} title={category.title} icon={category.icon}>
             {category.tools.map((tool: any) => {
@@ -19,7 +24,7 @@ export default function Toolbar() {
     })
 
     return (
-        <div className={styles['toolbar-container']}>
+        <div className={`${styles['toolbar-container']} ${toolbarIsActive && styles['active']}`} onMouseEnter={() => dispatch(switchActive())} onMouseLeave={() => dispatch(switchActive())} >
             {toolCategories}
         </div>
     )
