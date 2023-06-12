@@ -1,16 +1,19 @@
 .navbar {
     width: 100%;
-    border-bottom: 1px solid var(--grey-200);
     height: 3rem;
+    border-bottom: 1px solid var(--grey-200);
 }
 
 .logo-container {
-    width: 16rem;
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-left: 1rem;
-    border-right: 1px solid var(--grey-200);
+    margin-left: 4rem;
+}
+
+.link {
+    text-decoration: none;
+    color: var(--black);
 }
 
 .logo {

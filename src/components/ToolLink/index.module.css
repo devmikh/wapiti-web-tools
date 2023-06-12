@@ -1,12 +1,19 @@
 .link-container {
-    width: 90%;
-    padding: 0.4rem 1rem;
-    border-radius: 0.4rem;
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 2rem;
     color: var(--grey-700);
+    background-color: var(--white);
+}
+
+.link-container:hover {
+    filter: brightness(90%);
 }
 
 .link {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     color: inherit;
     text-decoration: none;
 }

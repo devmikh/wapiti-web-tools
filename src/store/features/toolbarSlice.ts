@@ -101,7 +101,9 @@ const toolbarSlice = createSlice({
             })
 
             // Expand category to which given link is related
-            state.categories[action.payload.categoryId].expanded = true
+            if (state.active) {
+                state.categories[action.payload.categoryId].expanded = true
+            }
 
             // Make this category active (while making all other categories inactive)
             state.categories.forEach(category => {

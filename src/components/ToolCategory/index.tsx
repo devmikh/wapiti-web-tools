@@ -26,14 +26,17 @@ export default function ToolCategory(props: ToolCategoryPropsType) {
     }
 
     return (
-        <div>
+        <div className={styles['category-container']}>
             <div className={`${styles['category-title-container']} ${active && styles['active']}`} onClick={handleClick}>
-                <img src={icon} height={24} className={styles['icon']} />
+                <div className={styles['icon']}><img src={icon} height={28} /></div>
                 <h3 className={`${styles['category-title']} ${!toolbarIsActive && styles['category-title-collapsed']}`}>{title}</h3>
                 <img src={expanded ? upArrow : downArrow} height={10} className={`${styles['collapse-icon']} ${!toolbarIsActive && styles['collapse-icon-collapsed']}`}/>
                 {toolbarIsActive}
             </div>
-            <div className={`${styles['links-container']} ${(toolbarIsActive && expanded) ? '' : styles['collapsed']}`}>
+            <div
+                className={`${styles['links-container']} ${(toolbarIsActive && expanded) ? '' : styles['collapsed']}`}
+                style={{ height: (expanded) ? ((children as []).length * 40) : 0}}
+            >
                 {children}
             </div>
         </div>
