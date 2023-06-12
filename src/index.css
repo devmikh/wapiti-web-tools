@@ -46,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tool-title {
-    width: 30%;
+    width: 30rem;
     text-align: center;
     margin-top: 1rem;
     font-size: 1.4rem;
@@ -67,6 +67,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 input[type="radio"] {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+}
+
+input[type="checkbox"] {
     -ms-transform: scale(1.5); /* IE 9 */
     -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
     transform: scale(1.5);
