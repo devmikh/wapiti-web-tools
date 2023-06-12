@@ -1,0 +1,55 @@
+.container {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    border: 1px solid var(--grey-200);
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+    padding: 0.4rem;
+    border-bottom: 1px solid var(--grey-200);
+    font-size: 1.4rem;
+}
+
+.checkboxes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.charset {
+    margin-left: 1.8rem;
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: var(--grey-400);
+}
+
+.charset.active {
+    text-decoration: none;
+    color: var(--blue-600);
+}
+
+.password-container {
+    width: 70%;
+    border: 1px solid var(--grey-200);
+    text-align: center;
+    padding: 1rem;
+}
+
+.buttons-container {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}

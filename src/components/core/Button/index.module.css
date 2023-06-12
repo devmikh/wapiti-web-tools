@@ -7,21 +7,18 @@
     font-size: 1rem;
     font-family: inherit;
     cursor: pointer;
-    transition: 0.45s;
-}
-
-.button:hover {
-    box-shadow:
-        inset -7rem 0 0 0 var(--grey-200),
-        inset 7rem 0 0 0 var(--grey-200); 
-}
-
-.button:active {
-    box-shadow:
-        inset -7rem 0 0 0 var(--grey-400),
-        inset 7rem 0 0 0 var(--grey-400);
 }
 
 .button:focus {
     outline-color: var(--blue-200);
+}
+
+.primary {
+    border: none;
+    background-color: var(--blue-600);
+    color: var(--white);
+}
+
+.primary:hover {
+    background-color: var(--blue-700);
 }
