@@ -51,7 +51,7 @@ export default function TintShadeGenerator() {
     }, [])
 
     return (
-        <div className={styles['container']}>
+        <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Tint & Shade Generator</h1>
             <Textfield
                 value={state.inputColor}

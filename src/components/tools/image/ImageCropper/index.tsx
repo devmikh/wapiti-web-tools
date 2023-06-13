@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
 import Cropper, { Area } from 'react-easy-crop'
-import html2canvas from 'html2canvas';
+import html2canvas from 'html2canvas'
 
-import Button from '../../../core/Button';
+import Button from '../../../core/Button'
+import Radio from '../../../core/Radio'
 import uploadIcon from '../../../../assets/icons/upload.svg'
 
 import styles from './index.module.css'
@@ -37,7 +38,7 @@ const Output = ({ croppedArea, src, aspect }: any) => {
         }
     }
 
-    return (<>
+    return (<div className={styles['output-container']}>
                 <div
                     className={styles['output']}
                     style={{ paddingBottom: `${100 / aspect}%` }}
@@ -49,7 +50,7 @@ const Output = ({ croppedArea, src, aspect }: any) => {
                     label='Download'
                     color='primary'
                     onClick={handleDownload} />
-            </>
+            </div>
     )
 }
 
@@ -62,11 +63,11 @@ export default function ImageCropper() {
     const [croppedArea, setCroppedArea] = useState<Area | null>(null)
 
     const aspectRatioOptions = [
-        { label: '1:1', value: 1 / 1 },
-        { label: '16:9', value: 16 / 9 },
-        { label: '4:3', value: 4 / 3 },
-        { label: '3:4', value: 3 / 4 },
-        { label: '9:16', value: 9 / 16 },
+        { id: 'first-ratio', label: '1:1', value: 1 / 1 },
+        { id: 'second-ratio', label: '16:9', value: 16 / 9 },
+        { id: 'third-ratio', label: '4:3', value: 4 / 3 },
+        { id: 'fourth-ratio', label: '3:4', value: 3 / 4 },
+        { id: 'fifth-ratio', label: '9:16', value: 9 / 16 },
     ]
 
     const handleFileUpload = (files: FileList | null) => {
@@ -93,7 +94,7 @@ export default function ImageCropper() {
     }, [])
 
     return (
-        <div className={styles['container']} onDrop={handleDrop} onDragOver={handleDragOver}>
+        <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
             <h1 className='tool-title'>Image Cropper</h1>
             <label htmlFor='cropper-input-file' className={styles['cropper-input']}>
                 <img src={uploadIcon} height='30' />
@@ -101,14 +102,20 @@ export default function ImageCropper() {
                 <input type='file' accept="image/*" id='cropper-input-file' onChange={(e) => handleFileUpload(e.target.files)} className={styles['cropper-input-file']} />
             </label>
             {src &&
-                <div>
-                    <select value={aspect} onChange={(e: any) => setAspect(e.target.value)}>
-                        {aspectRatioOptions.map((option) => (
-                            <option key={option.value} value={option.value}>
-                            {option.label}
-                            </option>
-                        ))}
-                    </select>
+                <div className={styles['radios-container']}>
+                    {aspectRatioOptions.map(ratio => {
+                        return (
+                            <Radio 
+                                id={ratio.id}
+                                name='aspect'
+                                value={ratio.value}
+                                checked={Number(aspect) === ratio.value}
+                                label={ratio.label}
+                                onChange={(e: any) => setAspect(e.target.value)}
+                            />
+                        )
+                    })}
+                    
                 </div>}
             <div className={styles['cropper']}>
                 {src && <Cropper
@@ -124,9 +131,9 @@ export default function ImageCropper() {
                 }} />}
             </div>
             
-            <div className={styles['viewer']}>
-                <div>{croppedArea && <Output croppedArea={croppedArea} src={src as string} aspect={aspect} />}</div>
-            </div>
+            {croppedArea && <div className={styles['viewer']}>
+                <Output croppedArea={croppedArea} src={src as string} aspect={aspect} />
+            </div>}
         </div>
     )
 }

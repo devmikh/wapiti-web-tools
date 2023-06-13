@@ -84,7 +84,7 @@ export default function DummyTextGenerator() {
     }, [state.amount, state.format])
 
     return (
-        <div className={styles['container']}>
+        <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Dummy Text Generator</h1>
             <CopyButton label='Copy Text' onClick={() => copyToClipboard(state.text)} />
             <Textarea value={state.text} readOnly={true} />

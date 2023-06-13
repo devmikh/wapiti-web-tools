@@ -50,7 +50,7 @@ export default function RandomPasswordGenerator() {
     }, [])
 
     return (
-        <div className={styles['container']}>
+        <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Random Password Generator</h1>
             <div className={styles['checkboxes-container']}>
                 <div className={styles['checkbox-container']}>

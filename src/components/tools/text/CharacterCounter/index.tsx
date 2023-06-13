@@ -27,7 +27,7 @@ export default function CharacterCounter() {
     }, [text])
     
     return (
-        <div className={styles['container']}>
+        <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Character Counter</h1>
             <Button label='Clear Text' onClick={() => setText(() => '')} />
             <Textarea value={text} readOnly={false} onChange={handleChange} />

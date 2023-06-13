@@ -35,7 +35,7 @@ export default function ColorFormatConverter() {
     }, [])
 
     return (
-        <div className={styles['container']}>
+        <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Color Format Converter</h1>
             <Textfield
                 value={state.inputColor}
