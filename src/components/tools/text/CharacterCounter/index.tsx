@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import Button from '../../core/Button'
-import Textarea from '../../core/Textarea'
-import { countWords } from '../../../utils/text'
+import Button from '../../../core/Button'
+import Textarea from '../../../core/Textarea'
+import { countWords } from '../../../../utils/text'
 import styles from './index.module.css'
 
 export default function CharacterCounter() {

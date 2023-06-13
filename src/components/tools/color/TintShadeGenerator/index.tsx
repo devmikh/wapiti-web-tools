@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { HexColorPicker } from 'react-colorful'
-import Textfield from '../../core/Textfield'
-import Range from '../../core/Range'
-import Radio from '../../core/Radio'
-import { generateTintsAndShades, formatColor } from '../../../utils/color'
+import Textfield from '../../../core/Textfield'
+import Range from '../../../core/Range'
+import Radio from '../../../core/Radio'
+import { generateTintsAndShades, formatColor } from '../../../../utils/color'
 import styles from './index.module.css'
 
 export default function TintShadeGenerator() {
@@ -45,6 +45,10 @@ export default function TintShadeGenerator() {
         })
         
     }, [state.inputColor, state.quantity, state.percentage, state.format])
+
+    useEffect(() => {
+        document.title = 'Tint & Shade Generator'
+    }, [])
 
     return (
         <div className={styles['container']}>

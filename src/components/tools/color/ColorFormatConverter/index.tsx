@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { HexAlphaColorPicker } from 'react-colorful'
 import tinycolor from 'tinycolor2'
-import CopyButton from '../../core/CopyButton'
-import Textfield from '../../core/Textfield'
-import { copyToClipboard } from '../../../utils/text'
+import CopyButton from '../../../core/CopyButton'
+import Textfield from '../../../core/Textfield'
+import { copyToClipboard } from '../../../../utils/text'
 
 import styles from './index.module.css'
 

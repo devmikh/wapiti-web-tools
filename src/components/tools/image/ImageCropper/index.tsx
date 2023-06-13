@@ -1,8 +1,8 @@
-import { useState, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Cropper, { Area } from 'react-easy-crop'
 import html2canvas from 'html2canvas';
 
-import uploadIcon from '../../../assets/icons/upload.svg'
+import uploadIcon from '../../../../assets/icons/upload.svg'
 
 import styles from './index.module.css'
 
@@ -83,6 +83,10 @@ export default function ImageCropper() {
         e.preventDefault()
         handleFileUpload(e.dataTransfer.files)
     }
+
+    useEffect(() => {
+        document.title = 'Image Cropper'
+    }, [])
 
     return (
         <div className={styles['container']} onDrop={handleDrop} onDragOver={handleDragOver}>

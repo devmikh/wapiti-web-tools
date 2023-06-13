@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import Button from '../../core/Button'
-import CopyButton from '../../core/CopyButton'
-import Textarea from '../../core/Textarea'
-import { toTitleCase, copyToClipboard } from '../../../utils/text'
+import Button from '../../../core/Button'
+import CopyButton from '../../../core/CopyButton'
+import Textarea from '../../../core/Textarea'
+import { toTitleCase, copyToClipboard } from '../../../../utils/text'
 import styles from './index.module.css'
 
 export default function CaseConverter() {

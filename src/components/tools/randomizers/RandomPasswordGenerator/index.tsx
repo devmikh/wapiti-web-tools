@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-import Button from '../../core/Button'
-import CopyButton from '../../core/CopyButton'
-import Checkbox from '../../core/Checkbox'
-import Range from '../../core/Range'
-import { copyToClipboard } from '../../../utils/text'
-import { generatePassword } from '../../../utils/randomizers'
+import Button from '../../../core/Button'
+import CopyButton from '../../../core/CopyButton'
+import Checkbox from '../../../core/Checkbox'
+import Range from '../../../core/Range'
+import { copyToClipboard } from '../../../../utils/text'
+import { generatePassword } from '../../../../utils/randomizers'
 import styles from  './index.module.css'
 
 export default function RandomPasswordGenerator() {
@@ -14,7 +14,7 @@ export default function RandomPasswordGenerator() {
         upper: true,
         numbers: true,
         symbols: true,
-        length: 10
+        length: 16
     })
 
     const [password, setPassword] = useState('')

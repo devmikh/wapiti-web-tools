@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react'
 import { LoremIpsum } from 'lorem-ipsum'
-import CopyButton from '../../core/CopyButton'
-import Textarea from '../../core/Textarea'
-import Range from '../../core/Range'
-import { copyToClipboard } from '../../../utils/text'
+import CopyButton from '../../../core/CopyButton'
+import Textarea from '../../../core/Textarea'
+import Range from '../../../core/Range'
+import { copyToClipboard } from '../../../../utils/text'
 import styles from './index.module.css'
 
 export default function DummyTextGenerator() {
