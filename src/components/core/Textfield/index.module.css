@@ -1,7 +1,6 @@
 .textfield {
     display: flex;
     flex-direction: column;
-    border-radius: 0.3rem;
     border: 1px solid var(--grey-200);
     background-color: var(--white);
 }

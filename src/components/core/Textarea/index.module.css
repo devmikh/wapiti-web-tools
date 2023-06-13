@@ -1,13 +1,12 @@
 .textarea {
-    width: 70%;
+    width: 90%;
     height: 30rem;
     padding: 1rem;
-    border-radius: 0.5rem;
     border: 1px solid var(--grey-200);
     font-size: 1.3rem;
     resize: none;
 }
 
 .textarea:focus {
-    outline-color: var(--blue-200);
+    outline: 2px solid var(--blue-500);
 }

@@ -20,12 +20,12 @@ export default function CaseConverter() {
     return (
         <div className={styles['container']}>
             <h1 className='tool-title'>Case Converter</h1>
-            <div className={styles['button-container']}>
+            <div className={styles['top-button-container']}>
                 <CopyButton label='Copy Text' onClick={() => copyToClipboard(text)} />
                 <Button label='Clear Text' onClick={() => setText(() => '')} />
             </div>
             <Textarea value={text} readOnly={false} onChange={handleChange} />
-            <div className={styles['button-container']}>
+            <div className={styles['bottom-button-container']}>
                 <Button label='UPPERCASE' onClick={() => setText(() => text.toUpperCase())} />
                 <Button label='lowercase' onClick={() => setText(() => text.toLowerCase())} />
                 <Button label='Title Case' onClick={() => setText(() => toTitleCase(text))} />

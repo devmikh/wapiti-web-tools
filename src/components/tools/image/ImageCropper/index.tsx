@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import Cropper, { Area } from 'react-easy-crop'
 import html2canvas from 'html2canvas';
 
+import Button from '../../../core/Button';
 import uploadIcon from '../../../../assets/icons/upload.svg'
 
 import styles from './index.module.css'
@@ -44,7 +45,10 @@ const Output = ({ croppedArea, src, aspect }: any) => {
                 >
                     <img src={src} alt="" style={imageStyle} />
                 </div>
-                <button onClick={handleDownload}>Download</button>
+                <Button
+                    label='Download'
+                    color='primary'
+                    onClick={handleDownload} />
             </>
     )
 }
@@ -93,12 +97,21 @@ export default function ImageCropper() {
             <h1 className='tool-title'>Image Cropper</h1>
             <label htmlFor='cropper-input-file' className={styles['cropper-input']}>
                 <img src={uploadIcon} height='30' />
-                <span>Upload image to start cropping</span>
+                <span>{src ? 'Upload another image' : 'Upload image to start cropping'}</span>
                 <input type='file' accept="image/*" id='cropper-input-file' onChange={(e) => handleFileUpload(e.target.files)} className={styles['cropper-input-file']} />
             </label>
-            
+            {src &&
+                <div>
+                    <select value={aspect} onChange={(e: any) => setAspect(e.target.value)}>
+                        {aspectRatioOptions.map((option) => (
+                            <option key={option.value} value={option.value}>
+                            {option.label}
+                            </option>
+                        ))}
+                    </select>
+                </div>}
             <div className={styles['cropper']}>
-                {src ? <Cropper
+                {src && <Cropper
                 image={src as string}
                 aspect={aspect}
                 crop={crop}
@@ -108,15 +121,9 @@ export default function ImageCropper() {
                 onZoomChange={setZoom}
                 onCropAreaChange={(croppedArea) => {
                     setCroppedArea(croppedArea);
-                }} /> : <div>Your image will be here</div>}
+                }} />}
             </div>
-            <select value={aspect} onChange={(e: any) => setAspect(e.target.value)}>
-                {aspectRatioOptions.map((option) => (
-                    <option key={option.value} value={option.value}>
-                    {option.label}
-                    </option>
-                ))}
-            </select>
+            
             <div className={styles['viewer']}>
                 <div>{croppedArea && <Output croppedArea={croppedArea} src={src as string} aspect={aspect} />}</div>
             </div>
