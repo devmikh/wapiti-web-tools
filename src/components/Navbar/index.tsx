@@ -6,7 +6,9 @@ import themeIcon from '../../assets/icons/theme.svg'
 export default function Navbar() {
     
     const switchTheme = () => {
-        document.body.classList.toggle('dark')
+        document.body.classList.toggle('dark');
+        const theme = document.body.classList.contains('dark') ? 'dark' : '';
+        localStorage.setItem('theme', theme);
     }
 
     return (

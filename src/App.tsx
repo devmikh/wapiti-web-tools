@@ -13,8 +13,17 @@ import ColorFormatConverter from './components/tools/color/ColorFormatConverter'
 import TintShadeGenerator from './components/tools/color/TintShadeGenerator'
 import ImageCropper from './components/tools/image/ImageCropper'
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
+import { useEffect } from 'react'
 
 export default function App() {
+
+    useEffect(() => {
+        const theme = localStorage.getItem('theme');
+        if (theme) {
+            document.body.classList.add(theme);
+        }
+    }, [])
+
     return (
         <Provider store={store}>
             <div className='app-container'>
