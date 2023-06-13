@@ -34,10 +34,18 @@
     background: var(--grey-200);
 }
 
+:global(body.dark) .range::-webkit-slider-runnable-track {
+    background: var(--grey-500);
+}
+
 .range::-moz-range-track {
     height: 0.5rem;
     border-radius: 0.4rem;
     background: var(--grey-200);
+}
+
+:global(body.dark) .range::-moz-range-track {
+    background: var(--grey-500);
 }
 
 .range::-webkit-slider-thumb {

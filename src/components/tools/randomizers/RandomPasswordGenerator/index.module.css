@@ -26,6 +26,10 @@
     color: var(--blue-600);
 }
 
+:global(body.dark) .charset.active {
+    color: var(--blue-500);
+}
+
 .password-container {
     width: 70%;
     border: 1px solid var(--grey-200);

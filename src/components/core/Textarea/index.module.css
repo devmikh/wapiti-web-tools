@@ -7,6 +7,12 @@
     resize: none;
 }
 
+:global(body.dark) .textarea {
+    color: var(--white);
+    background-color: var(--grey-700);
+    border: 1px solid var(--grey-500);
+}
+
 .textarea:focus {
     outline: 2px solid var(--blue-500);
 }

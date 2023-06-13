@@ -1,5 +1,5 @@
 .container {
-    width: 60%;
+    min-width: 45rem;
 }
 
 .form {
@@ -24,6 +24,7 @@
 .colors-container {
     display: flex;
     gap: 0.3rem;
+    margin: 0 2rem;
 }
 
 .color-container {
@@ -31,6 +32,10 @@
     flex-direction: column;
     border: 1px solid var(--grey-300);
     display: flex;
+}
+
+:global(body.dark) .color-container {
+    border: 1px solid var(--grey-500);
 }
 
 .color-square {
@@ -45,4 +50,8 @@
     padding: 0.2rem;
     border-top: 1px solid var(--grey-300);
     font-size: 0.8rem;
+}
+
+:global(body.dark) .color-value-container {
+    border-top: 1px solid var(--grey-500);
 }

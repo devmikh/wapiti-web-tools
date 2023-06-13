@@ -9,6 +9,11 @@
     cursor: pointer;
 }
 
+:global(body.dark) .link-container {
+    background-color: var(--grey-800);
+    color: var(--grey-100);
+}
+
 .link-container:hover {
     filter: brightness(90%);
 }
@@ -20,6 +25,11 @@
 }
 
 .active {
+    background-color: var(--blue-600);
+    color: var(--white);
+}
+
+:global(body.dark) .active {
     background-color: var(--blue-600);
     color: var(--white);
 }

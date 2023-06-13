@@ -23,3 +23,7 @@
     font-size: 2rem;
     border: 1px solid var(--grey-200);
 }
+
+:global(body.dark) .counter-number {
+    border: 1px solid var(--grey-500);   
+}

@@ -5,6 +5,12 @@
     background-color: var(--white);
 }
 
+:global(body.dark) .textfield {
+    color: var(--white);
+    border: 1px solid var(--grey-500);
+    background-color: var(--grey-700);
+}
+
 .textfield:focus-within {
     outline: 2px solid var(--blue-500);
 }
@@ -13,17 +19,25 @@
     color: var(--blue-600);
 }
 
+:global(body.dark) .textfield:focus-within .prompt {
+    color: var(--blue-400);
+}
+
 .prompt {
     padding: 0.2rem 0.8rem 0 0.8rem;
     color: var(--grey-600);
 }
 
+:global(body.dark) .prompt {
+    color: var(--grey-300);
+}
+
 .input {
     padding: 0.4rem 0.8rem;
     font-size: 1.2rem;
-    border-radius: inherit;
     border: none;
     background-color: inherit;
+    color: inherit;
 }
 
 .input:focus {
