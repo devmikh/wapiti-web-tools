@@ -46,6 +46,10 @@
     margin-right: 1rem;
 }
 
+:global(body.dark) .collapse-icon {
+    filter: var(--white-svg);
+}
+
 .collapse-icon-collapsed {
     display: none;
 }
