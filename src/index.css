@@ -76,6 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 2rem;
     margin-top: 6rem;
+    padding-bottom: 2rem;
     border: 1px solid var(--grey-200);
 }
 
@@ -95,6 +96,28 @@ body.dark .tool-container {
 body.dark .tool-title {
     border-bottom: 1px solid var(--grey-500);
     background-color: var(--grey-700);
+}
+
+.mobile-toolbar {
+    display: none;
+}
+
+.mobile-toolbar.active {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .tool-container {
+        margin-top: 4rem;
+    }
+
+    .mobile-toolbar {
+        display: none;
+    }
+    .mobile-toolbar.active {
+        display: flex;
+    }
 }
 
 input[type="radio"] {

@@ -1,5 +1,6 @@
 .container {
     width: 60%;
+    margin-left: 4rem;
     padding-bottom: 2rem;
 }
 
@@ -87,4 +88,56 @@
     left: 0;
     transform-origin: top left;
 }
-  
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .cropper-input {
+        width: 90%;
+    }
+
+    .cropper {
+        width: 90%;
+    }
+
+    .viewer {
+        width: 90%;
+    }
+
+    .output {
+        width: 25rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+
+    .radios-container {
+        gap: 1rem;
+    }
+
+    .output {
+        width: 20rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+
+    .output {
+        width: 16rem;
+    }
+}

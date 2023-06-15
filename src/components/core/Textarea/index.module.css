@@ -16,3 +16,9 @@
 .textarea:focus {
     outline: 2px solid var(--blue-500);
 }
+
+@media only screen and (max-width: 600px) {
+    .textarea {
+        height: 20rem;
+    }
+}

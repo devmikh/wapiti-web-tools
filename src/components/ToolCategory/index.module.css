@@ -11,13 +11,17 @@
     display: flex;
     align-items: center;
     padding-left: 0.4rem;
-    /* background-color: var(--grey-100); */
+    background-color: var(--grey-100);
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
+:global(body.dark) .category-title-container {
+    background-color: var(--grey-700);
+}
+
 .category-title-container:hover {
-    filter: brightness(95%);
+    filter: brightness(90%);
 }
 
 .category-title-container.active {

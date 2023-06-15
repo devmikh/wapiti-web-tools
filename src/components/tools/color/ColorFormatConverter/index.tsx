@@ -45,23 +45,19 @@ export default function ColorFormatConverter() {
                 <HexAlphaColorPicker color={state.hex} onChange={color => handleChange(color)} />
                 <div className={styles['colors-container']}>
                     <div className={styles['color-container']}>
-                        <span className={styles['color-container-title']}>Hex</span>
-                        <div className={styles['color-container-value']}>{state.hex}</div>
+                        <Textfield value={state.hex} prompt='Hex' disabled={true} />
                         <CopyButton label='Copy' onClick={() => copyToClipboard(state.hex)} isSmall={true} />
                     </div>
                     <div className={styles['color-container']}>
-                        <span className={styles['color-container-title']}>RGBA</span>
-                        <div className={styles['color-container-value']}>{state.rgb}</div>
+                        <Textfield value={state.rgb} prompt='RGBA' disabled />
                         <CopyButton label='Copy' onClick={() => copyToClipboard(state.rgb)} isSmall={true} />
                     </div>
                     <div className={styles['color-container']}>
-                        <span className={styles['color-container-title']}>HSLA</span>
-                        <div className={styles['color-container-value']}>{state.hsl}</div>
+                        <Textfield value={state.hsl} prompt='HSLA' disabled />
                         <CopyButton label='Copy' onClick={() => copyToClipboard(state.hsl)} isSmall={true} />
                     </div>
                     <div className={styles['color-container']}>
-                        <span className={styles['color-container-title']}>HSVA</span>
-                        <div className={styles['color-container-value']}>{state.hsv}</div>
+                        <Textfield value={state.hsv} prompt='HSVA' disabled />
                         <CopyButton label='Copy' onClick={() => copyToClipboard(state.hsv)} isSmall={true} />
                     </div>
                 </div>

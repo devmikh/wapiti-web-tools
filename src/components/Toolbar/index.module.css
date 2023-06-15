@@ -8,16 +8,22 @@
     flex-direction: column;
     align-items: flex-start;
     border-right: 1px solid var(--grey-200);
-    background-color: var(--white);
+    background-color: var(--grey-100);
     transition: width 0.3s;
-    z-index: 100;
+    z-index: 120;
 }
 
 :global(body.dark) .toolbar-container {
-    background-color: var(--grey-800);
+    background-color: var(--grey-700);
     border-right: 1px solid var(--grey-500);
 }
 
 .toolbar-container.active {
     width: 19rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .toolbar-container {
+        display: none;
+    }
 }

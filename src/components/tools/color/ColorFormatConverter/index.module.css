@@ -1,5 +1,6 @@
 .container {
-    width: 40%;
+    width: 60%;
+    margin-left: 4rem;
 }
 
 .prompt {
@@ -9,9 +10,10 @@
 
 .bottom-container {
     display: flex;
+    align-items: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    gap: 2rem;
+    gap: 3rem;
 }
 
 .colors-container {
@@ -41,4 +43,43 @@
 
 :global(body.dark) .color-container-value {
     background-color: var(--grey-700);
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .bottom-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+
+    .colors-container {
+        gap: 2rem;
+    }
+
+    .color-container {
+        flex-direction: column;
+    }
+
+    .color-container-value {
+        width: 15rem;
+        font-size: 1rem;
+    }
 }

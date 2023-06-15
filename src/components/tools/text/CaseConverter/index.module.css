@@ -1,5 +1,6 @@
 .container {
     width: 60%;
+    margin-left: 4rem;
 }
 
 .top-button-container {
@@ -11,4 +12,28 @@
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+
+    .bottom-button-container {
+        flex-wrap: wrap;
+    }
 }

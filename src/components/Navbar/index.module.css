@@ -5,13 +5,27 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--grey-200);
-    background-color: var(--white);
-    z-index: 100;
+    background-color: var(--grey-100);
+    z-index: 120;
 }
 
 :global(body.dark) .navbar {
-    background-color: var(--grey-800);
+    background-color: var(--grey-700);
     border-bottom: 1px solid var(--grey-500);
+}
+
+.hamburger-icon-container {
+    display: none;
+    margin-left: 2rem;
+}
+
+.hamburger-icon {
+    filter: var(--blue-700-svg);
+    cursor: pointer;
+}
+
+:global(body.dark) .hamburger-icon {
+    filter: var(--blue-500-svg);
 }
 
 .logo-container {
@@ -53,4 +67,26 @@
 
 :global(body.dark) .theme-icon {
     filter: var(--blue-500-svg);
+}
+
+@media only screen and (max-width: 600px) {
+    .hamburger-icon-container {
+        display: flex;
+    }
+
+    .navbar {
+        justify-content: space-between;
+    }
+
+    .logo-container {
+        margin-left: 0;
+    }
+
+    .theme-icon-container {
+        margin-left: 0;
+    }
+
+    .logo-title {
+        display: none;
+    }
 }

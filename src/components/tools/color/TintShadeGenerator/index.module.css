@@ -1,5 +1,6 @@
 .container {
-    min-width: 45rem;
+    width: 60%;
+    margin-left: 4rem;
 }
 
 .form {
@@ -23,15 +24,12 @@
 
 .colors-container {
     display: flex;
-    gap: 0.3rem;
-    margin: 0 2rem;
+    flex-direction: column;
 }
 
 .color-container {
     display: flex;
-    flex-direction: column;
     border: 1px solid var(--grey-300);
-    display: flex;
 }
 
 :global(body.dark) .color-container {
@@ -39,19 +37,45 @@
 }
 
 .color-square {
-    width: 8rem;
-    height: 4rem;
+    width: 10rem;
+    height: 2rem;
 }
 
 .color-value-container {
+    width: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.2rem;
-    border-top: 1px solid var(--grey-300);
+    border-left: 1px solid var(--grey-300);
     font-size: 0.8rem;
 }
 
 :global(body.dark) .color-value-container {
-    border-top: 1px solid var(--grey-500);
+    border-left: 1px solid var(--grey-500);
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
 }

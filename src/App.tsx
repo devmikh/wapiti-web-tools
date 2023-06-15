@@ -5,6 +5,7 @@ import store from '../src/store/store'
 
 import Navbar from './components/Navbar'
 import Toolbar from './components/Toolbar'
+import MobileToolbar from './components/MobileToolbar'
 import HomePage from './components/HomePage'
 import CharacterCounter from './components/tools/text/CharacterCounter'
 import CaseConverter from './components/tools/text/CaseConverter'
@@ -27,6 +28,7 @@ export default function App() {
     return (
         <Provider store={store}>
             <div className='app-container'>
+                <MobileToolbar />
                 <Navbar />
                 <Toolbar />
                 <div className='main-container'>
