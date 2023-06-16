@@ -90,7 +90,7 @@ export default function ImageCropper() {
     }
 
     useEffect(() => {
-        document.title = 'Image Cropper'
+        document.title = 'Image Cropper | Wapiti Web Tools'
     }, [])
 
     return (

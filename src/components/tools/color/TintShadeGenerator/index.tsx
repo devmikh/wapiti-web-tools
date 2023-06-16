@@ -48,7 +48,7 @@ export default function TintShadeGenerator() {
     }, [state.inputColor, state.quantity, state.percentage, state.format])
 
     useEffect(() => {
-        document.title = 'Tint & Shade Generator'
+        document.title = 'Tint & Shade Generator | Wapiti Web Tools'
     }, [])
 
     return (

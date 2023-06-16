@@ -29,7 +29,7 @@ export default function ColorFormatConverter() {
     }
 
     useEffect(() => {
-        document.title = 'Color Format Converter'
+        document.title = 'Color Format Converter | Wapiti Web Tools'
     }, [])
 
     return (

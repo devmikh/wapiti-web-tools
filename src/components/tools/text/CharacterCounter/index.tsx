@@ -14,7 +14,7 @@ export default function CharacterCounter() {
     }
 
     useEffect(() => {
-        document.title = 'Character Counter'
+        document.title = 'Character Counter | Wapiti Web Tools'
     }, [])
 
     useEffect(() => {

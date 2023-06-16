@@ -45,7 +45,7 @@ export default function RandomPasswordGenerator() {
     }, [options])
 
     useEffect(() => {
-        document.title = 'Random Password Generator'
+        document.title = 'Random Password Generator | Wapiti Web Tools'
     }, [])
 
     return (

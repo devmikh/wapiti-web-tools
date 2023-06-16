@@ -14,7 +14,7 @@ export default function CaseConverter() {
     }
 
     useEffect(() => {
-        document.title = 'Case Converter'
+        document.title = 'Case Converter | Wapiti Web Tools'
     }, []);
 
     return (

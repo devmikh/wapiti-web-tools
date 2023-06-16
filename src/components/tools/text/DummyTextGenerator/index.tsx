@@ -45,7 +45,7 @@ export default function DummyTextGenerator() {
     }
 
     useEffect(() => {
-        document.title = 'Dummy Text Generator'
+        document.title = 'Dummy Text Generator | Wapiti Web Tools'
     }, [])
 
     useEffect(() => {
