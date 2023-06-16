@@ -1,7 +1,13 @@
+import { useEffect } from 'react'
 import styles from './index.module.css'
 import logo from '../../assets/icons/logo.svg'
 
 export default function HomePage() {
+    
+    useEffect(() => {
+        document.title = 'Homepage | Wapiti Web Tools'
+    }, [])
+
     return (
         <div className={styles['container']}>
             <img src={logo} alt='logo' height={100} className={styles['logo']} />
