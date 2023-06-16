@@ -59,7 +59,7 @@
 }
 
 .category-title {
-    margin-left: 3rem;
+    margin-left: 3.5rem;
     font-size: 1.3rem;
     font-weight: 500;
 }
@@ -78,4 +78,14 @@
 
 .collapsed {
     height: 0rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .category-title-container {
+        padding-left: 1.2rem;
+    }
+
+    .collapse-icon {
+        margin-right: 2.6rem;
+    }
 }
