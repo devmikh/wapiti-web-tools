@@ -18,7 +18,8 @@
 
 .radios-container {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
     padding: 1rem;
     margin-bottom: 2rem;
 }
