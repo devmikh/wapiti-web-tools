@@ -1,0 +1,31 @@
+.display-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--grey-200);
+    background-color: var(--white);
+}
+
+.value-container {
+    display: flex;
+    flex-direction: column;
+}
+
+:global(body.dark) .display-field {
+    border: 1px solid var(--grey-500);
+    background-color: var(--grey-700);
+    color: var(--white);
+}
+
+.label {
+    padding: 0.2rem 0.8rem 0 0.8rem;
+    color: var(--grey-600);
+}
+
+:global(body.dark) .label {
+    color: var(--grey-300);
+}
+
+.value {
+    padding: 0.4rem 0.8rem;
+    font-size: inherit;
+}

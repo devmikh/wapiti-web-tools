@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Button from '../../../core/Button'
 import CopyButton from '../../../core/CopyButton'
 import Textarea from '../../../core/Textarea'
-import { toTitleCase, copyToClipboard } from '../../../../utils/text'
+import { toTitleCase } from '../../../../utils/text'
 import styles from './index.module.css'
 
 export default function CaseConverter() {
@@ -21,15 +21,15 @@ export default function CaseConverter() {
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Case Converter</h1>
             <div className={styles['top-button-container']}>
-                <CopyButton label='Copy Text' onClick={() => copyToClipboard(text)} />
-                <Button label='Clear Text' onClick={() => setText(() => '')} />
+                <Button label='Clear' onClick={() => setText(() => '')} />
+                <CopyButton value={text} buttonLook />
+            </div>
+            <div className={styles['bottom-button-container']}>
+                <Button color='primary' label='UPPERCASE' onClick={() => setText(() => text.toUpperCase())} />
+                <Button color='primary' label='lowercase' onClick={() => setText(() => text.toLowerCase())} />
+                <Button color='primary' label='Title Case' onClick={() => setText(() => toTitleCase(text))} />
             </div>
             <Textarea value={text} readOnly={false} onChange={handleChange} />
-            <div className={styles['bottom-button-container']}>
-                <Button label='UPPERCASE' onClick={() => setText(() => text.toUpperCase())} />
-                <Button label='lowercase' onClick={() => setText(() => text.toLowerCase())} />
-                <Button label='Title Case' onClick={() => setText(() => toTitleCase(text))} />
-            </div>
         </div>
     )
 }

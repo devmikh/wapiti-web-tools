@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { HexColorPicker } from 'react-colorful'
 import Textfield from '../../../core/Textfield'
+import DisplayField from '../../../core/DisplayField'
 import Range from '../../../core/Range'
 import Radio from '../../../core/Radio'
 import { generateTintsAndShades, formatColor } from '../../../../utils/color'
@@ -66,15 +67,13 @@ export default function TintShadeGenerator() {
                         max={9}
                         step={2}
                         value={state.quantity}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(e.target.value)}
-                    />
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(e.target.value)} />
                     <Range
                         prompt='Tint %:'
                         min={5}
                         max={20}
                         value={state.percentage}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePercentageChange(e.target.value)}
-                    />
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePercentageChange(e.target.value)} />
                 </div>
             </div>
             <div className={styles['colors-container']}>
@@ -82,7 +81,10 @@ export default function TintShadeGenerator() {
                     return (
                         <div className={styles['color-container']}>
                             <div style={{ backgroundColor: color.value }} className={styles['color-square']}></div>
-                            <div className={styles['color-value-container']}>{color.displayValue}</div>
+                            <DisplayField
+                                value={color.displayValue}
+                                includeCopyButton
+                                small />
                         </div>   
                     )
                 })}

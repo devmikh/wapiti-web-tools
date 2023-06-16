@@ -1,31 +1,49 @@
-.button {
-    width: 7rem;
+.copy-button-container {
+    width: 6rem;
     height: 2.4rem;
-    border: 1px solid var(--grey-300);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
     background-color: var(--grey-100);
-    font-size: 1rem;
-    font-family: inherit;
+    color: var(--black);
     cursor: pointer;
-    transition: 0.45s;
 }
 
-.button:hover {
-    box-shadow:
-        inset -7rem 0 0 0 var(--grey-200),
-        inset 7rem 0 0 0 var(--grey-200); 
+.copy-button-container:hover {
+    background-color: var(--grey-200);
 }
 
-.button:active {
-    box-shadow:
-        inset -7rem 0 0 0 var(--grey-400),
-        inset 7rem 0 0 0 var(--grey-400);
+.copy-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
-.button:focus {
-    outline-color: var(--blue-200);
+.copy-icon {
+    filter: var(--blue-700-svg);
 }
 
-.small {
-    width: 4rem;
-    height: 2rem;
+:global(body.dark) .copy-icon {
+    filter: var(--blue-500-svg);
+}
+
+.copy-icon:hover {
+    filter: var(--blue-500-svg);
+}
+
+.copy-button-container .copy-icon:hover {
+    filter: var(--blue-700-svg);
+}
+
+:global(body.dark) .copy-icon:hover {
+    filter: var(--blue-700-svg);
+}
+
+:global(body.dark) .copy-button-container .copy-icon:hover {
+    filter: var(--blue-500-svg);
+}
+
+.check-icon {
+    filter: var(--green-500-svg);
 }

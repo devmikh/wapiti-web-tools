@@ -1,24 +1,45 @@
 import { useState } from 'react'
+import { copyToClipboard } from '../../../utils/text'
 import styles from './index.module.css'
+import copyIcon from '../../../assets/icons/copy.svg'
+import checkIcon from '../../../assets/icons/check.svg'
 
-export default function CopyButton(props: { label: string, onClick: Function, isSmall?: boolean }) {
+type CopyButtonPropsType = {
+    value: string,
+    buttonLook?: boolean,
+    small?: boolean,
+    style?: {},
+}
 
-    const { label, onClick, isSmall } = props
+export default function CopyButton(props: CopyButtonPropsType) {
+    
+    const { value, buttonLook = false, small = false, style } = props
+
     const [ copied, setCopied ] = useState(false)
 
     const handleClick = () => {
-        onClick()
-        setCopied(() => {
-            return true
-        })
+        copyToClipboard(value)
+        setCopied(true)
         setTimeout(() => {
-            setCopied(() => {
-                return false
-            })
-        }, 3000)
+            setCopied(false)
+        }, 2250)
     }
 
     return (
-        <button onClick={handleClick} className={`${styles['button']} ${isSmall ? styles['small'] : ''}`}>{copied ? 'Copied!' : label}</button>
+        (buttonLook ?
+        <div className={styles['copy-button-container']} onClick={handleClick}>
+            
+            <div className={styles['copy-button']} style={style}>
+                {copied ?
+                    <img src={checkIcon} width={20} className={styles['check-icon']} /> :
+                    <img src={copyIcon} width={20} className={styles['copy-icon']}/>}
+            </div>
+            <span>Copy</span>
+        </div> :
+        <div className={styles['copy-button']} onClick={handleClick} style={style}>
+                {copied ?
+                    <img src={checkIcon} width={small ? 18 : 28} className={styles['check-icon']} /> :
+                    <img src={copyIcon} width={small ? 18 : 28} className={styles['copy-icon']}/>}
+        </div>)
     )
 }

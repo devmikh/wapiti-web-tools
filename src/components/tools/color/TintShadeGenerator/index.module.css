@@ -6,52 +6,42 @@
 .form {
     display: flex;
     gap: 2rem;
+    margin-bottom: 1rem;
 }
 
 .ranges-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 3rem;
+    gap: 1.4rem;
 }
 
 .radios-container {
-    padding: 1rem;
     display: flex;
     gap: 2rem;
+    padding: 1rem;
     margin-bottom: 2rem;
 }
 
 .colors-container {
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
 }
 
 .color-container {
     display: flex;
-    border: 1px solid var(--grey-300);
-}
-
-:global(body.dark) .color-container {
-    border: 1px solid var(--grey-500);
 }
 
 .color-square {
-    width: 10rem;
-    height: 2rem;
+    width: 6rem;
+    border: 1px solid var(--grey-300);
+    border-right: none;
 }
 
-.color-value-container {
-    width: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: 1px solid var(--grey-300);
-    font-size: 0.8rem;
-}
-
-:global(body.dark) .color-value-container {
-    border-left: 1px solid var(--grey-500);
+:global(body.dark) .color-square {
+    border: 1px solid var(--grey-500);
+    border-right: none;
 }
 
 @media only screen and (max-width: 1500px) {

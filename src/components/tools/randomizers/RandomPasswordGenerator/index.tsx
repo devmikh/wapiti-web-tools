@@ -3,7 +3,6 @@ import Button from '../../../core/Button'
 import CopyButton from '../../../core/CopyButton'
 import Checkbox from '../../../core/Checkbox'
 import Range from '../../../core/Range'
-import { copyToClipboard } from '../../../../utils/text'
 import { generatePassword } from '../../../../utils/randomizers'
 import styles from  './index.module.css'
 
@@ -14,7 +13,7 @@ export default function RandomPasswordGenerator() {
         upper: true,
         numbers: true,
         symbols: true,
-        length: 16
+        length: 15
     })
 
     const [password, setPassword] = useState('')
@@ -100,24 +99,24 @@ export default function RandomPasswordGenerator() {
             
             <Range
                 prompt='Length:'
-                min={5}
-                max={30}
+                min={6}
+                max={24}
                 value={options.length}
                 onChange={handleLengthChange}
             />
-            <div className={styles['password-container']}>{password}</div>
-            <div className={styles['buttons-container']}>
-                <Button
-                    label='Generate'
-                    color='primary'
-                    onClick={() => setPassword(generatePassword(options.lower, options.upper, options.numbers, options.symbols, options.length))}
-                />
-                <CopyButton 
-                    label='Copy'
-                    onClick={() => copyToClipboard(password)}
-                    />
+
+            <div className={styles['password-container']}>
+                <span>{password}</span>
             </div>
             
+            <div className={styles['buttons-container']}>
+                <Button
+                        label='Generate'
+                        color='primary'
+                        onClick={() => setPassword(generatePassword(options.lower, options.upper, options.numbers, options.symbols, options.length))}
+                    />
+                <CopyButton value={password} buttonLook />
+            </div>
         </div>
     )
 }

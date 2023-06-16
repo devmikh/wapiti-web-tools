@@ -32,17 +32,17 @@
 }
 
 .password-container {
-    width: 20rem;
+    width: 17.5rem;
+    padding: 0.5rem;
     border: 1px solid var(--grey-200);
     text-align: center;
-    padding: 1rem;
 }
 
 .buttons-container {
-    width: 70%;
+    width: 17.5rem;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2rem;
+    gap: 1rem;
 }
 
 @media only screen and (max-width: 600px) {

@@ -5,16 +5,15 @@
 }
 
 .label {
-    font-size: 0.9rem;
+    font-size: 1rem;
     cursor: pointer;
 }
 
 .radio {
     -webkit-appearance: none;
     appearance: none;
-    background-color: #fff;
     margin: 0;
-
+    background-color: #fff;
     width: 0.9rem;
     height: 0.9rem;
     border-radius: 50%;

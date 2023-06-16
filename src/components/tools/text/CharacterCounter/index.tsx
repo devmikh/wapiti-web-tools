@@ -29,7 +29,7 @@ export default function CharacterCounter() {
     return (
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Character Counter</h1>
-            <Button label='Clear Text' onClick={() => setText(() => '')} />
+            <Button label='Clear' onClick={() => setText(() => '')} />
             <Textarea value={text} readOnly={false} onChange={handleChange} />
             <div className={styles['counters-container']}>
                 <div className={styles['counter']}><span>characters</span><div className={styles['counter-number']}>{characterCounter}</div></div>

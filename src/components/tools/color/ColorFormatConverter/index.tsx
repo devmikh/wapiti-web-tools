@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react'
 import { HexAlphaColorPicker } from 'react-colorful'
 import tinycolor from 'tinycolor2'
-import CopyButton from '../../../core/CopyButton'
 import Textfield from '../../../core/Textfield'
-import { copyToClipboard } from '../../../../utils/text'
-
+import DisplayField from '../../../core/DisplayField'
 import styles from './index.module.css'
 
 export default function ColorFormatConverter() {
@@ -44,22 +42,26 @@ export default function ColorFormatConverter() {
             <div className={styles['bottom-container']}>
                 <HexAlphaColorPicker color={state.hex} onChange={color => handleChange(color)} />
                 <div className={styles['colors-container']}>
-                    <div className={styles['color-container']}>
-                        <Textfield value={state.hex} prompt='Hex' disabled={true} />
-                        <CopyButton label='Copy' onClick={() => copyToClipboard(state.hex)} isSmall={true} />
-                    </div>
-                    <div className={styles['color-container']}>
-                        <Textfield value={state.rgb} prompt='RGBA' disabled />
-                        <CopyButton label='Copy' onClick={() => copyToClipboard(state.rgb)} isSmall={true} />
-                    </div>
-                    <div className={styles['color-container']}>
-                        <Textfield value={state.hsl} prompt='HSLA' disabled />
-                        <CopyButton label='Copy' onClick={() => copyToClipboard(state.hsl)} isSmall={true} />
-                    </div>
-                    <div className={styles['color-container']}>
-                        <Textfield value={state.hsv} prompt='HSVA' disabled />
-                        <CopyButton label='Copy' onClick={() => copyToClipboard(state.hsv)} isSmall={true} />
-                    </div>
+                    <DisplayField 
+                        value={state.hex}
+                        label='Hex'
+                        includeCopyButton
+                    />
+                    <DisplayField 
+                        value={state.rgb}
+                        label='RGB'
+                        includeCopyButton
+                    />
+                    <DisplayField 
+                        value={state.hsl}
+                        label='HSLA'
+                        includeCopyButton
+                    />
+                    <DisplayField 
+                        value={state.hsv}
+                        label='HSVA'
+                        includeCopyButton
+                    />
                 </div>
             </div> 
         </div>

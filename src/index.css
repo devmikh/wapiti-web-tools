@@ -24,7 +24,10 @@
     --grey-800: hsl(0, 0%, 20%);
     --grey-900: hsl(0, 0%, 10%);
 
+    --green-500: hsl(119, 56%, 42%);
+
     --white-svg: invert(98%) sepia(91%) saturate(180%) hue-rotate(167deg) brightness(117%) contrast(94%);
+    --green-500-svg: invert(45%) sepia(83%) saturate(517%) hue-rotate(71deg) brightness(100%) contrast(81%);
     --blue-500-svg: invert(56%) sepia(76%) saturate(4178%) hue-rotate(186deg) brightness(98%) contrast(105%);
     --blue-700-svg: invert(32%) sepia(60%) saturate(1908%) hue-rotate(185deg) brightness(88%) contrast(106%);
 }
@@ -110,6 +113,7 @@ body.dark .tool-title {
 
     .tool-container {
         margin-top: 4rem;
+        gap: 1rem;
     }
 
     .mobile-toolbar {

@@ -10,7 +10,6 @@
 
 .bottom-container {
     display: flex;
-    align-items: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
     gap: 3rem;
