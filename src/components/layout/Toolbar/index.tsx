@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux'
-import { useAppDispatch } from '../../hooks/useAppDispatch'
-import { switchActive } from '../../store/features/toolbarSlice'
+import { useAppDispatch } from '../../../hooks/useAppDispatch'
+import { switchActive } from '../../../store/features/toolbarSlice'
 import ToolCategory from '../ToolCategory'
 import ToolLink from '../ToolLink'
-import { State, Category, Tool } from '../../store/types'
+import { State, Category, Tool } from '../../../store/types'
 import styles from './index.module.css'
 
 export default function Toolbar() {

@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 
-type RadioPropsType = {
+type RadioProps = {
     id: string,
     name: string,
     value: string | number,
@@ -9,7 +9,7 @@ type RadioPropsType = {
     label: string
 }
 
-export default function Radio(props: RadioPropsType) {
+export default function Radio(props: RadioProps) {
 
     const { id, name, value, checked, onChange, label } = props
 

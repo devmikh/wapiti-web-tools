@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux'
-import { useAppDispatch } from '../../hooks/useAppDispatch'
-import { expandCollapseCategory } from '../../store/features/toolbarSlice'
-import { State } from '../../store/types'
-import upArrow from '../../assets/icons/angle-up.svg'
-import downArrow from '../../assets/icons/angle-down.svg'
+import { useAppDispatch } from '../../../hooks/useAppDispatch'
+import { expandCollapseCategory } from '../../../store/features/toolbarSlice'
+import { State } from '../../../store/types'
+import upArrow from '../../../assets/icons/angle-up.svg'
+import downArrow from '../../../assets/icons/angle-down.svg'
 import styles from './index.module.css'
 
 type ToolCategoryPropsType = {

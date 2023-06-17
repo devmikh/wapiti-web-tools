@@ -29,7 +29,7 @@ export default function CaseConverter() {
                 <Button color='primary' label='lowercase' onClick={() => setText(() => text.toLowerCase())} />
                 <Button color='primary' label='Title Case' onClick={() => setText(() => toTitleCase(text))} />
             </div>
-            <Textarea value={text} readOnly={false} onChange={handleChange} />
+            <Textarea value={text} readOnly={false} onChange={handleChange} placeholder='Enter Text...'/>
         </div>
     )
 }

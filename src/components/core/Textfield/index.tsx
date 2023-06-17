@@ -1,13 +1,13 @@
 import styles from './index.module.css'
 
-type TextfieldPropsType = {
+type TextfieldProps = {
     prompt: string,
     value: string,
     onChange?: Function,
     disabled?: boolean
 }
 
-export default function Textfield(props: TextfieldPropsType) {
+export default function Textfield(props: TextfieldProps) {
 
     const { value, onChange, prompt, disabled } = props
 
