@@ -8,7 +8,7 @@ import uploadIcon from '../../../../assets/icons/upload.svg'
 
 import styles from './index.module.css'
 
-const Output = ({ croppedArea, src, aspect }: any) => {
+const Output = ({ croppedArea, src, aspect, fileName }: any) => {
     const outputRef = useRef<HTMLDivElement>(null)
 
     const scale = 100 / croppedArea.width
@@ -29,10 +29,10 @@ const Output = ({ croppedArea, src, aspect }: any) => {
     const handleDownload = () => {
         if (outputRef.current) {
             html2canvas(outputRef.current).then((canvas: any) => {
-                const url = canvas.toDataURL('image/png')
+                const url = canvas.toDataURL('image/jpeg')
                 const link = document.createElement('a')
                 link.href = url
-                link.download = 'cropped_image.png'
+                link.download = `cropped_${fileName}`
                 link.click()
             })
         }
@@ -57,6 +57,7 @@ const Output = ({ croppedArea, src, aspect }: any) => {
 export default function ImageCropper() {
     
     const [src, setSrc] = useState<string | ArrayBuffer | null>(null)
+    const [fileName, setFileName] = useState<string>('');
     const [crop, setCrop] = useState({ x: 0, y: 0 })
     const [zoom, setZoom] = useState(1)
     const [aspect, setAspect] = useState(1 / 1)
@@ -74,9 +75,11 @@ export default function ImageCropper() {
         if (files && files.length > 0) {
             const reader = new FileReader()
             reader.addEventListener('load', () => {
+                
                 setSrc(reader.result)
             })
             reader.readAsDataURL(files[0])
+            setFileName(files[0].name)
         }
     }
 
@@ -132,7 +135,7 @@ export default function ImageCropper() {
             </div>
             
             {croppedArea && <div className={styles['viewer']}>
-                <Output croppedArea={croppedArea} src={src as string} aspect={aspect} />
+                <Output croppedArea={croppedArea} src={src as string} fileName={fileName} aspect={aspect} />
             </div>}
         </div>
     )
