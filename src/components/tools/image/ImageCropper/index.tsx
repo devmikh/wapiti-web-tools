@@ -8,7 +8,15 @@ import uploadIcon from '../../../../assets/icons/upload.svg'
 
 import styles from './index.module.css'
 
-const Output = ({ croppedArea, src, aspect, fileName }: any) => {
+type OutputPropsType = {
+    croppedArea: Area,
+    src: string,
+    aspect: number,
+    fileName: string
+}
+
+const Output = (props: OutputPropsType) => {
+    const { croppedArea, src, aspect, fileName } = props
     const outputRef = useRef<HTMLDivElement>(null)
 
     const scale = 100 / croppedArea.width
