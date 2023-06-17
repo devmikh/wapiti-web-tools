@@ -7,19 +7,33 @@ import Radio from '../../../core/Radio'
 import { generateTintsAndShades, formatColor } from '../../../../utils/color'
 import styles from './index.module.css'
 
+type GeneratedTint = {
+    value: string,
+    displayValue: string
+}
+
+type TintAndShadeGeneratorState = {
+    inputColor: string,
+    hex: string,
+    quantity: number,
+    percentage: number,
+    format: string,
+    resultArray: GeneratedTint[]
+}
+
 export default function TintShadeGenerator() {
 
-    const [state, setState] = useState({
+    const [state, setState] = useState<TintAndShadeGeneratorState>({
         inputColor: '#ff0000',
         hex: '#ff0000',
-        quantity: '7',
-        percentage: '10',
+        quantity: 7,
+        percentage: 10,
         format: 'hex',
         resultArray: []
     })
 
     const handleColorChange = (input: string) => {
-        setState((prev: any) => {
+        setState((prev) => {
             const hex = formatColor(input, 'hex')
             return { ...prev,
                 inputColor: input,
@@ -28,11 +42,11 @@ export default function TintShadeGenerator() {
         })
     }
 
-    const handleQuantityChange = (input: string) => {
+    const handleQuantityChange = (input: number) => {
         setState(prev => ({ ...prev, quantity: input}))
     }
 
-    const handlePercentageChange = (input: string) => {
+    const handlePercentageChange = (input: number) => {
         setState(prev => ({ ...prev, percentage: input}))
     }
 
@@ -41,7 +55,7 @@ export default function TintShadeGenerator() {
     }
 
     useEffect(() => {
-        setState((prev: any) => {
+        setState(prev => {
             return { ...prev, resultArray: generateTintsAndShades(prev.hex, prev.quantity, prev.percentage, prev.format)}
         })
         
@@ -67,13 +81,13 @@ export default function TintShadeGenerator() {
                         max={9}
                         step={2}
                         value={state.quantity}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(e.target.value)} />
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(Number(e.target.value))} />
                     <Range
                         prompt='Tint %:'
                         min={5}
                         max={20}
                         value={state.percentage}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePercentageChange(e.target.value)} />
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePercentageChange(Number(e.target.value))} />
                 </div>
             </div>
             <div className={styles['colors-container']}>

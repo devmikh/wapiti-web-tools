@@ -5,7 +5,7 @@ type RangePropsType = {
     min: number,
     max: number,
     step?: number,
-    value: string | number,
+    value: number,
     onChange: Function
 }
 

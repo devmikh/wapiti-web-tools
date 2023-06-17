@@ -36,7 +36,7 @@ const Output = (props: OutputPropsType) => {
 
     const handleDownload = () => {
         if (outputRef.current) {
-            html2canvas(outputRef.current).then((canvas: any) => {
+            html2canvas(outputRef.current).then((canvas: HTMLCanvasElement) => {
                 const url = canvas.toDataURL('image/jpeg')
                 const link = document.createElement('a')
                 link.href = url
@@ -122,7 +122,7 @@ export default function ImageCropper() {
                                 value={ratio.value}
                                 checked={Number(aspect) === ratio.value}
                                 label={ratio.label}
-                                onChange={(e: any) => setAspect(e.target.value)}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setAspect(Number(e.target.value))}
                             />
                         )
                     })}

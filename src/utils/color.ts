@@ -1,21 +1,20 @@
 import tinycolor from 'tinycolor2'
 
-export const generateTintsAndShades = (color: string, quantity: string, percentage: string, format: string) => {
+export const generateTintsAndShades = (color: string, quantity: number, percentage: number, format: string) => {
     const tints = []
     const shades = []
 
-    const parsedQuantity = (Number(quantity) - 1) / 2
-    const parsedPercentage = Number(percentage)
+    const parsedQuantity = (quantity - 1) / 2
 
     for (let i = 1; i <= parsedQuantity; i++) {
-        const tint = tinycolor(color).lighten(i * parsedPercentage).toHexString()
+        const tint = tinycolor(color).lighten(i * percentage).toHexString()
         tints.push({
             value: tint,
             displayValue: formatColor(tint, format)
         })
     }
     for (let i = 1; i <= parsedQuantity; i++) {
-        const shade = tinycolor(color).darken(i * parsedPercentage).toHexString()
+        const shade = tinycolor(color).darken(i * percentage).toHexString()
         shades.push({
             value: shade,
             displayValue: formatColor(shade, format)

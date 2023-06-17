@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { useAppDispatch } from '../../hooks/useAppDispatch'
 import { switchActive } from '../../store/features/toolbarSlice'
+import { State } from '../../store/types'
 import styles from './index.module.css'
 import logo from '../../assets/icons/logo.svg'
 import themeIcon from '../../assets/icons/theme.svg'
@@ -11,7 +12,7 @@ import hamburgerIcon from '../../assets/icons/hamburger.svg'
 export default function Navbar() {
     
     const dispatch = useAppDispatch()
-    const toolbarIsActive = useSelector((state: any) => state.toolbar.active)
+    const toolbarIsActive = useSelector((state: State) => state.toolbar.active)
 
     const handleClick = () => {
         if (toolbarIsActive) {

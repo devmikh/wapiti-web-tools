@@ -3,7 +3,7 @@ import styles from './index.module.css'
 type RadioPropsType = {
     id: string,
     name: string,
-    value: any,
+    value: string | number,
     checked: boolean,
     onChange: Function,
     label: string
