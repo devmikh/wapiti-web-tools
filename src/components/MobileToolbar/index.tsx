@@ -10,10 +10,10 @@ export default function MobileToolbar() {
 
     const toolCategories = categories.map((category: any) => {
         return (
-        <ToolCategory id={category.id} expanded={category.expanded} title={category.title} icon={category.icon} mobile={true}>
+        <ToolCategory key={category.id} id={category.id} expanded={category.expanded} title={category.title} icon={category.icon} mobile={true}>
             {category.tools.map((tool: any) => {
                 return (
-                <ToolLink id={tool.id} categoryId={category.id} name={tool.name} link={tool.link} collapseToolbarOnClick={true} />
+                <ToolLink key={tool.id} id={tool.id} categoryId={category.id} name={tool.name} link={tool.link} collapseToolbarOnClick={true} />
                 )
             })}
         </ToolCategory>)
