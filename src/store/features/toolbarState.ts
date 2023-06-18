@@ -51,6 +51,12 @@ export const toolbarState = {
                     name: 'Tint & Shade Generator',
                     link: '/tint-shade-generator',
                     active: false
+                },
+                {
+                    id: 2,
+                    name: 'Contrast Checker',
+                    link: '/contrast-checker',
+                    active: false
                 }
             ]
         },

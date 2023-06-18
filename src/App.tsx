@@ -12,6 +12,7 @@ import CaseConverter from './components/tools/text/CaseConverter'
 import DummyTextGenerator from './components/tools/text/DummyTextGenerator'
 import ColorFormatConverter from './components/tools/color/ColorFormatConverter'
 import TintShadeGenerator from './components/tools/color/TintShadeGenerator'
+import ContrastChecker from './components/tools/color/ContrastChecker'
 import ImageCropper from './components/tools/image/ImageCropper'
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
 import { useEffect } from 'react'
@@ -39,6 +40,7 @@ export default function App() {
                         <Route path='/dummy-text-generator' element={<DummyTextGenerator />}/>
                         <Route path='/color-format-converter' element={<ColorFormatConverter />}/>
                         <Route path='/tint-shade-generator' element={<TintShadeGenerator />}/>
+                        <Route path='/contrast-checker' element={<ContrastChecker />}/>
                         <Route path='/image-cropper' element={<ImageCropper />}/>
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
                     </Routes>
