@@ -4,6 +4,7 @@ import Textfield from '../../../core/Textfield'
 import DisplayField from '../../../core/DisplayField'
 import Range from '../../../core/Range'
 import Radio from '../../../core/Radio'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import { generateTintsAndShades, formatColor } from '../../../../utils/color'
 import styles from './index.module.css'
 
@@ -61,9 +62,7 @@ export default function TintShadeGenerator() {
         
     }, [state.inputColor, state.quantity, state.percentage, state.format])
 
-    useEffect(() => {
-        document.title = 'Tint & Shade Generator | Wapiti Web Tools'
-    }, [])
+    usePageTitle('Tint & Shade Generator | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>

@@ -1,12 +1,10 @@
-import { useEffect } from 'react'
+import usePageTitle from '../../../hooks/usePageTitle'
 import styles from './index.module.css'
 import logo from '../../../assets/icons/logo.svg'
 
 export default function HomePage() {
     
-    useEffect(() => {
-        document.title = 'Homepage | Wapiti Web Tools'
-    }, [])
+    usePageTitle('Homepage | Wapiti Web Tools')
 
     return (
         <div className={styles['container']}>

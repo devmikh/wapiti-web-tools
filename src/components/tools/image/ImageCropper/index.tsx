@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 import Cropper, { Area } from 'react-easy-crop'
 import html2canvas from 'html2canvas'
-
 import Button from '../../../core/Button'
 import Radio from '../../../core/Radio'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import uploadIcon from '../../../../assets/icons/upload.svg'
 
 import styles from './index.module.css'
@@ -100,9 +100,7 @@ export default function ImageCropper() {
         handleFileUpload(e.dataTransfer.files)
     }
 
-    useEffect(() => {
-        document.title = 'Image Cropper | Wapiti Web Tools'
-    }, [])
+    usePageTitle('Image Cropper | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>

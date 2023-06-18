@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { HexAlphaColorPicker } from 'react-colorful'
 import tinycolor from 'tinycolor2'
 import Textfield from '../../../core/Textfield'
 import DisplayField from '../../../core/DisplayField'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import styles from './index.module.css'
 
 export default function ColorFormatConverter() {
@@ -28,9 +29,7 @@ export default function ColorFormatConverter() {
         })
     }
 
-    useEffect(() => {
-        document.title = 'Color Format Converter | Wapiti Web Tools'
-    }, [])
+    usePageTitle('Color Format Converter | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>

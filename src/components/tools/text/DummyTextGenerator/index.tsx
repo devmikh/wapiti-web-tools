@@ -4,6 +4,7 @@ import CopyButton from '../../../core/CopyButton'
 import Textarea from '../../../core/Textarea'
 import Range from '../../../core/Range'
 import Radio from '../../../core/Radio'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import styles from './index.module.css'
 
 export default function DummyTextGenerator() {
@@ -45,10 +46,6 @@ export default function DummyTextGenerator() {
     }
 
     useEffect(() => {
-        document.title = 'Dummy Text Generator | Wapiti Web Tools'
-    }, [])
-
-    useEffect(() => {
         const lorem = new LoremIpsum({
             sentencesPerParagraph: {
               max: 8,
@@ -82,6 +79,8 @@ export default function DummyTextGenerator() {
             }
         })
     }, [state.amount, state.format])
+
+    usePageTitle('Dummy Text Generator | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>
