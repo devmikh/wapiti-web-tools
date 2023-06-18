@@ -1,8 +1,9 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Button from '../../../core/Button'
 import CopyButton from '../../../core/CopyButton'
 import Textarea from '../../../core/Textarea'
 import { toTitleCase } from '../../../../utils/text'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import styles from './index.module.css'
 
 export default function CaseConverter() {
@@ -13,9 +14,7 @@ export default function CaseConverter() {
         setText(() => e.target.value)
     }
 
-    useEffect(() => {
-        document.title = 'Case Converter | Wapiti Web Tools'
-    }, []);
+    usePageTitle('Case Converter | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>
@@ -29,7 +28,7 @@ export default function CaseConverter() {
                 <Button color='primary' label='lowercase' onClick={() => setText(() => text.toLowerCase())} />
                 <Button color='primary' label='Title Case' onClick={() => setText(() => toTitleCase(text))} />
             </div>
-            <Textarea value={text} readOnly={false} onChange={handleChange} />
+            <Textarea value={text} readOnly={false} onChange={handleChange} placeholder='Enter Text...'/>
         </div>
     )
 }

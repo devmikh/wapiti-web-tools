@@ -1,8 +1,9 @@
 import { useSelector } from 'react-redux'
-import { useAppDispatch } from '../../hooks/useAppDispatch'
-import { expandCollapseCategory } from '../../store/features/toolbarSlice'
-import upArrow from '../../assets/icons/angle-up.svg'
-import downArrow from '../../assets/icons/angle-down.svg'
+import { useAppDispatch } from '../../../hooks/useAppDispatch'
+import { expandCollapseCategory } from '../../../store/features/toolbarSlice'
+import { State } from '../../../store/types'
+import upArrow from '../../../assets/icons/angle-up.svg'
+import downArrow from '../../../assets/icons/angle-down.svg'
 import styles from './index.module.css'
 
 type ToolCategoryPropsType = {
@@ -17,8 +18,8 @@ type ToolCategoryPropsType = {
 export default function ToolCategory(props: ToolCategoryPropsType) {
     const { id, expanded, title, icon, children, mobile } = props
 
-    const toolbarIsActive = useSelector((state: any) => state.toolbar.active)
-    const active = useSelector((state: any) => state.toolbar.categories[id].active)
+    const toolbarIsActive = useSelector((state: State) => state.toolbar.active)
+    const active = useSelector((state: State) => state.toolbar.categories[id].active)
 
     const dispatch = useAppDispatch();
 

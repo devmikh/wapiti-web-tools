@@ -1,15 +1,15 @@
 import styles from './index.module.css'
 
-type RangePropsType = {
+type RangeProps = {
     prompt: string,
     min: number,
     max: number,
     step?: number,
-    value: string | number,
+    value: number,
     onChange: Function
 }
 
-export default function Range(props: RangePropsType) {
+export default function Range(props: RangeProps) {
 
     const { prompt, min, max, step, value, onChange } = props
 

@@ -1,11 +1,23 @@
 import styles from './index.module.css'
 
-export default function Textarea(props: { value: string, readOnly: boolean, onChange?: Function}) {
+type TextareaProps = {
+    value: string,
+    readOnly: boolean,
+    placeholder?: string, 
+    onChange?: Function
+}
 
-    const { value, onChange, readOnly } = props
+export default function Textarea(props: TextareaProps) {
+
+    const { value, readOnly, placeholder, onChange } = props
 
     return (
-        onChange ? <textarea value={value} onChange={(e) => onChange(e)} readOnly={readOnly} className={styles['textarea']} /> :
-        <textarea value={value} readOnly={readOnly} className={styles['textarea']} />
+        <textarea
+            value={value}
+            onChange={onChange && ((e) => onChange(e))}
+            placeholder={placeholder}
+            readOnly={readOnly}
+            spellCheck={false}
+            className={styles['textarea']} />
     )
 }

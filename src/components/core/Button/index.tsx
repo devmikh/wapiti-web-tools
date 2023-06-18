@@ -1,8 +1,14 @@
 import styles from './index.module.css'
 
-export default function Button(props: { label: string, color?: string, onClick: Function }) {
+type ButtonProps = {
+    label: string,
+    onClick: Function,
+    color?: string, 
+}
 
-    const { label, color, onClick } = props
+export default function Button(props: ButtonProps) {
+
+    const { label, onClick, color } = props
 
     return (
         <button onClick={() => onClick()} className={`${styles['button']} ${color && styles[color]}`}>{label}</button>

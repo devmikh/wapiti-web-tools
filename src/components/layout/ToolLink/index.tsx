@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useMatch, useResolvedPath, useNavigate } from 'react-router-dom'
-import { useAppDispatch } from '../../hooks/useAppDispatch'
-import { setActiveLink, switchActive } from '../../store/features/toolbarSlice'
+import { useAppDispatch } from '../../../hooks/useAppDispatch'
+import { setActiveLink, switchActive } from '../../../store/features/toolbarSlice'
 import styles from './index.module.css'
 
 type ToolLinkPropsType = {

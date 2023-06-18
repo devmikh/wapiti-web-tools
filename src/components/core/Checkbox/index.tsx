@@ -1,6 +1,6 @@
 import styles from './index.module.css'
 
-type CheckboxPropsType = {
+type CheckboxProps = {
     id: string,
     name: string,
     checked: boolean,
@@ -8,7 +8,7 @@ type CheckboxPropsType = {
     label: string
 }
 
-export default function Checkbox(props: CheckboxPropsType) {
+export default function Checkbox(props: CheckboxProps) {
 
     const { id, name, checked, onChange, label } = props
 

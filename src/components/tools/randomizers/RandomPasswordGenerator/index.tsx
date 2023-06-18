@@ -4,6 +4,7 @@ import CopyButton from '../../../core/CopyButton'
 import Checkbox from '../../../core/Checkbox'
 import Range from '../../../core/Range'
 import { generatePassword } from '../../../../utils/randomizers'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import styles from  './index.module.css'
 
 export default function RandomPasswordGenerator() {
@@ -44,9 +45,7 @@ export default function RandomPasswordGenerator() {
         setPassword(generatePassword(options.lower, options.upper, options.numbers, options.symbols, options.length))
     }, [options])
 
-    useEffect(() => {
-        document.title = 'Random Password Generator | Wapiti Web Tools'
-    }, [])
+    usePageTitle('Random Password Generator | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>

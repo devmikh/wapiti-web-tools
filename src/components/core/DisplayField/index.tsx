@@ -1,14 +1,14 @@
 import CopyButton from '../CopyButton'
 import styles from './index.module.css'
 
-type DisplayFieldPropsType = {
+type DisplayFieldProps = {
     value: string,
     label?: string,
     includeCopyButton?: boolean,
     small?: boolean
 }
 
-export default function DisplayField(props: DisplayFieldPropsType) {
+export default function DisplayField(props: DisplayFieldProps) {
 
     const { value, label, includeCopyButton = false, small = false } = props
 

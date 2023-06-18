@@ -4,14 +4,14 @@ import styles from './index.module.css'
 import copyIcon from '../../../assets/icons/copy.svg'
 import checkIcon from '../../../assets/icons/check.svg'
 
-type CopyButtonPropsType = {
+type CopyButtonProps = {
     value: string,
     buttonLook?: boolean,
     small?: boolean,
     style?: {},
 }
 
-export default function CopyButton(props: CopyButtonPropsType) {
+export default function CopyButton(props: CopyButtonProps) {
     
     const { value, buttonLook = false, small = false, style } = props
 
