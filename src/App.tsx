@@ -6,6 +6,7 @@ import store from '../src/store/store'
 import Navbar from './components/layout/Navbar'
 import Toolbar from './components/layout/Toolbar'
 import MobileToolbar from './components/layout/MobileToolbar'
+import ScrollToTop from './components/core/ScrollToTop'
 import HomePage from './components/layout/HomePage'
 import CharacterCounter from './components/tools/text/CharacterCounter'
 import CaseConverter from './components/tools/text/CaseConverter'
@@ -34,6 +35,7 @@ export default function App() {
     return (
         <Provider store={store}>
             <div className='app-container'>
+                <ScrollToTop />
                 <MobileToolbar />
                 <Navbar />
                 <Toolbar />
