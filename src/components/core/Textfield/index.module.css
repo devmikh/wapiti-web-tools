@@ -32,6 +32,35 @@
     color: var(--grey-300);
 }
 
+.color-input-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 0.8rem;
+}
+
+.color-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: black;
+    cursor: pointer;
+}
+
+.color-picker-container {
+    padding: 1rem;
+    background-color: var(--white);
+    position: absolute;
+    top: 100%;
+    left: -1px;
+    z-index: 110;
+    border: 1px solid var(--grey-200);
+}
+
+:global(body.dark) .color-picker-container {
+    border: 1px solid var(--grey-500);
+    background-color: var(--grey-700);
+}
+
 .input {
     padding: 0.4rem 0.8rem;
     font-size: 1.2rem;
