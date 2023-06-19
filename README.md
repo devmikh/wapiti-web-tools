@@ -11,6 +11,7 @@ Wapiti Web Tools is a collection of various web instruments accessible from a si
 - Dummy Text Generator
 - Color Format Converter
 - Tint & Shade Generator
+- Contrast Checker
 - Image Cropper
 - Random Password Generator
 
