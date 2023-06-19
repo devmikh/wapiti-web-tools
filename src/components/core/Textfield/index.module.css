@@ -42,8 +42,13 @@
 .color-button {
     width: 1.5rem;
     height: 1.5rem;
+    border: 1px solid var(--grey-200);
     background-color: black;
     cursor: pointer;
+}
+
+:global(body.dark) .color-button {
+    border: 1px solid var(--grey-500);
 }
 
 .color-picker-container {

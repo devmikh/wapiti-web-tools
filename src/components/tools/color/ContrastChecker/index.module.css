@@ -1,11 +1,102 @@
 .container {
-    width: 60%;
+    width: 50%;
     margin-left: 4rem;
+}
+
+.textfields-container {
+    display: flex;
+    gap: 3rem;
+    order: 1;
+}
+
+.preview {
+    width: 20rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--grey-200);
+}
+
+.preview.small {
+    font-size: 1rem;
+    order: 2;
+}
+
+.preview.large {
+    font-size: 2rem;
+    order: 3;
+}
+
+:global(body.dark) .preview {
+    border: 1px solid var(--grey-500);
+}
+
+.ratio-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    order: 4;
+}
+
+.ratio-value-container {
+    height: 3rem;
+    width: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.guide-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    order: 5;
+}
+
+.guide-table-title a {
+    color: inherit;
+}
+
+.guide-table {
+    margin-top: 0.5rem;
+    border-collapse: collapse;
+    font-size: 1.3rem;
+}
+
+.guide-table, .guide-table th, .guide-table td {
+    border: 1px solid var(--grey-200);
+}
+
+:global(body.dark) .guide-table, :global(body.dark) .guide-table th, :global(body.dark) .guide-table td {
+    border: 1px solid var(--grey-500);
+}
+
+.guide-table-type {
+    width: 14rem;
+    text-align: left;
+    padding: 0.3rem 1rem;
+}
+
+.guide-table-standard {
+    width: 4rem;
+}
+
+.guide-table-standard a {
+    color: inherit;
+}
+
+.guide-table-result {
+    text-align: center;
+    color: var(--white);
 }
 
 @media only screen and (max-width: 1500px) {
     .container {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -13,11 +104,34 @@
     .container {
         width: 80%;
     }
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    .textfields-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .ratio-container {
+        order: 0;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .container {
         width: 95%;
         margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .preview {
+        width: 19rem;
+    }
+    .preview.large {
+        font-size: 1.6rem;
+    }
+    .guide-table-type {
+        width: 10rem;
     }
 }
