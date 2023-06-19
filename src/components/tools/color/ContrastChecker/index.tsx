@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import Textfield from '../../../core/Textfield'
 import { formatColor, calculateContrastRatio } from '../../../../utils/color'
+import switchIcon from '../../../../assets/icons/switch.svg'
+import switchHorizontalIcon from '../../../../assets/icons/switch-horizontal.svg'
 import styles from './index.module.css'
 
 export default function ContrastChecker() {
@@ -20,6 +22,11 @@ export default function ContrastChecker() {
 
     const handleBackgroundColorChange = (color: string) => {
         setBackgroundColor(color)
+    }
+
+    const switchColors = () => {
+        setTextColor(backgroundColor)
+        setBackgroundColor(textColor)
     }
 
     useEffect(() => {
@@ -66,6 +73,10 @@ export default function ContrastChecker() {
                     includeColorPicker
                     onChange={(color: string) => handleTextColorChange(color)}
                 />
+                <button className={styles['switch-button']} onClick={switchColors}>
+                    <img src={switchHorizontalIcon} height={16} className={styles['switch-horizontal']} />
+                    <img src={switchIcon} height={16} className={styles['switch-vertical']} />
+                </button>
                 <Textfield
                     prompt='Background Color'
                     value={backgroundColor}

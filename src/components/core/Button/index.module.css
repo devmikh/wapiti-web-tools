@@ -9,7 +9,7 @@
 }
 
 .button:focus {
-    outline-color: var(--blue-200);
+    outline-color: var(--blue-500);
 }
 
 .button:hover {
