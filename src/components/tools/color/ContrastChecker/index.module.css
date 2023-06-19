@@ -126,7 +126,7 @@
 
 @media only screen and (max-width: 500px) {
     .preview {
-        width: 19rem;
+        width: 18rem;
     }
     .preview.large {
         font-size: 1.6rem;
