@@ -20,9 +20,14 @@ import { useEffect } from 'react'
 export default function App() {
 
     useEffect(() => {
-        const theme = localStorage.getItem('theme');
-        if (theme) {
-            document.body.classList.add(theme);
+        const theme = localStorage.getItem('theme')
+        if (theme === 'dark') {
+            document.body.classList.add('dark')
+        } else if (theme === 'light') {
+            document.body.classList.remove('dark')
+        } else {
+            localStorage.setItem('theme', 'dark')
+            document.body.classList.add('dark')
         }
     }, [])
 
