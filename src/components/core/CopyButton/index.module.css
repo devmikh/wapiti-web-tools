@@ -45,5 +45,5 @@
 }
 
 .check-icon {
-    filter: var(--green-500-svg);
+    filter: var(--status-green-svg);
 }
