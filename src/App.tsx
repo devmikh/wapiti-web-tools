@@ -16,6 +16,7 @@ import TintShadeGenerator from './components/tools/color/TintShadeGenerator'
 import ContrastChecker from './components/tools/color/ContrastChecker'
 import ImageCropper from './components/tools/image/ImageCropper'
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
+import TimeCalculator from './components/tools/time/TimeCalculator'
 import { useEffect } from 'react'
 
 export default function App() {
@@ -50,6 +51,7 @@ export default function App() {
                         <Route path='/contrast-checker' element={<ContrastChecker />}/>
                         <Route path='/image-cropper' element={<ImageCropper />}/>
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
+                        <Route path='/time-calculator' element={<TimeCalculator />}/>
                     </Routes>
                 </div>
             </div>
