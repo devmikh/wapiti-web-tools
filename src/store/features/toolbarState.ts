@@ -2,6 +2,7 @@ import textIcon from '../../assets/icons/text.svg'
 import colorIcon from '../../assets/icons/color.svg'
 import imageIcon from '../../assets/icons/image.svg'
 import randomIcon from '../../assets/icons/random.svg'
+import timeIcon from '../../assets/icons/time.svg'
 
 export const toolbarState = {
     active: false,
@@ -86,6 +87,21 @@ export const toolbarState = {
                     id: 0,
                     name: 'Random Password Generator',
                     link: '/random-password-generator',
+                    active: false
+                }
+            ]
+        },
+        {
+            id: 4,
+            title: 'Time',
+            expanded: false,
+            active: false,
+            icon: timeIcon,
+            tools: [
+                {
+                    id: 0,
+                    name: 'Date Difference Calculator',
+                    link: '/date-difference-calculator',
                     active: false
                 }
             ]

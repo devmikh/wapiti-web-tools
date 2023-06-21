@@ -1,8 +1,7 @@
+import { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import { Provider } from 'react-redux'
-
 import store from '../src/store/store'
-
 import Navbar from './components/layout/Navbar'
 import Toolbar from './components/layout/Toolbar'
 import MobileToolbar from './components/layout/MobileToolbar'
@@ -16,7 +15,7 @@ import TintShadeGenerator from './components/tools/color/TintShadeGenerator'
 import ContrastChecker from './components/tools/color/ContrastChecker'
 import ImageCropper from './components/tools/image/ImageCropper'
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
-import { useEffect } from 'react'
+import DateDifferenceCalculator from './components/tools/time/TimeCalculator'
 
 export default function App() {
 
@@ -50,6 +49,7 @@ export default function App() {
                         <Route path='/contrast-checker' element={<ContrastChecker />}/>
                         <Route path='/image-cropper' element={<ImageCropper />}/>
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
+                        <Route path='/date-difference-calculator' element={<DateDifferenceCalculator />}/>
                     </Routes>
                 </div>
             </div>
