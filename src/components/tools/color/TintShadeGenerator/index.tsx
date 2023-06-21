@@ -90,9 +90,9 @@ export default function TintShadeGenerator() {
                 </div>
             </div>
             <div className={styles['colors-container']}>
-                {state.resultArray.map((color: { value: string, displayValue: string}) => {
+                {state.resultArray.map((color: { value: string, displayValue: string}, index) => {
                     return (
-                        <div className={styles['color-container']}>
+                        <div key={index} className={styles['color-container']}>
                             <div style={{ backgroundColor: color.value }} className={styles['color-square']}></div>
                             <DisplayField
                                 value={color.displayValue}

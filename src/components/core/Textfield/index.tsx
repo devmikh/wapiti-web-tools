@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect, forwardRef } from 'react'
 import { HexColorPicker } from 'react-colorful'
 import { formatColor } from '../../../utils/color'
 import styles from './index.module.css'
@@ -12,13 +12,13 @@ type TextfieldProps = {
     includeColorPicker?: boolean
 }
 
-export default function Textfield(props: TextfieldProps) {
+const Textfield = forwardRef((props: TextfieldProps, ref: any) => {
 
     const { value, onChange, onClick, prompt, editable = true, includeColorPicker = false } = props
 
     // Code related purely to color picker, if it is included
     const [showColorPicker, setShowColorPicker] = useState(false)
-    const colorPickerRef = useRef<HTMLDivElement>(null);
+    const colorPickerRef = useRef<HTMLDivElement>(null)
 
     const handleChange = (color: string) => {
         if (onChange) {
@@ -27,7 +27,7 @@ export default function Textfield(props: TextfieldProps) {
     }
 
     const handleClick = () => {
-        setShowColorPicker(prev => !prev);
+        setShowColorPicker(prev => !prev)
     }
     
     useEffect(() => {
@@ -45,7 +45,7 @@ export default function Textfield(props: TextfieldProps) {
     // End of code, related to color picker
 
     return (
-        <div className={styles['textfield']}>
+        <div className={styles['textfield']} ref={ref}>
             <span className={styles['prompt']}>{prompt}</span>
             {includeColorPicker ?
                 // With color picker
@@ -74,4 +74,6 @@ export default function Textfield(props: TextfieldProps) {
             }      
         </div>
     )
-}
+})
+
+export default Textfield

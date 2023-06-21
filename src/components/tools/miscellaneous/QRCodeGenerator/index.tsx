@@ -35,7 +35,7 @@ export default function QRCodeGenerator() {
         }
     }, [input])
 
-    usePageTitle('QR Code Generator')
+    usePageTitle('QR Code Generator | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>
