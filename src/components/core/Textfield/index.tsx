@@ -7,13 +7,14 @@ type TextfieldProps = {
     prompt: string,
     value: string,
     onChange?: Function,
-    disabled?: boolean,
+    onClick?: Function
+    editable?: boolean,
     includeColorPicker?: boolean
 }
 
 export default function Textfield(props: TextfieldProps) {
 
-    const { value, onChange, prompt, disabled, includeColorPicker = false } = props
+    const { value, onChange, onClick, prompt, editable = true, includeColorPicker = false } = props
 
     // Code related purely to color picker, if it is included
     const [showColorPicker, setShowColorPicker] = useState(false)
@@ -58,15 +59,16 @@ export default function Textfield(props: TextfieldProps) {
                             <HexColorPicker color={formatColor(value, 'hex')} onChange={color => handleChange(color)} />
                         </div>}
                     <input
-                    disabled={disabled}
-                    value={value}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e.target.value)}
-                    className={styles['input']}/>
+                        readOnly={!editable}
+                        value={value}
+                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e.target.value)}
+                        className={styles['input']}/>
                 </div> :
                 // Without color picker
                 <input
-                    disabled={disabled}
+                    readOnly={!editable}
                     value={value}
+                    onClick={onClick && (() => onClick())}
                     onChange={onChange && ((e) => onChange(e))}
                     className={styles['input']}/>
             }      

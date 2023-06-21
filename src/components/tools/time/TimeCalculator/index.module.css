@@ -1,4 +1,61 @@
 .container {
-    width: 30rem;
+    width: 45rem;
     margin-left: 4rem;
+}
+
+.datepickers-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.result-container {
+    width: 20rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--grey-200);
+    background-color: var(--blue-600);
+    color: var(--white);
+    font-size: 1.4rem;
+}
+
+:global(body.dark) .result-container {
+    border: 1px solid var(--grey-500);
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .datepickers-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+    .result-container {
+        margin-top: 1rem;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .result-container {
+        width: 15rem;
+        font-size: 1.1rem;
+    }
 }

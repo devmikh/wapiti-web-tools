@@ -100,8 +100,8 @@ export const toolbarState = {
             tools: [
                 {
                     id: 0,
-                    name: 'Time Calculator',
-                    link: '/time-calculator',
+                    name: 'Date Difference Calculator',
+                    link: '/date-difference-calculator',
                     active: false
                 }
             ]
