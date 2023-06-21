@@ -3,6 +3,7 @@ import colorIcon from '../../assets/icons/color.svg'
 import imageIcon from '../../assets/icons/image.svg'
 import randomIcon from '../../assets/icons/random.svg'
 import timeIcon from '../../assets/icons/time.svg'
+import miscIcon from '../../assets/icons/misc.svg'
 
 export const toolbarState = {
     active: false,
@@ -102,6 +103,21 @@ export const toolbarState = {
                     id: 0,
                     name: 'Date Difference Calculator',
                     link: '/date-difference-calculator',
+                    active: false
+                }
+            ]
+        },
+        {
+            id: 5,
+            title: 'Miscellaneous',
+            expanded: false,
+            active: false,
+            icon: miscIcon,
+            tools: [
+                {
+                    id: 0,
+                    name: 'QR Code Generator',
+                    link: '/qr-code-generator',
                     active: false
                 }
             ]

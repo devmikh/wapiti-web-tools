@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Textfield from '../../../core/Textfield'
 import { formatColor, calculateContrastRatio } from '../../../../utils/color'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import switchIcon from '../../../../assets/icons/switch.svg'
 import switchHorizontalIcon from '../../../../assets/icons/switch-horizontal.svg'
 import styles from './index.module.css'
@@ -61,6 +62,8 @@ export default function ContrastChecker() {
         setRatioColor(ratioColor)
     }, [textColor, backgroundColor])
 
+    usePageTitle('Contrast Checker | Wapiti Web Tools')
+
     return (
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Contrast Checker</h1>
@@ -106,45 +109,47 @@ export default function ContrastChecker() {
                     <a href='https://www.w3.org/WAI/standards-guidelines/wcag/' target='_blank'>WCAG 2.1</a> Compliance Table:
                 </span>
                 <table className={styles['guide-table']}>
-                    <tr>
-                        <th className={styles['guide-table-type']}>Type</th>
-                        <th className={styles['guide-table-standard']}>
-                            <a href='https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html' target='_blank'>AA</a>
-                        </th>
-                        <th className={styles['guide-table-standard']}>
-                            <a href='https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html' target='_blank'>AAA</a>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td className={styles['guide-table-type']}>Small text</td>
-                        <td
-                            className={styles['guide-table-result']}
-                            style={{ backgroundColor: smallTextAA ? 'var(--status-green)' : 'var(--status-red)'}}
-                            >
-                            {smallTextAA ? 'Pass' : 'Fail'}
-                        </td>
-                        <td
-                            className={styles['guide-table-result']}
-                            style={{ backgroundColor: smallTextAAA ? 'var(--status-green)' : 'var(--status-red)'}}
-                            >
-                            {smallTextAAA ? 'Pass' : 'Fail'}  
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className={styles['guide-table-type']}>Large text</td>
-                        <td
-                            className={styles['guide-table-result']}
-                            style={{ backgroundColor: largeTextAA ? 'var(--status-green)' : 'var(--status-red)'}}
-                            >
-                            {largeTextAA ? 'Pass' : 'Fail'}  
-                        </td>
-                        <td
-                            className={styles['guide-table-result']}
-                            style={{ backgroundColor: largeTextAAA ? 'var(--status-green)' : 'var(--status-red)'}}
-                            >
-                            {largeTextAAA ? 'Pass' : 'Fail'} 
-                        </td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th className={styles['guide-table-type']}>Type</th>
+                            <th className={styles['guide-table-standard']}>
+                                <a href='https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html' target='_blank'>AA</a>
+                            </th>
+                            <th className={styles['guide-table-standard']}>
+                                <a href='https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast7.html' target='_blank'>AAA</a>
+                            </th>
+                        </tr>
+                        <tr>
+                            <td className={styles['guide-table-type']}>Small text</td>
+                            <td
+                                className={styles['guide-table-result']}
+                                style={{ backgroundColor: smallTextAA ? 'var(--status-green)' : 'var(--status-red)'}}
+                                >
+                                {smallTextAA ? 'Pass' : 'Fail'}
+                            </td>
+                            <td
+                                className={styles['guide-table-result']}
+                                style={{ backgroundColor: smallTextAAA ? 'var(--status-green)' : 'var(--status-red)'}}
+                                >
+                                {smallTextAAA ? 'Pass' : 'Fail'}  
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className={styles['guide-table-type']}>Large text</td>
+                            <td
+                                className={styles['guide-table-result']}
+                                style={{ backgroundColor: largeTextAA ? 'var(--status-green)' : 'var(--status-red)'}}
+                                >
+                                {largeTextAA ? 'Pass' : 'Fail'}  
+                            </td>
+                            <td
+                                className={styles['guide-table-result']}
+                                style={{ backgroundColor: largeTextAAA ? 'var(--status-green)' : 'var(--status-red)'}}
+                                >
+                                {largeTextAAA ? 'Pass' : 'Fail'} 
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>

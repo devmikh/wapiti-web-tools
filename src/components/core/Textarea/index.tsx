@@ -2,14 +2,16 @@ import styles from './index.module.css'
 
 type TextareaProps = {
     value: string,
-    readOnly: boolean,
+    readOnly?: boolean,
     placeholder?: string, 
-    onChange?: Function
+    onChange?: Function,
+    small?: boolean
+    maxLength?: number
 }
 
 export default function Textarea(props: TextareaProps) {
 
-    const { value, readOnly, placeholder, onChange } = props
+    const { value, readOnly = false, placeholder, onChange, small = false, maxLength } = props
 
     return (
         <textarea
@@ -18,6 +20,8 @@ export default function Textarea(props: TextareaProps) {
             placeholder={placeholder}
             readOnly={readOnly}
             spellCheck={false}
-            className={styles['textarea']} />
+            className={styles['textarea']}
+            style={small ? {height: '10rem'} : {}}
+            maxLength={maxLength}/>
     )
 }

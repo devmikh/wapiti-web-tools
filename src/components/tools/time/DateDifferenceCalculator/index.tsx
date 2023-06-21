@@ -10,11 +10,11 @@ export default function DateDifferenceCalculator() {
     const [secondDate, setSecondDate] = useState<Date>(new Date())
     const [result, setResult] = useState<string>('')
 
-    usePageTitle('Date Difference Calculator')
-
     useEffect(() => {
         setResult(getTimeDifference(firstDate, secondDate))
     }, [firstDate, secondDate])
+
+    usePageTitle('Date Difference Calculator | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>
