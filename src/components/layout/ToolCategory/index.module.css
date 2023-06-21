@@ -29,7 +29,7 @@
 }
 
 :global(body.dark) .category-title-container.active {
-    background-color: var(--grey-700);
+    background-color: var(--blue-900);
 }
 
 .icon {
@@ -41,9 +41,14 @@
     position: fixed;
 }
 
+:global(body.dark) .category-title-container.active .icon {
+    filter: var(--white-svg);
+}
+
 :global(body.dark) .icon {
     filter: var(--blue-500-svg);
 }
+
 
 .collapse-icon {
     margin-left: auto;
