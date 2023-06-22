@@ -114,9 +114,10 @@ export default function ImageCropper() {
             />
             {src &&
                 <div className={styles['radios-container']}>
-                    {aspectRatioOptions.map(ratio => {
+                    {aspectRatioOptions.map((ratio, index) => {
                         return (
-                            <Radio 
+                            <Radio
+                                key={index}
                                 id={ratio.id}
                                 name='aspect'
                                 value={ratio.value}
