@@ -9,35 +9,6 @@
     gap: 2rem;
 }
 
-.cropper-input {
-    width: 40rem;
-    height: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.6rem;
-    border: 2px dashed var(--blue-600);
-    cursor: pointer;
-    font-size: 1.2rem;
-}
-
-:global(body.dark) .cropper-input {
-    border: 2px dashed var(--blue-500);
-}
-
-.cropper-input img {
-    filter: var(--blue-700-svg);
-}
-
-:global(body.dark).cropper-input img {
-    filter: var(--blue-500-svg);
-}
-
-.cropper-input-file {
-    display: none;
-}
-
 .cropper {
     position: relative;
     width: 40rem;
