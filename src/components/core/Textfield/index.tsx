@@ -4,17 +4,28 @@ import { formatColor } from '../../../utils/color'
 import styles from './index.module.css'
 
 type TextfieldProps = {
+    type?: string
     prompt: string,
     value: string,
     onChange?: Function,
     onClick?: Function
     editable?: boolean,
-    includeColorPicker?: boolean
+    includeColorPicker?: boolean,
+    short?: boolean
 }
 
 const Textfield = forwardRef((props: TextfieldProps, ref: any) => {
 
-    const { value, onChange, onClick, prompt, editable = true, includeColorPicker = false } = props
+    const {
+        type,
+        value,
+        onChange,
+        onClick,
+        prompt,
+        editable = true,
+        includeColorPicker = false,
+        short
+    } = props
 
     // Code related purely to color picker, if it is included
     const [showColorPicker, setShowColorPicker] = useState(false)
@@ -62,15 +73,20 @@ const Textfield = forwardRef((props: TextfieldProps, ref: any) => {
                         readOnly={!editable}
                         value={value}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e.target.value)}
-                        className={styles['input']}/>
+                        className={styles['input']}
+                        style={short ? { width: '1rem'} : {}}
+                        />
                 </div> :
                 // Without color picker
                 <input
+                    type={type}
                     readOnly={!editable}
                     value={value}
                     onClick={onClick && (() => onClick())}
                     onChange={onChange && ((e) => onChange(e))}
-                    className={styles['input']}/>
+                    className={styles['input']}
+                    style={short ? { width: '10rem'} : {}}
+                    />
             }      
         </div>
     )

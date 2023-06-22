@@ -26,3 +26,9 @@
 .input-file {
     display: none;
 }
+
+@media only screen and (max-width: 1500px) {
+    .input {
+        width: 80%;
+    }
+}
