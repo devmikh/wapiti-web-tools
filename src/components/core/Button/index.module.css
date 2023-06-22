@@ -17,7 +17,6 @@
 }
 
 .primary {
-    width: 7rem;
     border: none;
     background-color: var(--blue-600);
     color: var(--white);
@@ -25,4 +24,13 @@
 
 .primary:hover {
     background-color: var(--blue-700);
+}
+
+.disabled {
+    background-color: var(--grey-300);
+    cursor: not-allowed;
+}
+
+.disabled:hover {
+    background-color: var(--grey-400);
 }

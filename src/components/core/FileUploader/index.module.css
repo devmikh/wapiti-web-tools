@@ -1,0 +1,34 @@
+.input {
+    width: 40rem;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.6rem;
+    border: 2px dashed var(--blue-600);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+:global(body.dark) .input {
+    border: 2px dashed var(--blue-500);
+}
+
+.input img {
+    filter: var(--blue-700-svg);
+}
+
+:global(body.dark).input img {
+    filter: var(--blue-500-svg);
+}
+
+.input-file {
+    display: none;
+}
+
+@media only screen and (max-width: 1500px) {
+    .input {
+        width: 80%;
+    }
+}

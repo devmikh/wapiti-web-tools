@@ -74,6 +74,12 @@ export const toolbarState = {
                     name: 'Image Cropper',
                     link: '/image-cropper',
                     active: false
+                },
+                {
+                    id: 1,
+                    name: 'Image Resizer',
+                    link: '/image-resizer',
+                    active: false
                 }
             ]
         },

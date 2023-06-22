@@ -3,8 +3,8 @@ import Cropper, { Area } from 'react-easy-crop'
 import html2canvas from 'html2canvas'
 import Button from '../../../core/Button'
 import Radio from '../../../core/Radio'
+import FileUploader from '../../../core/FileUploader'
 import usePageTitle from '../../../../hooks/usePageTitle'
-import uploadIcon from '../../../../assets/icons/upload.svg'
 
 import styles from './index.module.css'
 
@@ -65,7 +65,7 @@ const Output = (props: OutputPropsType) => {
 export default function ImageCropper() {
     
     const [src, setSrc] = useState<string | ArrayBuffer | null>(null)
-    const [fileName, setFileName] = useState<string>('');
+    const [fileName, setFileName] = useState<string>('')
     const [crop, setCrop] = useState({ x: 0, y: 0 })
     const [zoom, setZoom] = useState(1)
     const [aspect, setAspect] = useState(1 / 1)
@@ -105,11 +105,13 @@ export default function ImageCropper() {
     return (
         <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
             <h1 className='tool-title'>Image Cropper</h1>
-            <label htmlFor='cropper-input-file' className={styles['cropper-input']}>
-                <img src={uploadIcon} height='30' />
-                <span>{src ? 'Upload another image' : 'Upload image to start cropping'}</span>
-                <input type='file' accept="image/*" id='cropper-input-file' onChange={(e) => handleFileUpload(e.target.files)} className={styles['cropper-input-file']} />
-            </label>
+            <FileUploader
+                type='image'
+                src={src as string}
+                firstPrompt='Upload image to start cropping'
+                secondPrompt='Upload another image'
+                handleFileUpload={handleFileUpload}
+            />
             {src &&
                 <div className={styles['radios-container']}>
                     {aspectRatioOptions.map(ratio => {

@@ -14,6 +14,7 @@ import ColorFormatConverter from './components/tools/color/ColorFormatConverter'
 import TintShadeGenerator from './components/tools/color/TintShadeGenerator'
 import ContrastChecker from './components/tools/color/ContrastChecker'
 import ImageCropper from './components/tools/image/ImageCropper'
+import ImageResizer from './components/tools/image/ImageResizer'
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
 import DateDifferenceCalculator from './components/tools/time/DateDifferenceCalculator'
 import QRCodeGenerator from './components/tools/miscellaneous/QRCodeGenerator'
@@ -49,6 +50,7 @@ export default function App() {
                         <Route path='/tint-shade-generator' element={<TintShadeGenerator />}/>
                         <Route path='/contrast-checker' element={<ContrastChecker />}/>
                         <Route path='/image-cropper' element={<ImageCropper />}/>
+                        <Route path='/image-resizer' element={<ImageResizer />}/>
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
                         <Route path='/date-difference-calculator' element={<DateDifferenceCalculator />}/>
                         <Route path='/qr-code-generator' element={<QRCodeGenerator />}/>

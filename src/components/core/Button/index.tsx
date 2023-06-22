@@ -3,14 +3,21 @@ import styles from './index.module.css'
 type ButtonProps = {
     label: string,
     onClick: Function,
-    color?: string, 
+    color?: string,
+    disabled?: boolean
 }
 
 export default function Button(props: ButtonProps) {
 
-    const { label, onClick, color } = props
+    const { label, onClick, color, disabled } = props
 
     return (
-        <button onClick={() => onClick()} className={`${styles['button']} ${color && styles[color]}`}>{label}</button>
+        <button
+            disabled={disabled}
+            onClick={(() => onClick())}
+            className={`${styles['button']} ${color && styles[color]} ${disabled && styles['disabled']}`}
+            >
+                {label}
+            </button>
     )
 }
