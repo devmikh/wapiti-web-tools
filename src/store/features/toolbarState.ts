@@ -125,6 +125,12 @@ export const toolbarState = {
                     name: 'QR Code Generator',
                     link: '/qr-code-generator',
                     active: false
+                },
+                {
+                    id: 1,
+                    name: 'File Metadata Extractor',
+                    link: '/file-metadata-extractor',
+                    active: false
                 }
             ]
         }
