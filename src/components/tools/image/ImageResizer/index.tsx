@@ -55,7 +55,7 @@ export default function ImageResizer() {
         }
         setWidth(newWidth)
         if (maintainAR) {
-            const aspectRatio = initialWidth / initialHeight
+            const aspectRatio = initialHeight / initialWidth
             const newHeight = Math.round(newWidth * aspectRatio)
             setHeight(newHeight)
         }

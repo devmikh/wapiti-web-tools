@@ -108,7 +108,7 @@ export default function ImageCropper() {
             <FileUploader
                 type='image'
                 src={src as string}
-                firstPrompt='Upload image to start cropping'
+                firstPrompt='Upload image'
                 secondPrompt='Upload another image'
                 handleFileUpload={handleFileUpload}
             />
