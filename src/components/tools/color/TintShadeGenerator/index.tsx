@@ -97,7 +97,7 @@ export default function TintShadeGenerator() {
                             <DisplayField
                                 value={color.displayValue}
                                 includeCopyButton
-                                small />
+                                size='small' />
                         </div>   
                     )
                 })}

@@ -3,7 +3,7 @@ import styles from './index.module.css'
 
 type FileUploaderProps = {
     type?: string,
-    src: string,
+    src: string | File | null,
     firstPrompt: string,
     secondPrompt: string,
     handleFileUpload: Function

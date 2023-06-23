@@ -26,6 +26,11 @@
     background-color: var(--blue-700);
 }
 
+.large {
+    width: 12rem;
+    height: 4rem;
+}
+
 .disabled {
     background-color: var(--grey-300);
     cursor: not-allowed;

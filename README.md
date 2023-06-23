@@ -14,6 +14,7 @@ Wapiti Web Tools is a collection of various web instruments accessible from a si
 - Contrast Checker
 - Image Cropper
 - Image Resizer
+- Image Metadata Extractor
 - Random Password Generator
 - Date Difference Calculator
 - QR Code Generator

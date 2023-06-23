@@ -80,6 +80,12 @@ export const toolbarState = {
                     name: 'Image Resizer',
                     link: '/image-resizer',
                     active: false
+                },
+                {
+                    id: 2,
+                    name: 'Image Metadata Extractor',
+                    link: '/image-metadata-extractor',
+                    active: false
                 }
             ]
         },
