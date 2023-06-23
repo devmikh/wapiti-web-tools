@@ -5,16 +5,18 @@ type DisplayFieldProps = {
     value: string,
     label?: string,
     includeCopyButton?: boolean,
-    small?: boolean
+    size?: string
 }
 
 export default function DisplayField(props: DisplayFieldProps) {
 
-    const { value, label, includeCopyButton = false, small = false } = props
+    const { value, label, includeCopyButton = false, size } = props
 
     let style;
-    if (small) {
+    if (size === 'small') {
         style = { fontSize: '0.9rem', width: '12rem'}
+    } else if (size === 'large') {
+        style = { fontSize: '1rem', width: '100%'}
     } else {
         style = { fontSize: '1rem', width: '16rem'}
     }
@@ -26,7 +28,7 @@ export default function DisplayField(props: DisplayFieldProps) {
                 <span className={styles['value']}>{value}</span>
             </div>
             {includeCopyButton &&
-            <CopyButton value={value} small={small} style={{ marginLeft: 'auto', marginRight: '1rem'}} />}
+            <CopyButton value={value} small={size === 'small'} style={{ marginLeft: 'auto', marginRight: '1rem'}} />}
         </div>
     )
 }
