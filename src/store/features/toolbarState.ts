@@ -101,6 +101,12 @@ export const toolbarState = {
                     name: 'Random Password Generator',
                     link: '/random-password-generator',
                     active: false
+                },
+                {
+                    id: 1,
+                    name: 'Random Number Generator',
+                    link: '/random-number-generator',
+                    active: false
                 }
             ]
         },

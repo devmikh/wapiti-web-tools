@@ -16,6 +16,7 @@ import ContrastChecker from './components/tools/color/ContrastChecker'
 import ImageCropper from './components/tools/image/ImageCropper'
 import ImageResizer from './components/tools/image/ImageResizer'
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
+import RandomNumberGenerator from './components/tools/randomizers/RandomNumberGenerator'
 import DateDifferenceCalculator from './components/tools/time/DateDifferenceCalculator'
 import QRCodeGenerator from './components/tools/miscellaneous/QRCodeGenerator'
 import ImageMetadataExtractor from './components/tools/miscellaneous/ImageMetadataExtractor'
@@ -53,6 +54,7 @@ export default function App() {
                         <Route path='/image-cropper' element={<ImageCropper />}/>
                         <Route path='/image-resizer' element={<ImageResizer />}/>
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
+                        <Route path='/random-number-generator' element={<RandomNumberGenerator />}/>
                         <Route path='/date-difference-calculator' element={<DateDifferenceCalculator />}/>
                         <Route path='/qr-code-generator' element={<QRCodeGenerator />}/>
                         <Route path='/image-metadata-extractor' element={<ImageMetadataExtractor />}/>
