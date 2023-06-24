@@ -122,6 +122,12 @@ export const toolbarState = {
                     name: 'Date Difference Calculator',
                     link: '/date-difference-calculator',
                     active: false
+                },
+                {
+                    id: 1,
+                    name: 'Stopwatch',
+                    link: '/stopwatch',
+                    active: false
                 }
             ]
         },
