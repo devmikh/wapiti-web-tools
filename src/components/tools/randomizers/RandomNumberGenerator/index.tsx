@@ -5,8 +5,8 @@ import usePageTitle from '../../../../hooks/usePageTitle'
 import { generateRandomNumber } from '../../../../utils/randomizers'
 import styles from './index.module.css'
 
-const MIN_VALUE = 0;
-const MAX_VALUE = 999999999;
+const MIN_VALUE = 0
+const MAX_VALUE = 999999999
 
 export default function RandomNumberGenerator() {
 
