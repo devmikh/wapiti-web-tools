@@ -5,9 +5,11 @@
     flex-direction: column;
     gap: 1rem;
     margin-top: 3rem;
+    padding-bottom: 4rem;
     padding-top: 1rem;
     background-color: var(--grey-100);
     z-index: 120;
+    overflow: scroll;
 }
 
 :global(body.dark) .mobile-toolbar-container {

@@ -28,7 +28,7 @@ export default function ToolCategory(props: ToolCategoryPropsType) {
     }
 
     return (
-        <div className={styles['category-container']}>
+        <div className={`${styles['category-container']} ${!toolbarIsActive && styles['toolbar-inactive']}`}>
             <div className={`${styles['category-title-container']} ${active && styles['active']}`} onClick={handleClick}>
                 <div className={styles['icon']}><img src={icon} height={28} /></div>
                 <h3 className={`${styles['category-title']} ${(!mobile && !toolbarIsActive) && styles['category-title-collapsed']}`}>{title}</h3>
