@@ -140,6 +140,12 @@ export const toolbarState = {
             tools: [
                 {
                     id: 0,
+                    name: 'JSON Formatter & Validator',
+                    link: '/json-formatter-validator',
+                    active: false
+                },
+                {
+                    id: 1,
                     name: 'QR Code Generator',
                     link: '/qr-code-generator',
                     active: false
