@@ -30,7 +30,7 @@ export default function JSONFormatterValidator() {
     }, [output])
 
     return (
-        <div className={`tool-container ${styles['container']}`}>
+        <div className={`tool-container ${styles['container']}`} style={{ gap: '0'}}>
             <h1 className='tool-title'>JSON Formatter & Validator</h1>
             <div className={styles['buttons-container']}>
                 <Button label='Clear' onClick={() => setInput('')} />
