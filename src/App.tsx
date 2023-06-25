@@ -20,6 +20,7 @@ import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswo
 import RandomNumberGenerator from './components/tools/randomizers/RandomNumberGenerator'
 import DateDifferenceCalculator from './components/tools/time/DateDifferenceCalculator'
 import Stopwatch from './components/tools/time/Stopwatch'
+import JSONFormatterValidator from './components/tools/miscellaneous/JSONFormatterValidator'
 import QRCodeGenerator from './components/tools/miscellaneous/QRCodeGenerator'
 
 
@@ -55,12 +56,13 @@ export default function App() {
                         <Route path='/contrast-checker' element={<ContrastChecker />}/>
                         <Route path='/image-cropper' element={<ImageCropper />}/>
                         <Route path='/image-resizer' element={<ImageResizer />}/>
+                        <Route path='/image-metadata-extractor' element={<ImageMetadataExtractor />}/>
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
                         <Route path='/random-number-generator' element={<RandomNumberGenerator />}/>
                         <Route path='/date-difference-calculator' element={<DateDifferenceCalculator />}/>
                         <Route path='/stopwatch' element={<Stopwatch />}/>
+                        <Route path='/json-formatter-validator' element={<JSONFormatterValidator />}/>
                         <Route path='/qr-code-generator' element={<QRCodeGenerator />}/>
-                        <Route path='/image-metadata-extractor' element={<ImageMetadataExtractor />}/>
                     </Routes>
                 </div>
             </div>

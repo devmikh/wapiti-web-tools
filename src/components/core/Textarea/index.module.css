@@ -25,6 +25,14 @@
     outline: 2px solid var(--blue-500);
 }
 
+.green {
+    outline: 2px solid var(--status-green);
+}
+
+.red {
+    outline: 2px solid var(--status-red);
+}
+
 @media only screen and (max-width: 600px) {
     .textarea {
         height: 20rem;

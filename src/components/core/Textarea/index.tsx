@@ -6,12 +6,13 @@ type TextareaProps = {
     placeholder?: string, 
     onChange?: Function,
     small?: boolean
-    maxLength?: number
+    maxLength?: number,
+    statusColor?: string
 }
 
 export default function Textarea(props: TextareaProps) {
 
-    const { value, readOnly = false, placeholder, onChange, small = false, maxLength } = props
+    const { value, readOnly = false, placeholder, onChange, small = false, maxLength, statusColor = '' } = props
 
     return (
         <textarea
@@ -19,8 +20,9 @@ export default function Textarea(props: TextareaProps) {
             onChange={onChange && ((e) => onChange(e))}
             placeholder={placeholder}
             readOnly={readOnly}
+            disabled={readOnly}
             spellCheck={false}
-            className={styles['textarea']}
+            className={`${styles['textarea']} ${styles[statusColor]}`}
             style={small ? {height: '10rem'} : {}}
             maxLength={maxLength}/>
     )

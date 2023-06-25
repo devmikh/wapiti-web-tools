@@ -1,0 +1,44 @@
+.container {
+    width: 80%;
+    margin-left: 4rem;
+    gap: 0rem;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.error {
+    height: 1rem;
+    margin-bottom: 0.6rem;
+    color: var(--status-red);
+}
+
+.textareas-container {
+    width: 95%;
+    display: flex;
+    gap: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .textareas-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .buttons-container {
+        flex-direction: column;
+    }
+}
