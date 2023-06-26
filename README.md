@@ -19,6 +19,7 @@ Wapiti Web Tools is a collection of various web instruments accessible from a si
 - Random Password Generator
 - Random Number Generator
 - Date Difference Calculator
+- Unix Timestamp Converter
 - Stopwatch
 - JSON Formatter & Validator
 - QR Code Generator

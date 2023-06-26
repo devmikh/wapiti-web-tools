@@ -20,6 +20,7 @@ import ImageMetadataExtractor from './components/tools/image/ImageMetadataExtrac
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
 import RandomNumberGenerator from './components/tools/randomizers/RandomNumberGenerator'
 import DateDifferenceCalculator from './components/tools/time/DateDifferenceCalculator'
+import UnixTimestampConverter from './components/tools/time/UnixTimestampConverter'
 import Stopwatch from './components/tools/time/Stopwatch'
 import JSONFormatterValidator from './components/tools/miscellaneous/JSONFormatterValidator'
 import QRCodeGenerator from './components/tools/miscellaneous/QRCodeGenerator'
@@ -62,6 +63,7 @@ export default function App() {
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
                         <Route path='/random-number-generator' element={<RandomNumberGenerator />}/>
                         <Route path='/date-difference-calculator' element={<DateDifferenceCalculator />}/>
+                        <Route path='/unix-timestamp-converter' element={<UnixTimestampConverter />}/>
                         <Route path='/stopwatch' element={<Stopwatch />}/>
                         <Route path='/json-formatter-validator' element={<JSONFormatterValidator />}/>
                         <Route path='/qr-code-generator' element={<QRCodeGenerator />}/>
