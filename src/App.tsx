@@ -10,6 +10,7 @@ import HomePage from './components/layout/HomePage'
 import CharacterCounter from './components/tools/text/CharacterCounter'
 import CaseConverter from './components/tools/text/CaseConverter'
 import DummyTextGenerator from './components/tools/text/DummyTextGenerator'
+import WhiteSpaceRemover from './components/tools/text/WhiteSpaceRemover'
 import ColorFormatConverter from './components/tools/color/ColorFormatConverter'
 import TintShadeGenerator from './components/tools/color/TintShadeGenerator'
 import ContrastChecker from './components/tools/color/ContrastChecker'
@@ -51,6 +52,7 @@ export default function App() {
                         <Route path='/character-counter' element={<CharacterCounter />}/>
                         <Route path='/case-converter' element={<CaseConverter />}/>
                         <Route path='/dummy-text-generator' element={<DummyTextGenerator />}/>
+                        <Route path='/white-space-remover' element={<WhiteSpaceRemover />}/>
                         <Route path='/color-format-converter' element={<ColorFormatConverter />}/>
                         <Route path='/tint-shade-generator' element={<TintShadeGenerator />}/>
                         <Route path='/contrast-checker' element={<ContrastChecker />}/>
