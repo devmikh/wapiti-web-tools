@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import exifr  from 'exifr'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import FileUploader from '../../../core/FileUploader'
 import DisplayField from '../../../core/DisplayField'
 import styles from './index.module.css'
@@ -43,6 +44,8 @@ export default function ImageMetadataExtractor() {
         }
         fetchMetadata()
     }, [inputFile])
+
+    usePageTitle('Image Metadata Extractor | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>
