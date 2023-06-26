@@ -11,6 +11,12 @@ export const toTitleCase = (text: string) => {
     return words.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
 }
 
+export const removeWhiteSpace = (text: string) => {
+    let result = text.trim()
+    result = result.replace(/\s+/g, ' ')
+    return result
+}
+
 export const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
 }

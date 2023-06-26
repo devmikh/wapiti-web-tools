@@ -33,6 +33,12 @@ export const toolbarState = {
                     link: '/dummy-text-generator',
                     active: false
                 },
+                {
+                    id: 3,
+                    name: 'White Space Remover',
+                    link: '/white-space-remover',
+                    active: false
+                }
             ]
         },
         {

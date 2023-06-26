@@ -9,6 +9,7 @@ Wapiti Web Tools is a collection of various web instruments accessible from a si
 - Character Counter
 - Case Converter
 - Dummy Text Generator
+- White Space Remover
 - Color Format Converter
 - Tint & Shade Generator
 - Contrast Checker
