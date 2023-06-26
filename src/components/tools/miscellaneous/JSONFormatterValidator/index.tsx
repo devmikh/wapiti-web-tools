@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Textarea from '../../../core/Textarea'
 import Button from '../../../core/Button'
 import CopyButton from '../../../core/CopyButton'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import { formatAndValidateJSON } from '../../../../utils/misc'
 import styles from './index.module.css'
 
@@ -28,6 +29,8 @@ export default function JSONFormatterValidator() {
             setStatusColor('green')
         }
     }, [output])
+
+    usePageTitle('JSON Formatter & Validator | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`} style={{ gap: '0'}}>

@@ -131,10 +131,16 @@ export const toolbarState = {
                 },
                 {
                     id: 1,
+                    name: 'Unix Timestamp Converter',
+                    link: '/unix-timestamp-converter',
+                    active: false
+                },
+                {
+                    id: 2,
                     name: 'Stopwatch',
                     link: '/stopwatch',
                     active: false
-                }
+                },
             ]
         },
         {

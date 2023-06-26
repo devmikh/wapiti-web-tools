@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import usePageTitle from '../../../../hooks/usePageTitle'
 import Button from '../../../core/Button'
 import CopyButton from '../../../core/CopyButton'
 import Textarea from '../../../core/Textarea'
@@ -8,6 +9,8 @@ import styles from './index.module.css'
 export default function WhiteSpaceRemover() {
     
     const [text, setText] = useState('')
+
+    usePageTitle('White Space Remover | Wapiti Web Tools')
 
     return (
         <div className={`tool-container ${styles['container']}`}>

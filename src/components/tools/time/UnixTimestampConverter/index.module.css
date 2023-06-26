@@ -1,0 +1,100 @@
+.container {
+    width: 50%;
+    margin-left: 4rem;
+}
+
+.display-container {
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--grey-200);
+}
+
+:global(body.dark) .display-container {
+    border: 1px solid var(--grey-500);
+}
+
+.display-container-label {
+    padding: 0.2rem 0.6rem;
+    color: var(--grey-600);
+}
+
+:global(body.dark) .display-container-label {
+    color: var(--grey-200);
+}
+
+.display-container-value {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    color: var(--black);
+}
+
+:global(body.dark) .display-container-value {
+    color: var(--white);
+}
+
+.display-container-value-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display-container-button {
+    margin-right: 0.6rem;
+}
+
+.form-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.output-container {
+    width: 16rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--grey-200);
+}
+
+.output-container.success {
+    background-color: var(--status-green);
+}
+
+.output-container.error {
+    background-color: var(--status-red);
+}
+
+.output-container-label {
+    padding: 0.2rem 0.6rem;
+    color: var(--grey-100);
+}
+
+.output-container-value {
+    font-size: 1.2rem;
+    padding: 0.3rem 0.6rem;
+    color: var(--white);
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .form-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+}
