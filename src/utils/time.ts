@@ -63,3 +63,15 @@ export function getTimeDifference(firstDate: Date, secondDate: Date): string {
     }
     return result
 }
+
+export const convertUnixToDate = (input: string) => {
+    try {
+        const date = new Date(Number(input) * 1000)
+        if (isNaN(date.getTime())) {
+            throw new Error('Invalid timestamp')
+        }
+        return date.toLocaleString()
+    } catch {
+        return 'Invalid timestamp'
+    }
+}
