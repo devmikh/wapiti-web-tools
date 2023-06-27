@@ -82,7 +82,8 @@ export default function TintShadeGenerator() {
                         value={state.quantity}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(Number(e.target.value))} />
                     <Range
-                        prompt='Tint %:'
+                        measurementUnitLabel='%'
+                        prompt='Tint:'
                         min={5}
                         max={20}
                         value={state.percentage}

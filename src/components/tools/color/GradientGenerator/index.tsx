@@ -25,18 +25,19 @@ export default function GradientGenerator() {
             <h1 className='tool-title'>Gradient Generator</h1>
             <div className={styles['textfields-container']}>
                 <Textfield
-                    prompt='First Color'
+                    prompt='Color #1'
                     value={firstColor}
                     onChange={setFirstColor}
                     includeColorPicker />
                 <Textfield
-                    prompt='Second Color'
+                    prompt='Color #2'
                     value={secondColor}
                     onChange={setSecondColor}
                     includeColorPicker />
             </div>
             <Range
-                prompt='Angle'
+                measurementUnitLabel='°'
+                prompt='Angle:'
                 min={0}
                 max={360}
                 value={angle}

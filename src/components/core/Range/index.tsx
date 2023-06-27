@@ -6,18 +6,19 @@ type RangeProps = {
     max: number,
     step?: number,
     value: number,
-    onChange: Function
+    onChange: Function,
+    measurementUnitLabel?: string
 }
 
 export default function Range(props: RangeProps) {
 
-    const { prompt, min, max, step, value, onChange } = props
+    const { prompt, min, max, step, value, onChange, measurementUnitLabel } = props
 
     return (
         <div className={styles['container']}>
             <div className={styles['title']}>
                 <label className={styles['prompt']}>{prompt}</label>
-                <span className={styles['value']}>{value}</span>
+                <span className={styles['value']}>{value}{measurementUnitLabel ? measurementUnitLabel : ''}</span>
             </div>
             <input
                 type='range'
