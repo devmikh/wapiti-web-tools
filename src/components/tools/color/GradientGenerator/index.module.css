@@ -1,0 +1,56 @@
+.container {
+    width: 60%;
+    margin-left: 4rem;
+}
+
+.textfields-container {
+    display: flex;
+    gap: 3rem;
+}
+
+.preview {
+    height: 20rem;
+    width: 20rem;
+    border: 1px solid var(--grey-200);
+}
+
+:global(body.dark) .preview {
+    border: 1px solid var(--grey-500);
+}
+
+.display-container {
+    width: 34rem;
+}
+
+@media only screen and (max-width: 1500px) {
+    .container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .textfields-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .display-container {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        width: 95%;
+        margin-left: 0;
+    }
+    .preview {
+        height: 16rem;
+        width: 16rem;
+    }
+}
