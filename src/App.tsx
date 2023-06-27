@@ -13,6 +13,7 @@ import DummyTextGenerator from './components/tools/text/DummyTextGenerator'
 import WhiteSpaceRemover from './components/tools/text/WhiteSpaceRemover'
 import ColorFormatConverter from './components/tools/color/ColorFormatConverter'
 import TintShadeGenerator from './components/tools/color/TintShadeGenerator'
+import GradientGenerator from './components/tools/color/GradientGenerator'
 import ContrastChecker from './components/tools/color/ContrastChecker'
 import ImageCropper from './components/tools/image/ImageCropper'
 import ImageResizer from './components/tools/image/ImageResizer'
@@ -56,6 +57,7 @@ export default function App() {
                         <Route path='/white-space-remover' element={<WhiteSpaceRemover />}/>
                         <Route path='/color-format-converter' element={<ColorFormatConverter />}/>
                         <Route path='/tint-shade-generator' element={<TintShadeGenerator />}/>
+                        <Route path='/gradient-generator' element={<GradientGenerator />}/>
                         <Route path='/contrast-checker' element={<ContrastChecker />}/>
                         <Route path='/image-cropper' element={<ImageCropper />}/>
                         <Route path='/image-resizer' element={<ImageResizer />}/>

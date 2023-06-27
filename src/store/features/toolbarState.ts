@@ -62,6 +62,12 @@ export const toolbarState = {
                 },
                 {
                     id: 2,
+                    name: 'Gradient Generator',
+                    link: '/gradient-generator',
+                    active: false
+                },
+                {
+                    id: 3,
                     name: 'Contrast Checker',
                     link: '/contrast-checker',
                     active: false

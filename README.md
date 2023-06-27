@@ -12,6 +12,7 @@ Wapiti Web Tools is a collection of various web instruments accessible from a si
 - White Space Remover
 - Color Format Converter
 - Tint & Shade Generator
+- Gradient Generator
 - Contrast Checker
 - Image Cropper
 - Image Resizer
