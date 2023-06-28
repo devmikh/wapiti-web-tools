@@ -2,17 +2,19 @@ import styles from './index.module.css'
 
 type RangeProps = {
     prompt: string,
+    name?: string,
     min: number,
     max: number,
     step?: number,
     value: number,
     onChange: Function,
-    measurementUnitLabel?: string
+    measurementUnitLabel?: string,
+    disabled?: boolean
 }
 
 export default function Range(props: RangeProps) {
 
-    const { prompt, min, max, step, value, onChange, measurementUnitLabel } = props
+    const { prompt, min, max, step, value, onChange, measurementUnitLabel, name, disabled = false } = props
 
     return (
         <div className={styles['container']}>
@@ -21,6 +23,8 @@ export default function Range(props: RangeProps) {
                 <span className={styles['value']}>{value}{measurementUnitLabel ? measurementUnitLabel : ''}</span>
             </div>
             <input
+                disabled={disabled}
+                name={name}
                 type='range'
                 min={min}
                 max={max}
