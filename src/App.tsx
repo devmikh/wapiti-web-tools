@@ -17,6 +17,7 @@ import GradientGenerator from './components/tools/color/GradientGenerator'
 import ContrastChecker from './components/tools/color/ContrastChecker'
 import ImageCropper from './components/tools/image/ImageCropper'
 import ImageResizer from './components/tools/image/ImageResizer'
+import ImageFilters from './components/tools/image/ImageFilters'
 import ImageMetadataExtractor from './components/tools/image/ImageMetadataExtractor'
 import RandomPasswordGenerator from './components/tools/randomizers/RandomPasswordGenerator'
 import RandomNumberGenerator from './components/tools/randomizers/RandomNumberGenerator'
@@ -61,6 +62,7 @@ export default function App() {
                         <Route path='/contrast-checker' element={<ContrastChecker />}/>
                         <Route path='/image-cropper' element={<ImageCropper />}/>
                         <Route path='/image-resizer' element={<ImageResizer />}/>
+                        <Route path='/image-filters' element={<ImageFilters />}/>
                         <Route path='/image-metadata-extractor' element={<ImageMetadataExtractor />}/>
                         <Route path='/random-password-generator' element={<RandomPasswordGenerator />}/>
                         <Route path='/random-number-generator' element={<RandomNumberGenerator />}/>
