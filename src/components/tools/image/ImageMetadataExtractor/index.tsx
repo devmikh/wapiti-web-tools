@@ -53,8 +53,8 @@ export default function ImageMetadataExtractor() {
             <FileUploader
                 src={inputFile as string}
                 type='image'
-                firstPrompt='Upload Image'
-                secondPrompt='Upload Another Image'
+                firstPrompt='Upload image'
+                secondPrompt='Upload another image'
                 handleFileUpload={handleFileUpload}   
             />
             {notFound &&
