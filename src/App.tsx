@@ -26,6 +26,7 @@ import UnixTimestampConverter from './components/tools/time/UnixTimestampConvert
 import Stopwatch from './components/tools/time/Stopwatch'
 import JSONFormatterValidator from './components/tools/miscellaneous/JSONFormatterValidator'
 import QRCodeGenerator from './components/tools/miscellaneous/QRCodeGenerator'
+import NumberFormatConverter from './components/tools/miscellaneous/NumberFormatConverter'
 
 
 export default function App() {
@@ -71,6 +72,7 @@ export default function App() {
                         <Route path='/stopwatch' element={<Stopwatch />}/>
                         <Route path='/json-formatter-validator' element={<JSONFormatterValidator />}/>
                         <Route path='/qr-code-generator' element={<QRCodeGenerator />}/>
+                        <Route path='/number-format-converter' element={<NumberFormatConverter />}/>
                     </Routes>
                 </div>
             </div>

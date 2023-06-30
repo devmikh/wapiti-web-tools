@@ -6,25 +6,32 @@
 
 Wapiti Web Tools is a collection of various web instruments accessible from a single location and conveniently organized by category. Currently available tools include:
 
-- Character Counter
-- Case Converter
-- Dummy Text Generator
-- White Space Remover
-- Color Format Converter
-- Tint & Shade Generator
-- Gradient Generator
-- Contrast Checker
-- Image Cropper
-- Image Resizer
-- Image Filters
-- Image Metadata Extractor
-- Random Password Generator
-- Random Number Generator
-- Date Difference Calculator
-- Unix Timestamp Converter
-- Stopwatch
-- JSON Formatter & Validator
-- QR Code Generator
+- Text
+  - Character Counter
+  - Case Converter
+  - Dummy Text Generator
+  - White Space Remover
+- Color
+  - Color Format Converter
+  - Tint & Shade Generator
+  - Gradient Generator
+  - Contrast Checker
+- Image
+  - Image Cropper
+  - Image Resizer
+  - Image Filters
+  - Image Metadata Extractor
+- Randomizers
+  - Random Password Generator
+  - Random Number Generator
+- Time
+  - Date Difference Calculator
+  - Unix Timestamp Converter
+  - Stopwatch
+- Miscellaneous
+  - JSON Formatter & Validator
+  - QR Code Generator
+  - Number Format Converter
 
 ## Link
 

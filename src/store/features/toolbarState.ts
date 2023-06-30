@@ -172,6 +172,12 @@ export const toolbarState = {
                     name: 'QR Code Generator',
                     link: '/qr-code-generator',
                     active: false
+                },
+                {
+                    id: 2,
+                    name: 'Number Format Converter',
+                    link: '/number-format-converter',
+                    active: false
                 }
             ]
         }
