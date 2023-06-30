@@ -1,6 +1,5 @@
 .container {
     width: 60%;
-    margin-left: 4rem;
 }
 
 .settings-container {
@@ -75,10 +74,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
-        width: 95%;
-        margin-left: 0;
-    }
     .error {
         font-size: 0.9rem;
     }

@@ -1,6 +1,5 @@
 .container {
     width: 60%;
-    margin-left: 4rem;
 }
 
 .counters-container {
@@ -38,12 +37,5 @@
 @media only screen and (max-width: 1300px) {
     .container {
         width: 80%;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .container {
-        width: 95%;
-        margin-left: 0;
     }
 }

@@ -1,6 +1,5 @@
 .container {
     width: 60%;
-    margin-left: 4rem;
 }
 
 .prompt {
@@ -64,11 +63,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
-        width: 95%;
-        margin-left: 0;
-    }
-
     .colors-container {
         gap: 2rem;
     }

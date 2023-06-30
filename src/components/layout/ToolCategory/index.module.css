@@ -31,7 +31,7 @@
 }
 
 .icon {
-    width: 3rem;
+    width: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,22 +55,14 @@
     filter: var(--white-svg);
 }
 
-.collapse-icon-collapsed {
+/* .collapse-icon-collapsed {
     display: none;
-}
+} */
 
 .category-title {
-    margin-left: 1rem;
-    font-size: 1.3rem;
+    /* margin-left: 1rem; */
+    font-size: 1.1rem;
     font-weight: 500;
-}
-
-.category-title-collapsed {
-    display: none;
-}
-
-.toolbar-inactive .links-container {
-    transition: 0s;
 }
 
 .links-container {
@@ -95,6 +87,7 @@
     }
 
     .category-title {
+        font-size: 1.3rem;
         margin-left: 0.6rem;
     }
 }

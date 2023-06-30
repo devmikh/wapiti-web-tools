@@ -3,7 +3,7 @@
     height: 2.5rem;
     display: flex;
     align-items: center;
-    padding: 0.4rem 2rem;
+    padding: 0.4rem 1rem;
     color: var(--grey-700);
     background-color: var(--grey-100);
     cursor: pointer;
@@ -19,7 +19,7 @@
 }
 
 .link {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
 }
 
 .active {
@@ -30,4 +30,10 @@
 :global(body.dark) .active {
     background-color: var(--blue-600);
     color: var(--white);
+}
+
+@media only screen and (max-width: 600px) {
+    .link {
+        font-size: 1.1rem;
+    }
 }

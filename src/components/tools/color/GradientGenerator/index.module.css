@@ -1,6 +1,5 @@
 .container {
     width: 60%;
-    margin-left: 4rem;
 }
 
 .textfields-container {
@@ -45,10 +44,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
-        width: 95%;
-        margin-left: 0;
-    }
     .preview {
         height: 16rem;
         width: 16rem;

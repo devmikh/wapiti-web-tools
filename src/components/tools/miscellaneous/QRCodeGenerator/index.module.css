@@ -1,6 +1,5 @@
 .container {
     width: 60%;
-    margin-left: 4rem;
 }
 
 .qr-code-container {
@@ -32,11 +31,6 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .container {
-        width: 95%;
-        margin-left: 0;
-    }
-
     .qr-code-container-img {
         height: 12rem;
     }

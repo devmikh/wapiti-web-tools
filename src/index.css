@@ -82,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 2rem;
     margin-top: 6rem;
+    margin-left: 16rem;
     padding-bottom: 2rem;
     border: 1px solid var(--grey-200);
 }
@@ -117,6 +118,8 @@ body.dark .tool-title {
     .tool-container {
         margin-top: 4rem;
         gap: 1rem;
+        margin-left: 0;
+        width: 95%;
     }
 
     .mobile-toolbar {
