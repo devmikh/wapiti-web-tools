@@ -74,15 +74,16 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 17rem;
 }
 
 .tool-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    margin-top: 6rem;
-    margin-left: 16rem;
+    margin-top: 4rem;
     padding-bottom: 2rem;
     border: 1px solid var(--grey-200);
 }
@@ -113,12 +114,13 @@ body.dark .tool-title {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 768px) {
+    .main-container {
+        padding: 0;
+    }
     .tool-container {
         margin-top: 4rem;
         gap: 1rem;
-        margin-left: 0;
         width: 95%;
     }
 
