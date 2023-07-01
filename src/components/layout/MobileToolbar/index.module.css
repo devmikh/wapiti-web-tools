@@ -6,11 +6,39 @@
     margin-top: 2rem;
     padding-bottom: 4rem;
     padding-top: 1rem;
-    background-color: var(--grey-100);
+    background-color: var(--white);
     z-index: 120;
     overflow-y: auto;
 }
 
 :global(body.dark) .mobile-toolbar-container {
-    background-color: var(--grey-700);
+    background-color: var(--grey-800);
+}
+
+.mobile-toolbar-container::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+.mobile-toolbar-container::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+:global(body.dark) .mobile-toolbar-container::-webkit-scrollbar-track {
+    background: var(--grey-800);
+}
+
+.mobile-toolbar-container::-webkit-scrollbar-thumb {
+    background: var(--grey-200);
+}
+
+:global(body.dark) .mobile-toolbar-container::-webkit-scrollbar-thumb {
+    background: var(--grey-500);
+}
+
+.mobile-toolbar-container::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-300);
+}
+
+:global(body.dark) .mobile-toolbar-container::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-400);
 }

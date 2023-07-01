@@ -13,28 +13,32 @@
 }
 
 .link-container:hover {
-    background-color: var(--grey-200);
+    background-color: var(--grey-100);
 }
 
 :global(body.dark) .link-container:hover {
-    background-color: var(--grey-600);
+    background-color: var(--grey-700);
 }
 
 .link-container.active {
-    background-color: var(--blue-600);
-    color: var(--white);
+    background-color: var(--blue-100);
+}
+
+:global(body.dark) .link-container.active {
+    background-color: var(--blue-900);
 }
 
 .link-container.active:hover {
-    background-color: var(--blue-700);
+    background-color: var(--blue-200);
 }
 
 :global(body.dark) .link-container.active:hover {
-    background-color: var(--blue-500);
+    background-color: var(--blue-800);
 }
 
 .link {
     font-size: 0.9rem;
+    font-weight: 500;
 }
 
 @media only screen and (max-width: 768px) {

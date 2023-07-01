@@ -5,6 +5,7 @@
     border: 1px solid var(--grey-200);
     font-size: 1.3rem;
     resize: none;
+    font-family: inherit;
 }
 
 :global(body.dark) .textarea {

@@ -13,27 +13,27 @@
 }
 
 .category-title-container:hover {
-    background-color: var(--grey-200);
+    background-color: var(--grey-100);
 }
 
 :global(body.dark) .category-title-container:hover {
-    background-color: var(--grey-600);
+    background-color: var(--grey-700);
 }
 
 .category-title-container.active {
-    background-color: var(--blue-100);
+    background-color: var(--grey-100);
 }
 
 :global(body.dark) .category-title-container.active {
-    background-color: var(--blue-900);
+    background-color: var(--grey-700);
 }
 
 .category-title-container.active:hover {
-    background-color: var(--blue-200);
+    background-color: var(--grey-200);
 }
 
 :global(body.dark) .category-title-container.active:hover {
-    background-color: var(--blue-800);
+    background-color: var(--grey-600);
 }
 
 .icon {
