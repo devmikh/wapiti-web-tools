@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { HexColorPicker } from 'react-colorful'
 import Textfield from '../../../core/Textfield'
 import DisplayField from '../../../core/DisplayField'
 import Range from '../../../core/Range'
@@ -68,28 +67,28 @@ export default function TintShadeGenerator() {
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Tint & Shade Generator</h1>
             <Textfield
+                includeColorPicker
                 value={state.inputColor}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleColorChange(e.target.value)}
+                onChange={(color: string) => handleColorChange(color)}
                 prompt='Base color' />
-            <div className={styles['form']}>
-                <HexColorPicker color={state.hex} onChange={color => handleColorChange(color)} />
-                <div className={styles['ranges-container']}>
-                    <Range
-                        prompt='Number of Tints and Shades:'
-                        min={3}
-                        max={9}
-                        step={2}
-                        value={state.quantity}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(Number(e.target.value))} />
-                    <Range
-                        measurementUnitLabel='%'
-                        prompt='Tint:'
-                        min={5}
-                        max={20}
-                        value={state.percentage}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePercentageChange(Number(e.target.value))} />
-                </div>
+            
+            <div className={styles['ranges-container']}>
+                <Range
+                    prompt='Number of Tints and Shades:'
+                    min={3}
+                    max={9}
+                    step={2}
+                    value={state.quantity}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleQuantityChange(Number(e.target.value))} />
+                <Range
+                    measurementUnitLabel='%'
+                    prompt='Tint:'
+                    min={5}
+                    max={20}
+                    value={state.percentage}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handlePercentageChange(Number(e.target.value))} />
             </div>
+            
             <div className={styles['colors-container']}>
                 {state.resultArray.map((color: { value: string, displayValue: string}, index) => {
                     return (

@@ -14,11 +14,11 @@ export default function DisplayField(props: DisplayFieldProps) {
 
     let style;
     if (size === 'small') {
-        style = { fontSize: '0.9rem', width: '12rem'}
+        style = { fontSize: '0.9rem', width: '12rem', height: '2.5rem'}
     } else if (size === 'large') {
-        style = { fontSize: '1rem', width: '100%'}
+        style = { fontSize: '1rem', width: '100%', height: 'auto'}
     } else {
-        style = { fontSize: '1rem', width: '16rem'}
+        style = { fontSize: '1rem', width: '14rem'}
     }
 
     return (

@@ -21,7 +21,7 @@
     appearance: none;
     background: transparent;
     cursor: pointer;
-    width: 15rem;
+    width: 13rem;
 }
 
 .range::-webkit-slider-runnable-track {

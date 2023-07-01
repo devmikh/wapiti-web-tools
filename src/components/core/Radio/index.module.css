@@ -13,16 +13,23 @@
     -webkit-appearance: none;
     appearance: none;
     margin: 0;
-    background-color: #fff;
     width: 0.9rem;
     height: 0.9rem;
     border-radius: 50%;
-    border: 1px solid var(--blue-500);
+    border: 1px solid var(--grey-200);
     cursor: pointer;
 }
 
+:global(body.dark) .radio {
+    border: 1px solid var(--grey-500);
+}
+
 .radio:hover {
-    border: 2px solid var(--blue-500);
+    border: 1px solid var(--blue-500);
+}
+
+:global(body.dark) .radio:hover {
+    border: 1px solid var(--blue-500);
 }
 
 .radio:focus {
@@ -30,5 +37,10 @@
 }
 
 .radio:checked {
-    border: 4px solid var(--blue-500);
+    background-color: var(--blue-600);
+    border: none;
+}
+
+:global(body.dark) .radio:checked {
+    border: none;
 }

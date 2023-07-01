@@ -33,3 +33,10 @@
         width: 16rem;
     }
 }
+
+@media only screen and (max-width: 350px) {
+    .preview {
+        height: 12rem;
+        width: 12rem;
+    }
+}

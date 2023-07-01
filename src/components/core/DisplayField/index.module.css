@@ -1,4 +1,5 @@
 .display-field {
+    height: 4rem;
     display: flex;
     align-items: center;
     border: 1px solid var(--grey-200);

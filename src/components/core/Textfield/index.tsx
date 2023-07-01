@@ -23,8 +23,7 @@ const Textfield = forwardRef((props: TextfieldProps, ref: any) => {
         onClick,
         prompt,
         editable = true,
-        includeColorPicker = false,
-        short
+        includeColorPicker = false
     } = props
 
     // Code related purely to color picker, if it is included
@@ -74,7 +73,6 @@ const Textfield = forwardRef((props: TextfieldProps, ref: any) => {
                         value={value}
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChange(e.target.value)}
                         className={styles['input']}
-                        style={short ? { width: '1rem'} : {}}
                         />
                 </div> :
                 // Without color picker
@@ -85,7 +83,6 @@ const Textfield = forwardRef((props: TextfieldProps, ref: any) => {
                     onClick={onClick && (() => onClick())}
                     onChange={onChange && ((e) => onChange(e))}
                     className={styles['input']}
-                    style={short ? { width: '10rem'} : {}}
                     />
             }      
         </div>

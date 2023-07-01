@@ -11,13 +11,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--grey-200);
+    background-color: var(--grey-100);
     cursor: pointer;
     border: none;
 }
 
 .switch-button:hover {
-    background-color: var(--grey-300);
+    background-color: var(--grey-200);
 }
 
 .switch-button:focus {
@@ -144,5 +144,14 @@
     }
     .guide-table-type {
         width: 10rem;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .preview {
+        width: 15rem;
+    }
+    .guide-table-type {
+        width: 7rem;
     }
 }
