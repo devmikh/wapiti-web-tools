@@ -9,41 +9,55 @@
     display: flex;
     align-items: center;
     padding-left: 0.4rem;
-    background-color: var(--grey-100);
     cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-:global(body.dark) .category-title-container {
-    background-color: var(--grey-700);
 }
 
 .category-title-container:hover {
-    filter: brightness(90%);
+    background-color: var(--grey-100);
+}
+
+:global(body.dark) .category-title-container:hover {
+    background-color: var(--grey-700);
 }
 
 .category-title-container.active {
-    background-color: var(--blue-100);
+    background-color: var(--grey-100);
 }
 
 :global(body.dark) .category-title-container.active {
-    background-color: var(--blue-900);
+    background-color: var(--grey-700);
+}
+
+.category-title-container.active:hover {
+    background-color: var(--grey-200);
+}
+
+:global(body.dark) .category-title-container.active:hover {
+    background-color: var(--grey-600);
 }
 
 .icon {
-    width: 3rem;
+    width: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: var(--blue-900-svg);
+}
+
+:global(body.dark) .icon {
+    filter: var(--blue-200-svg);
+}
+
+.category-title-container.active .icon {
     filter: var(--blue-700-svg);
 }
 
 :global(body.dark) .category-title-container.active .icon {
-    filter: var(--white-svg);
+    filter: var(--blue-300-svg);
 }
 
-:global(body.dark) .icon {
-    filter: var(--blue-500-svg);
+.icon img {
+    height: 1.2rem;
 }
 
 .collapse-icon {
@@ -55,22 +69,10 @@
     filter: var(--white-svg);
 }
 
-.collapse-icon-collapsed {
-    display: none;
-}
-
 .category-title {
-    margin-left: 1rem;
-    font-size: 1.3rem;
+    margin-left: 0.4rem;
+    font-size: 1.1rem;
     font-weight: 500;
-}
-
-.category-title-collapsed {
-    display: none;
-}
-
-.toolbar-inactive .links-container {
-    transition: 0s;
 }
 
 .links-container {
@@ -85,16 +87,24 @@
     height: 0rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .category-title-container {
-        padding-left: 1.2rem;
+        height: 4rem;
+    }
+    .category-title-container {
+        padding-left: 1.7rem;
     }
 
     .collapse-icon {
-        margin-right: 1.6rem;
+        margin-right: 2.6rem;
     }
 
     .category-title {
-        margin-left: 0.6rem;
+        font-size: 1.3rem;
+        margin-left: 1.4rem;
+    }
+
+    .icon img {
+        height: 1.8rem;
     }
 }

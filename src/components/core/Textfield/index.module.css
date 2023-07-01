@@ -70,6 +70,7 @@
     width: 16rem;
     padding: 0.4rem 0.8rem;
     font-size: 1.2rem;
+    font-family: inherit;
     border: none;
     background-color: inherit;
     color: inherit;
