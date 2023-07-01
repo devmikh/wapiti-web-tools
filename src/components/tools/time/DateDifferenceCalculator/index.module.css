@@ -13,6 +13,7 @@
     background-color: var(--blue-600);
     color: var(--white);
     font-size: 1.4rem;
+    text-align: center;
 }
 
 :global(body.dark) .result-container {
@@ -34,7 +35,7 @@
 
 @media only screen and (max-width: 500px) {
     .result-container {
-        width: 15rem;
+        width: 14rem;
         font-size: 1.1rem;
     }
 }

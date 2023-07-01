@@ -15,15 +15,15 @@ export default function WhiteSpaceRemover() {
     return (
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>White Space Remover</h1>
-            <div className={styles['top-button-container']}>
-                <Button label='Clear' onClick={() => setText(() => '')} />
-                <CopyButton value={text} buttonLook />
-            </div>
             <Button
                 color='primary'
                 label='Remove White Space'
                 onClick={() => setText(() => removeWhiteSpace(text))}
                 size='large'/>
+            <div className={styles['button-container']}>
+                <Button label='Clear' onClick={() => setText(() => '')} />
+                <CopyButton value={text} buttonLook />
+            </div>
             <Textarea
                 value={text}
                 readOnly={false}

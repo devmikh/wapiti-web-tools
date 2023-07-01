@@ -223,7 +223,6 @@ export default function ImageFilters() {
                             />
                     </div>
                 </div>
-                
                 <div className={styles['preview-container']}>
                     <div className={styles['preview-image-container']}>
                         <img src={src as string} className={styles['preview-image']} style={style} />

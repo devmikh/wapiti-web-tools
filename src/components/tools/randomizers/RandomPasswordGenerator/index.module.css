@@ -36,6 +36,49 @@
 .buttons-container {
     width: 17.5rem;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     gap: 1rem;
+}
+
+@media only screen and (max-width: 350px) {
+    .charset {
+        display: none;
+    }
+    .password-container {
+        width: 90%;
+        overflow-x: scroll;
+    }
+    .buttons-container {
+        flex-direction: column;
+    }
+}
+
+.password-container::-webkit-scrollbar {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+
+.password-container::-webkit-scrollbar-track {
+    background: var(--white);
+}
+
+:global(body.dark) .password-container::-webkit-scrollbar-track {
+    background: var(--grey-800);
+}
+
+.password-container::-webkit-scrollbar-thumb {
+    background: var(--grey-200);
+}
+
+:global(body.dark) .password-container::-webkit-scrollbar-thumb {
+    background: var(--grey-500);
+}
+
+.password-container::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-300);
+}
+
+:global(body.dark) .password-container::-webkit-scrollbar-thumb:hover {
+    background: var(--grey-400);
 }

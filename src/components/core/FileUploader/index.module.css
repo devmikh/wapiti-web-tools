@@ -1,5 +1,5 @@
 .input {
-    width: 40rem;
+    width: 50rem;
     height: 6rem;
     display: flex;
     flex-direction: column;
@@ -9,26 +9,23 @@
     border: 2px dashed var(--blue-600);
     cursor: pointer;
     font-size: 1.2rem;
+    text-align: center;
 }
 
 :global(body.dark) .input {
-    border: 2px dashed var(--blue-500);
+    border: 2px dashed var(--blue-600);
 }
 
 .input img {
-    filter: var(--blue-700-svg);
-}
-
-:global(body.dark).input img {
-    filter: var(--blue-500-svg);
+    filter: var(--blue-600-svg);
 }
 
 .input-file {
     display: none;
 }
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1400px) {
     .input {
-        width: 80%;
+        width: 90%;
     }
 }
