@@ -41,19 +41,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: var(--blue-900-svg);
+}
+
+:global(body.dark) .icon {
+    filter: var(--blue-200-svg);
+}
+
+.category-title-container.active .icon {
     filter: var(--blue-700-svg);
+}
+
+:global(body.dark) .category-title-container.active .icon {
+    filter: var(--blue-300-svg);
 }
 
 .icon img {
     height: 1.2rem;
-}
-
-:global(body.dark) .category-title-container.active .icon {
-    filter: var(--white-svg);
-}
-
-:global(body.dark) .icon {
-    filter: var(--blue-500-svg);
 }
 
 .collapse-icon {

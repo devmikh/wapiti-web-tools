@@ -9,7 +9,7 @@
     align-items: flex-start;
     padding-bottom: 3rem;
     border-right: 1px solid var(--grey-200);
-    background-color: var(--grey-100);
+    background-color: var(--white);
     z-index: 120;
     overflow-y: auto;
 }
