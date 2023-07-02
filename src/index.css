@@ -38,6 +38,7 @@
     --blue-600-svg: invert(34%) sepia(59%) saturate(2138%) hue-rotate(187deg) brightness(96%) contrast(104%);
     --blue-700-svg: invert(32%) sepia(60%) saturate(1908%) hue-rotate(185deg) brightness(88%) contrast(106%);
     --blue-900-svg: invert(14%) sepia(48%) saturate(4135%) hue-rotate(192deg) brightness(93%) contrast(101%);
+    --grey-500-svg: invert(58%) sepia(0%) saturate(1494%) hue-rotate(135deg) brightness(87%) contrast(106%);
     --grey-700-svg: invert(33%) sepia(0%) saturate(61%) hue-rotate(206deg) brightness(97%) contrast(109%);
 }
 
