@@ -1,4 +1,5 @@
 import { useSelector } from 'react-redux'
+import Search from '../Search'
 import ToolCategory from '../ToolCategory'
 import ToolLink from '../ToolLink'
 import { State, Category, Tool } from '../../../store/types'
@@ -21,6 +22,7 @@ export default function Toolbar() {
 
     return (
         <div className={styles['toolbar-container']}>
+            <Search collapseToolbarOnClick={false} />
             {toolCategories}
         </div>
     )

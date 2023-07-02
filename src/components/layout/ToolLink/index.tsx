@@ -14,7 +14,7 @@ type ToolLinkPropsType = {
 
 export default function ToolLink(props: ToolLinkPropsType) {
     const { id, categoryId, name, link, collapseToolbarOnClick } = props
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     const dispatch = useAppDispatch()
 
     const resolvedPath = useResolvedPath(link)

@@ -11,6 +11,16 @@ export type Tool = {
     active: boolean
 }
 
+export type ToolSearched = {
+    id: number,
+    key: number,
+    name: string,
+    link: string,
+    active: boolean,
+    categoryId: number,
+    icon: string
+}
+
 export type Category = {
     id: number,
     title: string, 
@@ -22,5 +32,8 @@ export type Category = {
 
 export type ToolbarState = {
     active: boolean,
-    categories: Category[]
+    searchInput: string,
+    categories: Category[],
+    searchResults: ToolSearched[],
+    tools: ToolSearched[]
 }
