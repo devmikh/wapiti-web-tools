@@ -5,11 +5,14 @@
     height: 17rem;
     width: 17rem;
     border: 1px solid var(--grey-200);
-    background-color: white;
+}
+
+:global(body.dark) .qr-code-container {
+    border: 1px solid var(--grey-500);
 }
 
 .qr-code-img {
-    height: 16rem;
+    height: 100%;
 }
 
 .buttons-container {
@@ -25,10 +28,7 @@
 @media only screen and (max-width: 450px) {
     .qr-code-container {
         height: 13rem;
-        width: 13rem;
-    }
-    .qr-code-img {
-        height: 12rem;
+        width: 90%;
     }
     .buttons-container {
         width: 90%;
