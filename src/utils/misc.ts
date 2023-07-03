@@ -6,6 +6,6 @@ export const formatAndValidateJSON = (input: string) => {
         const parsedJson = JSON.parse(input)
         return JSON.stringify(parsedJson, null, 2)
     } catch (error) {
-        return null
+        return 'Invalid JSON'
     }
 }

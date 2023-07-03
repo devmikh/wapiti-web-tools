@@ -3,14 +3,29 @@ export const convertNumber = (
         toFormat: string,
         value: string) => {
     if (value === '') return ''
-    let decimalValue: number
 
-    const isHexadecimal = fromFormat === 'hexadecimal'
-    const isValidInput =
-        (isHexadecimal && /^[0-9A-Fa-f]+$/.test(value)) ||
-        (!isHexadecimal && /^[0-9]+$/.test(value))
-  
-    if (!isValidInput) return ''
+    let decimalValue: number
+    
+    if (fromFormat === 'decimal') {
+        if (!(/^[0-9]+$/.test(value))) {
+            return ''
+        }
+    }
+    if (fromFormat === 'binary') {
+        if (!(/^[0-1]+$/.test(value))) {
+            return ''
+        }
+    }
+    if (fromFormat === 'octal') {
+        if (!(/^[0-7]+$/.test(value))) {
+            return ''
+        }
+    }
+    if (fromFormat === 'hexadecimal') {
+        if (!(/^[0-9A-Fa-f]+$/.test(value))) {
+            return ''
+        }
+    }
 
     switch(fromFormat) {
         case 'decimal': 
@@ -29,16 +44,28 @@ export const convertNumber = (
             return ''
     }
 
+    let result
+
     switch (toFormat) {
         case 'decimal':
-            return decimalValue.toString()
+            result = decimalValue.toString()
+            break
         case 'binary':
-            return decimalValue.toString(2)
+            result = decimalValue.toString(2)
+            break
         case 'octal':
-            return decimalValue.toString(8)
+            result = decimalValue.toString(8)
+            break
         case 'hexadecimal':
-            return decimalValue.toString(16).toUpperCase()
+            result = decimalValue.toString(16).toUpperCase()
+            break
         default:
-            return ''
+            result = ''
+    }
+
+    if (result) {
+        return result
+    } else {
+        return ''
     }
 }

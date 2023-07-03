@@ -10,7 +10,6 @@ export default function JSONFormatterValidator() {
 
     const [input, setInput] = useState('')
     const [output, setOutput] = useState<string | null>('')
-    const [error, setError] = useState('')
     const [statusColor, setStatusColor] = useState('')
 
     useEffect(() => {
@@ -18,14 +17,11 @@ export default function JSONFormatterValidator() {
     }, [input])
 
     useEffect(() => {
-        if (output === null) {
-            setError('Invalid JSON')
+        if (output === 'Invalid JSON') {
             setStatusColor('red')
         } else if (output === '') {
-            setError('')
             setStatusColor('')
         } else {
-            setError('')
             setStatusColor('green')
         }
     }, [output])
@@ -33,13 +29,12 @@ export default function JSONFormatterValidator() {
     usePageTitle('JSON Formatter & Validator | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`} style={{ gap: '0'}}>
+        <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>JSON Formatter & Validator</h1>
             <div className={styles['buttons-container']}>
                 <Button label='Clear' onClick={() => setInput('')} />
                 <CopyButton value={output ? output : ''} buttonLook />
             </div>
-            <span className={styles['error']}>{error}</span>
             <div className={styles['textareas-container']}>
                 <Textarea
                     value={input}

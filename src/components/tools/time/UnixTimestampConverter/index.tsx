@@ -46,6 +46,7 @@ export default function UnixTimestampConverter() {
             </div>
             <div className={styles['form-container']}>
                 <Textfield
+                    type='number'
                     prompt='Input Timestamp'
                     value={unixInput}
                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUnixInput(e.target.value)}/>

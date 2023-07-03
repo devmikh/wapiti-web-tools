@@ -16,6 +16,7 @@ export default function NumberFormatConverter() {
             format: 'decimal' | 'binary' | 'octal' | 'hexadecimal') => {
         const value = event.target.value
         setValues(format, value)
+        console.log(decimal, binary, octal, hexadecimal)
     }
 
     const setValues = (format: string, value: string) => {
@@ -31,14 +32,17 @@ export default function NumberFormatConverter() {
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Number Format Converter</h1>
             <Textfield
+                type='number'
                 prompt='Decimal (Base-10)'
                 value={decimal}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e, 'decimal')} />
             <Textfield
+                type='number'
                 prompt='Binary (Base-2)'
                 value={binary}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e, 'binary')} />
             <Textfield
+                type='number'
                 prompt='Octal (Base-8)'
                 value={octal}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInputChange(e, 'octal')} />
