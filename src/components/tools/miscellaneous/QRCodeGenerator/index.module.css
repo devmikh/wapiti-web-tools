@@ -28,7 +28,7 @@
 @media only screen and (max-width: 450px) {
     .qr-code-container {
         height: 13rem;
-        width: 90%;
+        width: 13rem;
     }
     .buttons-container {
         width: 90%;
