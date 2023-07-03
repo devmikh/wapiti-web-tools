@@ -40,19 +40,22 @@ export default function QRCodeGenerator() {
     return (
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>QR Code Generator</h1>
+            <div className={styles['qr-code-container']}>
+                {qrCodeDataUrl &&
+                    <img src={qrCodeDataUrl} alt="QR Code" className={styles['qr-code-img']} />
+                }
+            </div>
+            <div className={styles['buttons-container']}>
+                <Button label='Clear' onClick={() => setInput('')} />
+                <Button onClick={downloadQRCode} label='Download' color='primary' disabled={qrCodeDataUrl ? false : true} />
+            </div>
             <Textarea
                 value={input}
                 small
                 placeholder='Enter text or website URL'
                 maxLength={1200}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setInput(e.target.value)} />
-            {qrCodeDataUrl && (
-                <div className={styles['qr-code-container']}>
-                    <Button label='Clear' onClick={() => setInput('')} />
-                    <img src={qrCodeDataUrl} alt="QR Code" className={styles['qr-code-container-img']} />
-                    <Button onClick={downloadQRCode} label='Download' color='primary' />
-                </div>
-            )}
+            
         </div>
     )
 }
