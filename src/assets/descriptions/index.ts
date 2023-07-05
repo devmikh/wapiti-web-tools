@@ -21,9 +21,9 @@ export const descriptions = {
         },
         instructions: [
             'Enter or paste the text you want to convert into the input field provided.',
-            'Choose the conversion option. Text will be converted instantly converted.',
+            'Choose the conversion option by pressing the corresponding button. Text will be converted to the specified case instantly.',
             'If you need to clear the input field and start over, you can use the "Clear" button provided.',
-            'Press "Copy" to copy the converted text'
+            'Press "Copy" button to copy the converted text to clipboard.'
         ]
     }
 }
