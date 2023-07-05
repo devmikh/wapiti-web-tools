@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap');
 
 :root {
     --black: hsl(0, 0%, 15%);
@@ -116,10 +117,10 @@ body.dark .tool-title {
 /* Tool Description */
 .description-container {
     width: 90%;
-    padding: 2rem;
+    padding: 4rem;
     margin-bottom: 2rem;
     border: 1px solid var(--grey-200);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body.dark .description-container {
@@ -136,7 +137,22 @@ body.dark .description-container {
     line-height: 1.5rem;
 }
 
-.instruction-list {
+.options-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    list-style-position: inside;
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+.instructions-list {
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
@@ -165,7 +181,9 @@ body.dark .description-container {
         gap: 1rem;
         width: 95%;
     }
-
+    .description-container {
+        padding: 2rem;
+    }
     .mobile-toolbar {
         display: none;
     }
