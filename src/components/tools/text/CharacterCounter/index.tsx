@@ -38,10 +38,10 @@ export default function CharacterCounter() {
                 </div>
             </div>
             <div className='description-container'>
-                <h2 className='description-title'>Tool Overview</h2>
+                <h2 className='description-title'>Overview</h2>
                 <p className='overview'>{descriptions.character_counter.overview}</p>
                 <h2 className='description-title'>How To Use</h2>
-                <ol className='instruction-list'>
+                <ol className='instructions-list'>
                     {descriptions.character_counter.instructions.map((point, index) => (
                         <li key={index}>{point}</li>
                     ))}
