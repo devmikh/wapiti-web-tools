@@ -28,12 +28,6 @@ const categories = [
             },
             {
                 id: 2,
-                name: 'Dummy Text Generator',
-                link: '/dummy-text-generator',
-                active: false
-            },
-            {
-                id: 3,
                 name: 'White Space Remover',
                 link: '/white-space-remover',
                 active: false
@@ -107,21 +101,27 @@ const categories = [
     },
     {
         id: 3,
-        title: 'Randomizers',
+        title: 'Random',
         expanded: false,
         active: false,
         icon: randomIcon,
         tools: [
             {
                 id: 0,
+                name: 'Random Number Generator',
+                link: '/random-number-generator',
+                active: false
+            },
+            {
+                id: 1,
                 name: 'Random Password Generator',
                 link: '/random-password-generator',
                 active: false
             },
             {
-                id: 1,
-                name: 'Random Number Generator',
-                link: '/random-number-generator',
+                id: 2,
+                name: 'Dummy Text Generator',
+                link: '/dummy-text-generator',
                 active: false
             }
         ]

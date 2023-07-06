@@ -9,7 +9,6 @@ Wapiti Web Tools is a collection of various web instruments accessible from a si
 - Text
   - Character Counter
   - Case Converter
-  - Dummy Text Generator
   - White Space Remover
 - Color
   - Color Format Converter
@@ -22,8 +21,9 @@ Wapiti Web Tools is a collection of various web instruments accessible from a si
   - Image Filters
   - Image Metadata Extractor
 - Randomizers
-  - Random Password Generator
   - Random Number Generator
+  - Random Password Generator
+  - Dummy Text Generator
 - Time
   - Date Difference Calculator
   - Unix Timestamp Converter
