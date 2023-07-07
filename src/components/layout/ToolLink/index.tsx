@@ -26,7 +26,7 @@ export default function ToolLink(props: ToolLinkPropsType) {
         }
         dispatch(setActiveLink({ toolId: id, categoryId: categoryId }))
         navigate(link)
-    };
+    }
 
     useEffect(() => {
         if (isActive) {
