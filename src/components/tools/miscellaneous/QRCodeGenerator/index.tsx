@@ -46,8 +46,16 @@ export default function QRCodeGenerator() {
                 }
             </div>
             <div className={styles['buttons-container']}>
-                <Button label='Clear' onClick={() => setInput('')} />
-                <Button onClick={downloadQRCode} label='Download' color='primary' disabled={qrCodeDataUrl ? false : true} />
+                <Button
+                    label='Clear'
+                    onClick={() => setInput('')}
+                    widthAuto />
+                <Button
+                    onClick={downloadQRCode}
+                    label='Download'
+                    color='primary'
+                    disabled={qrCodeDataUrl ? false : true}
+                    widthAuto />
             </div>
             <Textarea
                 value={input}

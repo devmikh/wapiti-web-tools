@@ -21,16 +21,24 @@ export default function CaseConverter() {
         <>
             <div className={`tool-container ${styles['container']}`}>
                 <h1 className='tool-title'>Case Converter</h1>
-                <div className={styles['top-button-container']}>
-                    <Button color='primary' label='UPPERCASE' onClick={() => setText(() => text.toUpperCase())} />
-                    <Button color='primary' label='lowercase' onClick={() => setText(() => text.toLowerCase())} />
-                    <Button color='primary' label='Title Case' onClick={() => setText(() => toTitleCase(text))} />
+                <div className={styles['editor']}>
+                    <div className={styles['buttons']}>
+                        <div className={styles['top-button-container']}>
+                            <Button color='primary' label='UPPERCASE' onClick={() => setText(() => text.toUpperCase())} />
+                            <Button color='primary' label='lowercase' onClick={() => setText(() => text.toLowerCase())} />
+                            <Button color='primary' label='Title Case' onClick={() => setText(() => toTitleCase(text))} />
+                        </div>
+                        <div className={styles['bottom-button-container']}>
+                            <Button label='Clear' onClick={() => setText(() => '')} />
+                            <CopyButton value={text} buttonLook />
+                        </div>
+                    </div>
+                    <div className={styles['input']}>
+                        <Textarea value={text} readOnly={false} onChange={handleChange} placeholder='Enter Text...'/>
+                    </div>
                 </div>
-                <div className={styles['bottom-button-container']}>
-                    <Button label='Clear' onClick={() => setText(() => '')} />
-                    <CopyButton value={text} buttonLook />
-                </div>
-                <Textarea value={text} readOnly={false} onChange={handleChange} placeholder='Enter Text...'/>
+                
+                
             </div>
             <div className='description-container'>
                 <h2 className='description-title'>Overview</h2>

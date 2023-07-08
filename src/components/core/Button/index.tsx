@@ -5,12 +5,12 @@ type ButtonProps = {
     onClick: Function,
     color?: string,
     disabled?: boolean,
-    size?: string
+    widthAuto?: boolean
 }
 
 export default function Button(props: ButtonProps) {
 
-    const { label, onClick, color, disabled, size } = props
+    const { label, onClick, color, disabled, widthAuto } = props
 
     return (
         <button
@@ -20,7 +20,7 @@ export default function Button(props: ButtonProps) {
                 ${styles['button']}
                 ${color && styles[color]}
                 ${disabled && styles['disabled']}
-                ${size === 'large' && styles['large']}
+                ${widthAuto && styles['width-auto']}
             `}
             >
                 {label}
