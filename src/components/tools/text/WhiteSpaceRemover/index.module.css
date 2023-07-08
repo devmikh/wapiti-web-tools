@@ -1,22 +1,18 @@
-.button-container {
+.buttons-container {
     display: flex;
     gap: 2rem;
 }
 
 @media only screen and (max-width: 768px) {
-    .button-container {
+    .buttons-container {
         gap: 1rem;
     }
 }
 
-@media only screen and (max-width: 450px) {
-    .button-container {
+@media only screen and (max-width: 600px) {
+    .buttons-container {
+        width: 100%;
+        align-items: center;
         flex-direction: column;
     }
-}
-
-@media only screen and (max-width: 300px) {
-    /* .button-container {
-        flex-direction: column;
-    } */
 }

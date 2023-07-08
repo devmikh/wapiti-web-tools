@@ -40,7 +40,21 @@
     }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 600px) {
+    .ranges-container {
+        width: 100%;
+    }
+    .colors-container {
+        width: 90%;
+    }
+    .radios-container {
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 370px) {
     .color-square {
         width: 2.5rem;
     }

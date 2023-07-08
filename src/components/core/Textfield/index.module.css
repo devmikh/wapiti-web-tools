@@ -88,3 +88,12 @@
     -webkit-appearance: none;
     margin: 0;
 }
+
+@media only screen and (max-width: 600px) {
+    .textfield {
+        width: 90%;
+    }
+    .color-button {
+        width: 1.5rem;
+    }
+}

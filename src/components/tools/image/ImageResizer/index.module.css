@@ -81,6 +81,20 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .settings-container {
+        width: 100%;
+    }
+    .textfields-container {
+        width: 100%;
+        align-items: center;
+    }
+    .buttons-container {
+        width: 100%;
+        align-items: center;
+    }
+}
+
 @media only screen and (max-width: 350px) {
     .preview-image-container {
         width: 14rem;

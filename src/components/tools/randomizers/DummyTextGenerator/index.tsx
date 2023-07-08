@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { LoremIpsum } from 'lorem-ipsum'
-import CopyButton from '../../../core/CopyButton'
+import Button from '../../../core/Button'
 import Textarea from '../../../core/Textarea'
 import Range from '../../../core/Range'
 import Radio from '../../../core/Radio'
@@ -116,7 +116,7 @@ export default function DummyTextGenerator() {
                         label='Words' />
                 </div>
             </form>
-            <CopyButton value={state.text} buttonLook />
+            <Button copyButton copyValue={state.text} label='Copy' />
             <Textarea value={state.text} readOnly={true} />
         </div>
     )

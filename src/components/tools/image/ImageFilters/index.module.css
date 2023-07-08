@@ -94,6 +94,20 @@
     }
 }
 
+@media only screen and (max-width: 600px) {
+    .settings-container {
+        width: 100%;
+    }
+    .ranges-container {
+        width: 100%;
+    }
+    .buttons-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .preview-image-container {
         height: 20rem;

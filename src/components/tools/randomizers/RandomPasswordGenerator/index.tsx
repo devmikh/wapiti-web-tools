@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import Button from '../../../core/Button'
-import CopyButton from '../../../core/CopyButton'
 import Checkbox from '../../../core/Checkbox'
 import Range from '../../../core/Range'
 import { generatePassword } from '../../../../utils/randomizers'
@@ -114,7 +113,7 @@ export default function RandomPasswordGenerator() {
                         color='primary'
                         onClick={() => setPassword(generatePassword(options.lower, options.upper, options.numbers, options.symbols, options.length))}
                     />
-                <CopyButton value={password} buttonLook />
+                <Button copyButton copyValue={password} label='Copy' />
             </div>
         </div>
     )

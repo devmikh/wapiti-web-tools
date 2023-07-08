@@ -13,3 +13,9 @@
 :global(body.dark) .result-container {
     border: 1px solid var(--grey-500);
 }
+
+@media only screen and (max-width: 600px) {
+    .result-container {
+        width: 90%;
+    }
+}

@@ -48,7 +48,6 @@ export default function GradientGenerator() {
                 <DisplayField
                     label='CSS'
                     value={resultString}
-                    size='large'
                     includeCopyButton />
             </div>
         </div>

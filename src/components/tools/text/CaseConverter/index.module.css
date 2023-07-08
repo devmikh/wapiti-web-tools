@@ -39,7 +39,7 @@
     }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 600px) {
     .buttons {
         order: 3;
         width: 90%;
@@ -50,6 +50,14 @@
     }
 
     .top-button-container button {
+        width: 100%;
+    }
+
+    .bottom-button-container {
+        width: 100%;
+    }
+
+    .bottom-button-container button {
         width: 100%;
     }
 

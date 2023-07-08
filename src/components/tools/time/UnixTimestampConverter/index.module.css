@@ -80,3 +80,17 @@
         gap: 1rem;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .display-container {
+        width: 90%;
+    }
+    .form-container {
+        width: 100%;
+        align-items: center;
+    }
+
+    .output-container {
+        width: 90%;
+    }
+}

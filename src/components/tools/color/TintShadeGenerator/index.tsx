@@ -74,7 +74,7 @@ export default function TintShadeGenerator() {
             
             <div className={styles['ranges-container']}>
                 <Range
-                    prompt='Number of Tints and Shades:'
+                    prompt='Number of Tints:'
                     min={3}
                     max={9}
                     step={2}
@@ -97,7 +97,7 @@ export default function TintShadeGenerator() {
                             <DisplayField
                                 value={color.displayValue}
                                 includeCopyButton
-                                size='small' />
+                                />
                         </div>   
                     )
                 })}

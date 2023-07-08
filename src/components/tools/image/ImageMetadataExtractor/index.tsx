@@ -80,7 +80,6 @@ export default function ImageMetadataExtractor() {
                                     key={key}
                                     label={tag}
                                     value={value}
-                                    size='large'
                                 />
                             )
                     })}

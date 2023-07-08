@@ -1,3 +1,9 @@
+.button-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
 .counters-container {
     display: flex;
     gap: 1rem;
@@ -22,3 +28,9 @@
 :global(body.dark) .counter-number {
     border: 1px solid var(--grey-500);   
 }
+
+/* @media only screen and (max-width: 600px) {
+    .button-container button {
+        width: 100%;
+    }
+} */

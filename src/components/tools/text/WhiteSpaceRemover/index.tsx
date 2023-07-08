@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import usePageTitle from '../../../../hooks/usePageTitle'
 import Button from '../../../core/Button'
-import CopyButton from '../../../core/CopyButton'
 import Textarea from '../../../core/Textarea'
 import { removeWhiteSpace } from '../../../../utils/text'
 import styles from './index.module.css'
@@ -15,16 +14,14 @@ export default function WhiteSpaceRemover() {
     return (
         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>White Space Remover</h1>
-            <div className={styles['main-button-container']}>
-                <Button
-                    color='primary'
-                    label='Remove White Space'
-                    onClick={() => setText(() => removeWhiteSpace(text))} />
-            </div>
+            <Button
+                color='primary'
+                label='Remove White Space'
+                onClick={() => setText(() => removeWhiteSpace(text))} />
             
-            <div className={styles['button-container']}>
+            <div className={styles['buttons-container']}>
                 <Button label='Clear' onClick={() => setText(() => '')} />
-                <CopyButton value={text} buttonLook />
+                <Button copyButton copyValue={text} label='Copy' />
             </div>
             <Textarea
                 value={text}

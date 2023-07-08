@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import Textarea from '../../../core/Textarea'
 import Button from '../../../core/Button'
-import CopyButton from '../../../core/CopyButton'
+// import CopyButton from '../../../core/CopyButton'
 import usePageTitle from '../../../../hooks/usePageTitle'
 import { formatAndValidateJSON } from '../../../../utils/misc'
 import styles from './index.module.css'
@@ -33,7 +33,7 @@ export default function JSONFormatterValidator() {
             <h1 className='tool-title'>JSON Formatter & Validator</h1>
             <div className={styles['buttons-container']}>
                 <Button label='Clear' onClick={() => setInput('')} />
-                <CopyButton value={output ? output : ''} buttonLook />
+                <Button copyButton copyValue={output ? output : ''} label='Copy' />
             </div>
             <div className={styles['textareas-container']}>
                 <Textarea

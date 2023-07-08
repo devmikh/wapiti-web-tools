@@ -1,4 +1,5 @@
 .display-field {
+    width: 14rem;
     height: 4rem;
     display: flex;
     align-items: center;
@@ -29,4 +30,10 @@
 .value {
     padding: 0.4rem 0.8rem;
     font-size: inherit;
+}
+
+@media only screen and (max-width: 600px) {
+    .display-field {
+        width: 90%;
+    }
 }

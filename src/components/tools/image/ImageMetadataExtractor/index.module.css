@@ -28,6 +28,10 @@
     overflow-y: scroll;
 }
 
+.metadata-entries-container > div {
+    width: 100%;
+}
+
 :global(body.dark) .metadata-entries-container {
     border: 1px solid var(--grey-500);
 }
@@ -37,6 +41,7 @@
         width: 90%;
     }
 }
+
 .metadata-entries-container::-webkit-scrollbar {
     width: 0.4rem;
 }

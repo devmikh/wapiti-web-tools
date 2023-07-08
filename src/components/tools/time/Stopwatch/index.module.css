@@ -36,6 +36,17 @@
     padding: 1.5rem;
 }
 
+@media only screen and (max-width: 600px) {
+    .stopwatch-container {
+        width: 90%;
+        justify-content: space-between;
+    }
+    .button-container {
+        width: 100%;
+        padding: 0;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .time-container {
         width: 4rem;

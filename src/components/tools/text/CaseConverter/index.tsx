@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import Button from '../../../core/Button'
-import CopyButton from '../../../core/CopyButton'
 import Textarea from '../../../core/Textarea'
 import { toTitleCase } from '../../../../utils/text'
 import usePageTitle from '../../../../hooks/usePageTitle'
@@ -30,7 +29,7 @@ export default function CaseConverter() {
                         </div>
                         <div className={styles['bottom-button-container']}>
                             <Button label='Clear' onClick={() => setText(() => '')} />
-                            <CopyButton value={text} buttonLook />
+                            <Button copyButton copyValue={text} label='Copy' />
                         </div>
                     </div>
                     <div className={styles['input']}>

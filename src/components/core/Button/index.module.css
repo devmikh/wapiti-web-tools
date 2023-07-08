@@ -8,10 +8,6 @@
     cursor: pointer;
 }
 
-.width-auto {
-    width: 100%;
-}
-
 .button:focus {
     outline-color: var(--blue-500);
 }
@@ -38,3 +34,53 @@
 .disabled:hover {
     background-color: var(--grey-400);
 }
+
+@media only screen and (max-width: 600px) {
+    .button {
+        width: 90%;
+    }
+}
+
+/* Copy button */
+.copy-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.copy-button {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.copy-icon {
+    filter: var(--blue-700-svg);
+}
+
+:global(body.dark) .copy-icon {
+    filter: var(--blue-500-svg);
+}
+
+.copy-icon:hover {
+    filter: var(--blue-500-svg);
+}
+
+.copy-button-container .copy-icon:hover {
+    filter: var(--blue-700-svg);
+}
+
+:global(body.dark) .copy-icon:hover {
+    filter: var(--blue-700-svg);
+}
+
+:global(body.dark) .copy-button-container .copy-icon:hover {
+    filter: var(--blue-500-svg);
+}
+
+.check-icon {
+    filter: var(--status-green-svg);
+}
+
+/* End of copy button */

@@ -22,8 +22,18 @@
     gap: 1rem;
 }
 
+.buttons-container button {
+    width: 100%;
+}
+
 :global(body.dark) .qr-code-container-img {
     border: 1px solid var(--grey-500);
+}
+
+@media only screen and (max-width: 600px) {
+    .buttons-container {
+        width: 90%;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -31,10 +41,4 @@
         height: 13rem;
         width: 13rem;
     }
-    .buttons-container {
-        width: 13rem;
-    }
-}
-
-@media only screen and (max-width: 300px) {
 }
