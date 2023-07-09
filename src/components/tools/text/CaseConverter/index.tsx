@@ -45,7 +45,7 @@ export default function CaseConverter() {
                 <p className='options-title'>{descriptions.case_converter.overview.options_title}</p>
                 <ul className='options-list'>
                     {descriptions.case_converter.overview.options.map((point, index) => (
-                        <li key={index}>{point}</li>
+                        <li key={index}><span className='emphasized'>{point.title}</span>{' ' + point.description}</li>
                     ))}
                 </ul>
                 <h2 className='description-title'>How To Use</h2>

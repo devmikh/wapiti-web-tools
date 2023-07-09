@@ -14,9 +14,18 @@ export const descriptions = {
             ],
             options_title: 'Available options:',
             options: [
-                'UPPERCASE: converts all letters in the text to uppercase.',
-                'lowercase: converts all letters in the text to lowercase.',
-                'Title Case: converts the first letter of each word to uppercase, while keeping the remaining letters lowercase.'
+                {
+                    title: 'UPPERCASE:',
+                    description: 'converts all letters in the text to uppercase.'
+                },
+                {
+                    title: 'lowercase:',
+                    description: 'converts all letters in the text to lowercase.'
+                },
+                {
+                    title: 'Title Case:',
+                    description: 'converts the first letter of each word to uppercase, while keeping the remaining letters lowercase.'
+                }
             ]
         },
         instructions: [

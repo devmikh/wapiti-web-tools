@@ -121,6 +121,7 @@ body.dark .tool-title {
     margin-bottom: 2rem;
     border: 1px solid var(--grey-200);
     font-family: 'Open Sans', sans-serif;
+    letter-spacing: 0.01ch;
 }
 
 body.dark .description-container {
@@ -129,6 +130,21 @@ body.dark .description-container {
 
 .description-title {
     margin-bottom: 0.8rem;
+    color: var(--blue-800);
+    font-weight: bold;
+}
+
+body.dark .description-title {
+    color: var(--blue-200);
+}
+
+.emphasized {
+    color: var(--blue-700);
+    font-weight: 500;
+}
+
+body.dark .emphasized {
+    color: var(--blue-300);
 }
 
 .overview {
@@ -160,6 +176,16 @@ body.dark .description-container {
     list-style-position: inside;
     font-size: 1.1rem;
     line-height: 1.5rem;
+}
+
+.instructions-list li::marker {
+    color: var(--blue-800);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+body.dark .instructions-list li::marker {
+    color: var(--blue-200);
 }
 
 /* End of Tool Description */
