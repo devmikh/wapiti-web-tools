@@ -168,6 +168,14 @@ body.dark .emphasized {
     line-height: 1.5rem;
 }
 
+.options-list li::marker {
+    color: var(--blue-800);
+}
+
+body.dark .options-list li::marker {
+    color: var(--blue-200);
+}
+
 .instructions-list {
     display: flex;
     flex-direction: column;

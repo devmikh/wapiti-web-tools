@@ -18,7 +18,7 @@ export default function CaseConverter() {
 
     return (
         <>
-            <div className={`tool-container ${styles['container']}`}>
+            <div className={`tool-container ${styles['container']}`} style={{ gap: '1rem' }}>
                 <h1 className='tool-title'>Case Converter</h1>
                 <div className={styles['editor']}>
                     <div className={styles['buttons']}>

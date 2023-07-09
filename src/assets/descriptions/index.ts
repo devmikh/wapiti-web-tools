@@ -3,20 +3,18 @@ export const descriptions = {
         overview: 'The Character Counter is a utility designed to help you count the number of characters and words in a given text. Whether you\'re a writer, editor, or simply need to keep track of character limits, this tool provides a quick and accurate way to count characters and words.',
         instructions: [
             'Enter or paste the text you want to count characters for into the designated input field.',
-            'As you type or paste the text, the counters will update in real-time, displaying the current number of characters and words.',
+            'As you type or paste the text, the counters will update in real time, displaying the current number of characters and words.',
             'If you need to clear the input field and start over, you can use the "Clear" button provided.'
         ]
     },
     case_converter: {
         overview: {
-            brief_overview: [
-                'The Case Converter is a utility that allows you to easily convert text between different letter cases.',
-            ],
+            brief_overview: 'The Case Converter is a utility that allows you to easily convert text between different letter cases.',
             options_title: 'Available options:',
             options: [
                 {
                     title: 'UPPERCASE:',
-                    description: 'converts all letters in the text to uppercase.'
+                    description: 'CONVERTS ALL LETTERS IN THE TEXT TO UPPERCASE.'
                 },
                 {
                     title: 'lowercase:',
@@ -24,15 +22,33 @@ export const descriptions = {
                 },
                 {
                     title: 'Title Case:',
-                    description: 'converts the first letter of each word to uppercase, while keeping the remaining letters lowercase.'
+                    description: 'Converts The First Letter Of Each Word To Uppercase, While Keeping The Remaining Letters Lowercase.'
                 }
             ]
         },
         instructions: [
-            'Enter or paste the text you want to convert into the input field provided.',
+            'Enter or paste the text you want to convert into the provided input field.',
             'Choose the conversion option by pressing the corresponding button. Text will be converted to the specified case instantly.',
-            'If you need to clear the input field and start over, you can use the "Clear" button provided.',
-            'Press "Copy" button to copy the converted text to clipboard.'
+            'If you need to clear the input field and start over, you can use the "Clear" button.',
+            'Press the "Copy" button to copy the converted text to the clipboard.'
+        ]
+    },
+    white_space_remover: {
+        overview: {
+            brief_overview: 'The White Space Remover is a simple utility designed to eliminate unnecessary white spaces from your text.',
+            options_title: 'It will remove:',
+            options: [
+                'Redundant spaces.',
+                'Leading and trailing spaces.',
+                'Excessive tabs.',
+                'Line breaks.'
+            ]
+        },
+        instructions: [
+            'Enter or paste the text you want to remove white spaces from into the provided input field.',
+            'Click the "Remove White Space" button to remove excessive white spaces',
+            'If you need to clear the input field and start over, you can use the "Clear" button.',
+            'Press the "Copy" button to copy the processed text to the clipboard.'
         ]
     }
 }

@@ -28,7 +28,7 @@ export default function CharacterCounter() {
 
     return (
         <>
-            <div className={`tool-container ${styles['container']}`}>
+            <div className={`tool-container ${styles['container']}`} style={{ gap: '1rem' }}>
                 <h1 className='tool-title'>Character Counter</h1>
                 <Button label='Clear' onClick={() => setText(() => '')} />
                 
