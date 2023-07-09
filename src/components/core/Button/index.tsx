@@ -35,7 +35,7 @@ export default function Button(props: ButtonProps) {
                     <img src={checkIcon} width={20} className={styles['check-icon']} /> :
                     <img src={copyIcon} width={20} className={styles['copy-icon']}/>}
             </div>
-            <span>Copy</span>
+            <span>{label}</span>
         </button> :
         <button
             disabled={disabled}

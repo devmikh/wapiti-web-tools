@@ -34,6 +34,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .datepickers-container {
+        margin-left: 10%;
+        width: 100%;
+    }
     .result-container {
         width: 90%;
         font-size: 1.1rem;

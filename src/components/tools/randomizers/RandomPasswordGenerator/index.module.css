@@ -41,6 +41,12 @@
     gap: 1rem;
 }
 
+@media only screen and (max-width: 768px) {
+    .password-container {
+        margin-top: 1rem;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .password-container {
         width: 90%;

@@ -85,6 +85,12 @@
     background-color: var(--blue-700);
 }
 
+@media only screen and (max-width: 768px) {
+    .tool-container {
+        width: 95%;
+    }
+}
+
 @media only screen and (max-width: 450px) {
     .categories-container {
         width: 100%;
@@ -92,17 +98,21 @@
 
     .category-container {
         padding: 2rem 1rem;
+        border-width: 1px 0 0 0;
+    }
+    :global(body.dark) .category-container {
+        border-width: 1px 0 0 0;
     }
 
     .tool-container {
         font-size: 1rem;
-        width: 16rem;
+        /* width: 16rem; */
     }
 }
 
 @media only screen and (max-width: 300px) {
     .tool-container {
         font-size: 0.9rem;
-        width: 15rem;
+        /* width: 15rem; */
     }
 }
