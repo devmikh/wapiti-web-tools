@@ -50,5 +50,22 @@ export const descriptions = {
             'If you need to clear the input field and start over, you can use the "Clear" button.',
             'Press the "Copy" button to copy the processed text to the clipboard.'
         ]
+    },
+    color_format_converter: {
+        overview: {
+            brief_overview: 'The Color Format Converter is a utility designed to simplify the conversion of color values between different formats.',
+            options_title: 'Available color formats:',
+            options: [
+                'Hex',
+                'RGB',
+                'HSL',
+                'HSV'
+            ]
+        },
+        instructions: [
+            'Enter color value in Hex, RGB, HSL, or HSV format into the provided input field.',
+            'Color format will be converted in real time and displayed in the respective display field.',
+            'Click the blue icon inside the display field to copy the color value.'
+        ]
     }
 }
