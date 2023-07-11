@@ -67,5 +67,16 @@ export const descriptions = {
             'Color format will be converted in real time and displayed in the respective display field.',
             'Click the blue icon inside the display field to copy the color value.'
         ]
+    },
+    tint_shade_generator: {
+        overview: 'The Tint & Shade Generator is a utility for generating tints and shades based on the input color.',
+        instructions: [
+            'Enter color value in Hex, RGB, HSL, or HSV format into the provided input field, or choose it from a color picker by clicking a color box inside the input field.',
+            'Select the number of tints and shades, that will be generated (3, 5, 7 or 9).',
+            'Select the tint percentage (min. 5%, max. 20%).',
+            'Tints and shades will be generated in real time, as soon as any of the settings change.',
+            'Click the blue icon inside the display field to copy the color value for the particular tint.',
+            'Choose color value format, available formats include Hex, RGB, HSL, HSV.'
+        ]
     }
 }
