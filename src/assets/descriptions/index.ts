@@ -78,5 +78,14 @@ export const descriptions = {
             'Click the blue icon inside the display field to copy the color value for the particular tint.',
             'Choose color value format, available formats include Hex, RGB, HSL, HSV.'
         ]
+    },
+    gradient_generator: {
+        overview: 'The Gradient Generator is a tool that allows you to create custom gradients and generate the corresponding CSS code.',
+        instructions: [
+            'Enter the color values for Color #1 and Color #2 into the provided input fields, or choose it from a color picker by clicking a color box inside the input field.',
+            'Use the Angle slider to control the angle of the gradient. The angle ranges from 0 to 360 degrees, allowing you to create linear gradients in any direction.',
+            'As you adjust the colors or the angle, the preview section will update, displaying a live preview of the gradient based on your input.',
+            'CSS code for the selected gradient will be displayed below the preview. Click the blue icon inside the display field to copy the code to the clipboard.'
+        ]
     }
 }
