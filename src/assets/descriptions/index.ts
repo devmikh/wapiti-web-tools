@@ -87,5 +87,17 @@ export const descriptions = {
             'As you adjust the colors or the angle, the preview section will update, displaying a live preview of the gradient based on your input.',
             'CSS code for the selected gradient will be displayed below the preview. Click the blue icon inside the display field to copy the code to the clipboard.'
         ]
+    },
+    contrast_checker: {
+        overview: 'The Contrast Checker is a tool that enables you to evaluate and ensure the readability and accessibility of your text by checking the contrast ratio between text and background colors.',
+        instructions: [
+            'Enter or select the desired text color in the Text Color input field. You can use the color picker by clicking a color box inside the input field, or manually enter the color value.',
+            'Similarly, enter or select the background color in the Background Color input field.',
+            'To quickly switch the colors between the text and the background, click the switch button.',
+            'The small text preview box displays a sample text using the selected colors. This preview helps you visualize how the text will appear in smaller sizes.',
+            'The large text preview box showcases a larger sample text, allowing you to assess the readability and contrast of the chosen colors in larger text sizes.',
+            'The contrast ratio between the text and background colors is displayed in the Contrast Ratio box. This value indicates the level of contrast between the two colors.',
+            'Refer to the WCAG 2.1 Compliance Table to interpret the results. A "Pass" indicates that the contrast meets the specified accessibility standard, while a "Fail" indicates that the contrast falls below the recommended level.',
+        ]
     }
 }
