@@ -239,3 +239,19 @@ input[type="checkbox"] {
     transform: scale(1.5);
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .tool-container {
+        width: 100%;
+        margin-top: 3rem;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+    }
+    .description-container {
+        width: 100%;
+        border-left: none;
+        border-right: none;
+        padding: 1.5rem;
+    }
+}
