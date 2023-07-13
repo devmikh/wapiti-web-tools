@@ -246,10 +246,17 @@ input[type="checkbox"] {
         margin-top: 3rem;
         border: none;
     }
+    body.dark .tool-container {
+        border: none;
+    }
     .description-container {
         width: 100%;
         border-left: none;
         border-right: none;
         padding: 1.5rem;
+    }
+    body.dark .description-container {
+        border-left: none;
+        border-right: none;
     }
 }
