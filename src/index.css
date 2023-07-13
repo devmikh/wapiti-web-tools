@@ -244,9 +244,7 @@ input[type="checkbox"] {
     .tool-container {
         width: 100%;
         margin-top: 3rem;
-        border-top: none;
-        border-left: none;
-        border-right: none;
+        border: none;
     }
     .description-container {
         width: 100%;
