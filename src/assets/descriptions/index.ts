@@ -99,5 +99,15 @@ export const descriptions = {
             'The contrast ratio between the text and background colors is displayed in the Contrast Ratio box. This value indicates the level of contrast between the two colors.',
             'Refer to the WCAG 2.1 Compliance Table to interpret the results. A "Pass" indicates that the contrast meets the specified accessibility standard, while a "Fail" indicates that the contrast falls below the recommended level.',
         ]
+    },
+    image_cropper: {
+        overview: 'The Image Cropper is a utility designed to help you easily crop images.',
+        instructions: [
+            'Upload the image you want to crop using the provided upload section. You can either drag and drop the image into the area, or click it and choose the image from your computer.',
+            'Once the image is loaded, you can adjust the cropping area by dragging the cropping window.',
+            'If you need to change the aspect ratio, choose one of the options above the cropping area.',
+            'Output will be displayed below the cropping window and updated in real time.',
+            'Click "Download" button to download the cropped image.'
+        ]
     }
 }

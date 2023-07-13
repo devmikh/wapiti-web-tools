@@ -5,7 +5,7 @@ import Button from '../../../core/Button'
 import Radio from '../../../core/Radio'
 import FileUploader from '../../../core/FileUploader'
 import usePageTitle from '../../../../hooks/usePageTitle'
-
+import { descriptions } from '../../../../assets/descriptions'
 import styles from './index.module.css'
 
 type OutputPropsType = {
@@ -103,49 +103,61 @@ export default function ImageCropper() {
     usePageTitle('Image Cropper | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
-            <h1 className='tool-title'>Image Cropper</h1>
-            <FileUploader
-                type='image'
-                src={src as string}
-                firstPrompt='Upload image'
-                secondPrompt='Upload another image'
-                handleFileUpload={handleFileUpload}
-            />
-            {src &&
-                <div className={styles['radios-container']}>
-                    {aspectRatioOptions.map((ratio, index) => {
-                        return (
-                            <Radio
-                                key={index}
-                                id={ratio.id}
-                                name='aspect'
-                                value={ratio.value}
-                                checked={Number(aspect) === ratio.value}
-                                label={ratio.label}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => setAspect(Number(e.target.value))}
-                            />
-                        )
-                    })}
-                    
+        <>
+            <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
+                <h1 className='tool-title'>Image Cropper</h1>
+                <FileUploader
+                    type='image'
+                    src={src as string}
+                    firstPrompt='Upload image'
+                    secondPrompt='Upload another image'
+                    handleFileUpload={handleFileUpload}
+                />
+                {src &&
+                    <div className={styles['radios-container']}>
+                        {aspectRatioOptions.map((ratio, index) => {
+                            return (
+                                <Radio
+                                    key={index}
+                                    id={ratio.id}
+                                    name='aspect'
+                                    value={ratio.value}
+                                    checked={Number(aspect) === ratio.value}
+                                    label={ratio.label}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setAspect(Number(e.target.value))}
+                                />
+                            )
+                        })}
+                        
+                    </div>}
+                <div className={styles['cropper']}>
+                    {src && <Cropper
+                    image={src as string}
+                    aspect={aspect}
+                    crop={crop}
+                    zoom={zoom}
+                    objectFit='contain'
+                    onCropChange={setCrop}
+                    onZoomChange={setZoom}
+                    onCropAreaChange={(croppedArea) => {
+                        setCroppedArea(croppedArea);
+                    }} />}
+                </div>
+                
+                {croppedArea && <div className={styles['viewer']}>
+                    <Output croppedArea={croppedArea} src={src as string} fileName={fileName} aspect={aspect} />
                 </div>}
-            <div className={styles['cropper']}>
-                {src && <Cropper
-                image={src as string}
-                aspect={aspect}
-                crop={crop}
-                zoom={zoom}
-                objectFit='contain'
-                onCropChange={setCrop}
-                onZoomChange={setZoom}
-                onCropAreaChange={(croppedArea) => {
-                    setCroppedArea(croppedArea);
-                }} />}
             </div>
-            
-            {croppedArea && <div className={styles['viewer']}>
-                <Output croppedArea={croppedArea} src={src as string} fileName={fileName} aspect={aspect} />
-            </div>}
-        </div>
+            <div className='description-container'>
+                <h2 className='description-title'>Overview</h2>
+                <p className='overview'>{descriptions.image_cropper.overview}</p>
+                <h2 className='description-title'>How To Use</h2>
+                <ol className='instructions-list'>
+                    {descriptions.image_cropper.instructions.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ol>
+            </div>
+        </>
     )
 }
