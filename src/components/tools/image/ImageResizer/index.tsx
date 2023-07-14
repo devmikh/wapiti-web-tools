@@ -4,6 +4,7 @@ import Button from '../../../core/Button'
 import FileUploader from '../../../core/FileUploader'
 import Textfield from '../../../core/Textfield'
 import Checkbox from '../../../core/Checkbox'
+import { descriptions } from '../../../../assets/descriptions'
 import styles from './index.module.css'
 
 export default function ImageResizer() {
@@ -113,67 +114,80 @@ export default function ImageResizer() {
     usePageTitle('Image Resizer | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
-            <h1 className='tool-title'>Image Resizer</h1>
-            <FileUploader
-                type='image'
-                src={src as string}
-                firstPrompt='Upload image'
-                secondPrompt='Upload another image'
-                handleFileUpload={handleFileUpload}
-            />
-            {src && <>
-                <div className={styles['settings-container']}>
-                    <span className={styles['error']}>{error}</span>
-                    <div className={styles['textfields-container']}>
-                        <Textfield
-                            short
-                            type='number'
-                            prompt='Width'
-                            value={width.toString()}
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleWidthChange(e)}
-                        />
-                        
-                        <Textfield
-                            short
-                            type='number'
-                            prompt='Height'
-                            value={height.toString()}
-                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleHeightChange(e)}
-                        />
+        <>
+            <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
+                <h1 className='tool-title'>Image Resizer</h1>
+                <FileUploader
+                    type='image'
+                    src={src as string}
+                    firstPrompt='Upload image'
+                    secondPrompt='Upload another image'
+                    handleFileUpload={handleFileUpload}
+                />
+                {src && <>
+                    <div className={styles['settings-container']}>
+                        <span className={styles['error']}>{error}</span>
+                        <div className={styles['textfields-container']}>
+                            <Textfield
+                                short
+                                type='number'
+                                prompt='Width'
+                                value={width.toString()}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleWidthChange(e)}
+                            />
+                            
+                            <Textfield
+                                short
+                                type='number'
+                                prompt='Height'
+                                value={height.toString()}
+                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleHeightChange(e)}
+                            />
+                        </div>
+                        <Checkbox
+                                id='maintain-ar'
+                                name='maintain-ar'
+                                checked={maintainAR}
+                                onChange={() => setMaintainAR(prev => !prev)}
+                                label='Maintain aspect ratio'
+                            />
+                        <div className={styles['buttons-container']}>
+                            <Button
+                                label='Resize'
+                                onClick={() => resizeImage(width, height)}
+                                color='primary'
+                                disabled={error ? true : false}
+                            />
+                            <Button
+                                label='Reset'
+                                onClick={resetImage}
+                            />
+                            <Button
+                                label='Download'
+                                onClick={downloadImage}
+                                color='primary'
+                                disabled={error ? true : false}
+                            />
+                        </div>
                     </div>
-                    <Checkbox
-                            id='maintain-ar'
-                            name='maintain-ar'
-                            checked={maintainAR}
-                            onChange={() => setMaintainAR(prev => !prev)}
-                            label='Maintain aspect ratio'
-                        />
-                    <div className={styles['buttons-container']}>
-                        <Button
-                            label='Resize'
-                            onClick={() => resizeImage(width, height)}
-                            color='primary'
-                            disabled={error ? true : false}
-                        />
-                        <Button
-                            label='Reset'
-                            onClick={resetImage}
-                        />
-                        <Button
-                            label='Download'
-                            onClick={downloadImage}
-                            color='primary'
-                            disabled={error ? true : false}
-                        />
+                    <div className={styles['preview-container']}>
+                        <div className={styles['preview-image-container']}>
+                            <img src={resizedImage} className={styles['preview-image']} />
+                        </div>
                     </div>
-                </div>
-                <div className={styles['preview-container']}>
-                    <div className={styles['preview-image-container']}>
-                        <img src={resizedImage} className={styles['preview-image']} />
-                    </div>
-                </div>
-            </>}
-        </div>
+                </>}
+            </div>
+            <div className='description-container'>
+                <h2 className='description-title'>Overview</h2>
+                <p className='overview'>{descriptions.image_resizer.overview}</p>
+                <h2 className='description-title'>How To Use</h2>
+                <ol className='instructions-list'>
+                    {descriptions.image_resizer.instructions.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ol>
+            </div>
+        </>
+        
     )
 }

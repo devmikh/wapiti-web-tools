@@ -103,11 +103,22 @@ export const descriptions = {
     image_cropper: {
         overview: 'The Image Cropper is a utility designed to help you easily crop images.',
         instructions: [
-            'Upload the image you want to crop using the provided upload section. You can either drag and drop the image into the area, or click it and choose the image from your computer.',
+            'Upload the image you want to crop using the provided upload section. You can either drag and drop the image into the area, or click it and choose the image from your local storage.',
             'Once the image is loaded, you can adjust the cropping area by dragging the cropping window.',
             'If you need to change the aspect ratio, choose one of the options above the cropping area.',
             'Output will be displayed below the cropping window and updated in real time.',
             'Click "Download" button to download the cropped image.'
+        ]
+    },
+    image_resizer: {
+        overview: 'The Image Resizer is a utility designed to help you easily resize images.',
+        instructions: [
+            'Upload the image you want to resize using the provided upload section. You can either drag and drop the image into the area, or click it and choose the image from your local storage.',
+            'Once the image is loaded, you can change the height or width of the image by entering the desired values into the provided input fields.',
+            'You can lock or unlock aspect ratio by checking or unchecking the corresponding box "Maintain aspect ratio".',
+            'After the desired width and height are entered, click "Resize" to process the image and display the preview.',
+            'Reset the image to the initial dimensions by clicking the "Reset" button.',
+            'To download the resized image, click "Download" button.'
         ]
     }
 }
