@@ -3,6 +3,7 @@ import Button from '../../../core/Button'
 import Range from '../../../core/Range'
 import FileUploader from '../../../core/FileUploader'
 import usePageTitle from '../../../../hooks/usePageTitle'
+import { descriptions } from '../../../../assets/descriptions'
 import styles from './index.module.css'
 
 export default function ImageFilters() {
@@ -116,119 +117,132 @@ export default function ImageFilters() {
     usePageTitle('Image Filters | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
-            <h1 className='tool-title'>Image Filters</h1>
-            <FileUploader
-                type='image'
-                src={src as string}
-                firstPrompt='Upload image'
-                secondPrompt='Upload another image'
-                handleFileUpload={handleFileUpload} />
-            <div className={styles['editor-container']}>
-                <div className={styles['settings-container']}>
-                    <div className={styles['ranges-container']}>
-                        <Range
-                            disabled={src ? false : true}
-                            name='blur'
-                            measurementUnitLabel='px'
-                            prompt='Blur:'
-                            min={0}
-                            max={10}
-                            value={settings.blur}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='brightness'
-                            measurementUnitLabel='%'
-                            prompt='Brightness:'
-                            min={0}
-                            max={200}
-                            value={settings.brightness}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='contrast'
-                            measurementUnitLabel='%'
-                            prompt='Contrast:'
-                            min={0}
-                            max={200}
-                            value={settings.contrast}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='grayscale'
-                            measurementUnitLabel='%'
-                            prompt='Grayscale:'
-                            min={0}
-                            max={100}
-                            value={settings.grayscale}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='hueRotate'
-                            measurementUnitLabel='°'
-                            prompt='Hue Rotate:'
-                            min={0}
-                            max={360}
-                            value={settings.hueRotate}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='invert'
-                            measurementUnitLabel='%'
-                            prompt='Invert:'
-                            min={0}
-                            max={100}
-                            value={settings.invert}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='opacity'
-                            measurementUnitLabel='%'
-                            prompt='Opacity:'
-                            min={0}
-                            max={100}
-                            value={settings.opacity}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='saturate'
-                            measurementUnitLabel='%'
-                            prompt='Saturate:'
-                            min={0}
-                            max={200}
-                            value={settings.saturate}
-                            onChange={handleChange} />
-                        <Range
-                            disabled={src ? false : true}
-                            name='sepia'
-                            measurementUnitLabel='%'
-                            prompt='Sepia:'
-                            min={0}
-                            max={100}
-                            value={settings.sepia}
-                            onChange={handleChange} />
+        <>
+            <div className={`tool-container ${styles['container']}`} onDrop={handleDrop} onDragOver={handleDragOver}>
+                <h1 className='tool-title'>Image Filters</h1>
+                <FileUploader
+                    type='image'
+                    src={src as string}
+                    firstPrompt='Upload image'
+                    secondPrompt='Upload another image'
+                    handleFileUpload={handleFileUpload} />
+                <div className={styles['editor-container']}>
+                    <div className={styles['settings-container']}>
+                        <div className={styles['ranges-container']}>
+                            <Range
+                                disabled={src ? false : true}
+                                name='blur'
+                                measurementUnitLabel='px'
+                                prompt='Blur:'
+                                min={0}
+                                max={10}
+                                value={settings.blur}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='brightness'
+                                measurementUnitLabel='%'
+                                prompt='Brightness:'
+                                min={0}
+                                max={200}
+                                value={settings.brightness}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='contrast'
+                                measurementUnitLabel='%'
+                                prompt='Contrast:'
+                                min={0}
+                                max={200}
+                                value={settings.contrast}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='grayscale'
+                                measurementUnitLabel='%'
+                                prompt='Grayscale:'
+                                min={0}
+                                max={100}
+                                value={settings.grayscale}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='hueRotate'
+                                measurementUnitLabel='°'
+                                prompt='Hue Rotate:'
+                                min={0}
+                                max={360}
+                                value={settings.hueRotate}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='invert'
+                                measurementUnitLabel='%'
+                                prompt='Invert:'
+                                min={0}
+                                max={100}
+                                value={settings.invert}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='opacity'
+                                measurementUnitLabel='%'
+                                prompt='Opacity:'
+                                min={0}
+                                max={100}
+                                value={settings.opacity}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='saturate'
+                                measurementUnitLabel='%'
+                                prompt='Saturate:'
+                                min={0}
+                                max={200}
+                                value={settings.saturate}
+                                onChange={handleChange} />
+                            <Range
+                                disabled={src ? false : true}
+                                name='sepia'
+                                measurementUnitLabel='%'
+                                prompt='Sepia:'
+                                min={0}
+                                max={100}
+                                value={settings.sepia}
+                                onChange={handleChange} />
+                        </div>
+                        <div className={styles['buttons-container']}>
+                            <Button
+                                disabled={src ? false : true}
+                                label='Reset'
+                                onClick={resetSettings}
+                                />
+                            <Button
+                                disabled={src ? false : true}
+                                color='primary'
+                                label='Download'
+                                onClick={handleDownload}
+                                />
+                        </div>
                     </div>
-                    <div className={styles['buttons-container']}>
-                        <Button
-                            disabled={src ? false : true}
-                            label='Reset'
-                            onClick={resetSettings}
-                            />
-                        <Button
-                            disabled={src ? false : true}
-                            color='primary'
-                            label='Download'
-                            onClick={handleDownload}
-                            />
-                    </div>
-                </div>
-                <div className={styles['preview-container']}>
-                    <div className={styles['preview-image-container']}>
-                        <img src={src as string} className={styles['preview-image']} style={style} />
+                    <div className={styles['preview-container']}>
+                        <div className={styles['preview-image-container']}>
+                            <img src={src as string} className={styles['preview-image']} style={style} />
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            <div className='description-container'>
+                <h2 className='description-title'>Overview</h2>
+                <p className='overview'>{descriptions.image_filters.overview}</p>
+                <h2 className='description-title'>How To Use</h2>
+                <ol className='instructions-list'>
+                    {descriptions.image_filters.instructions.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ol>
+            </div>
+        </>
+        
     )
 }

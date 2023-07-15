@@ -118,7 +118,17 @@ export const descriptions = {
             'You can lock or unlock aspect ratio by checking or unchecking the corresponding box "Maintain aspect ratio".',
             'After the desired width and height are entered, click "Resize" to process the image and display the preview.',
             'Reset the image to the initial dimensions by clicking the "Reset" button.',
-            'To download the resized image, click "Download" button.'
+            'To download the resized image, click the "Download" button.'
+        ]
+    },
+    image_filters: {
+        overview: 'The Image Filters is a utility that enables you to apply various visual effects and filters to your images.',
+        instructions: [
+            'Upload the image you want to apply filters to using the provided upload section. You can either drag and drop the image into the area, or click it and choose the image from your local storage.',
+            'Use sliders to apply various filters to the image, such as Blur, Brightness, Contrast, etc.',
+            'Output will be displayed in the preview section and updated in real time.',
+            'Reset the image to the default state by clicking the "Reset" button.',
+            'To download the processed image, click the "Download" button.'
         ]
     }
 }
