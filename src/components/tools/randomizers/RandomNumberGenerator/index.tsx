@@ -3,6 +3,7 @@ import Textfield from '../../../core/Textfield'
 import Button from '../../../core/Button'
 import usePageTitle from '../../../../hooks/usePageTitle'
 import { generateRandomNumber } from '../../../../utils/randomizers'
+import { descriptions } from '../../../../assets/descriptions'
 import styles from './index.module.css'
 
 const MIN_VALUE = 0
@@ -49,30 +50,43 @@ export default function RandomNumberGenerator() {
     usePageTitle('Random Number Generator | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`}>
-            <h1 className="tool-title">Random Number Generator</h1>
-            <Textfield
-                short
-                type='number'
-                prompt='Min'
-                value={min.toString()}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeMin(e)}
-            />
-            <Textfield
-                short
-                type='number'
-                prompt='Max'
-                value={max.toString()}
-                onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeMax(e)}
-            />
-            <div className={styles['result-container']}>
-                <span>{result}</span>
+        <>
+            <div className={`tool-container ${styles['container']}`}>
+                <h1 className="tool-title">Random Number Generator</h1>
+                <Textfield
+                    short
+                    type='number'
+                    prompt='Min'
+                    value={min.toString()}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeMin(e)}
+                />
+                <Textfield
+                    short
+                    type='number'
+                    prompt='Max'
+                    value={max.toString()}
+                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleChangeMax(e)}
+                />
+                <div className={styles['result-container']}>
+                    <span>{result}</span>
+                </div>
+                <Button
+                    label='Generate'
+                    onClick={handleClick}
+                    color='primary'
+                />
             </div>
-            <Button
-                label='Generate'
-                onClick={handleClick}
-                color='primary'
-            />
-        </div>
+            <div className='description-container'>
+                <h2 className='description-title'>Overview</h2>
+                <p className='overview'>{descriptions.random_number_generator.overview}</p>
+                <h2 className='description-title'>How To Use</h2>
+                <ol className='instructions-list'>
+                    {descriptions.random_number_generator.instructions.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ol>
+            </div>
+        </>
+        
     )
 }

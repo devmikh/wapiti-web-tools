@@ -137,5 +137,13 @@ export const descriptions = {
             'Upload the image you want to extract metadata from using the provided upload section. You can either drag and drop the image into the area, or click it and choose the image from your local storage.',
             'All available metadata tags of the image will be displayed in the metadata section.'
         ]
+    },
+    random_number_generator: {
+        overview: 'The Random Number Generator is a utility designed to generate random numbers within a specified range.',
+        instructions: [
+            'Specify the range for the random numbers by entering the minimum and maximum values in the designated input fields.',
+            'Click the "Generate" button to produce a random number within the specified range.',
+            'The tool will generate the requested random number and display it in the corresponding display field.'
+        ]
     }
 }
