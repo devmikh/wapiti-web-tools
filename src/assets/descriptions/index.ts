@@ -130,5 +130,12 @@ export const descriptions = {
             'Reset the image to the default state by clicking the "Reset" button.',
             'To download the processed image, click the "Download" button.'
         ]
+    },
+    image_metadata_extractor: {
+        overview: 'The Image Metadata Extractor is a utility that enables you to view the metadata tags of the image.',
+        instructions: [
+            'Upload the image you want to extract metadata from using the provided upload section. You can either drag and drop the image into the area, or click it and choose the image from your local storage.',
+            'All available metadata tags of the image will be displayed in the metadata section.'
+        ]
     }
 }
