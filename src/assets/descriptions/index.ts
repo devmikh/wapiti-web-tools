@@ -145,5 +145,15 @@ export const descriptions = {
             'Click the "Generate" button to produce a random number within the specified range.',
             'The tool will generate the requested random number and display it in the corresponding display field.'
         ]
+    },
+    random_password_generator: {
+        overview: 'The Random Password Generator is a utility designed to generate strong and secure passwords. Please note that Wapiti Web Tools does not store or save any of the newly generated passwords.',
+        instructions: [
+            'Select character sets, which will be used for password generation (lowercase letters, uppercase letters, numbers, symbols).',
+            'Choose length of the password by selecting a value on the slider (from 6 to 24).',
+            'New password will be generated each time any of the settings changes.',
+            'Alternatively, you can click the "Generate" button to create a new password.',
+            'Use the "Copy" button to copy the generated password to the clipboard.'
+        ]
     }
 }

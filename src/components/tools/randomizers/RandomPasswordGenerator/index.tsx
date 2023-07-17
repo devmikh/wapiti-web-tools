@@ -4,6 +4,7 @@ import Checkbox from '../../../core/Checkbox'
 import Range from '../../../core/Range'
 import { generatePassword } from '../../../../utils/randomizers'
 import usePageTitle from '../../../../hooks/usePageTitle'
+import { descriptions } from '../../../../assets/descriptions'
 import styles from  './index.module.css'
 
 export default function RandomPasswordGenerator() {
@@ -47,74 +48,87 @@ export default function RandomPasswordGenerator() {
     usePageTitle('Random Password Generator | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`}>
-            <h1 className='tool-title'>Random Password Generator</h1>
-            <div className={styles['checkboxes-container']}>
-                <div className={styles['checkbox-container']}>
-                    <Checkbox
-                        id='lower'
-                        name='lower'
-                        checked={options.lower}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
-                        label='Lowercase letters'
-                    />
-                    <div className={`${styles['charset']} ${options.lower && styles['active']}`}>abcdefghijklmnopqrstuvwxyz</div>
-                </div>
-                <div className={styles['checkbox-container']}>
-                    <Checkbox
-                        id='upper'
-                        name='upper'
-                        checked={options.upper}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
-                        label='Uppercase letters'
-                    />
-                    <div className={`${styles['charset']} ${options.upper && styles['active']}`}>ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+        <>
+            <div className={`tool-container ${styles['container']}`}>
+                <h1 className='tool-title'>Random Password Generator</h1>
+                <div className={styles['checkboxes-container']}>
+                    <div className={styles['checkbox-container']}>
+                        <Checkbox
+                            id='lower'
+                            name='lower'
+                            checked={options.lower}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
+                            label='Lowercase letters'
+                        />
+                        <div className={`${styles['charset']} ${options.lower && styles['active']}`}>abcdefghijklmnopqrstuvwxyz</div>
+                    </div>
+                    <div className={styles['checkbox-container']}>
+                        <Checkbox
+                            id='upper'
+                            name='upper'
+                            checked={options.upper}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
+                            label='Uppercase letters'
+                        />
+                        <div className={`${styles['charset']} ${options.upper && styles['active']}`}>ABCDEFGHIJKLMNOPQRSTUVWXYZ</div>
+                    </div>
+                    
+                    <div className={styles['checkbox-container']}>
+                        <Checkbox
+                            id='numbers'
+                            name='numbers'
+                            checked={options.numbers}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
+                            label='Numbers'
+                        />
+                        <div className={`${styles['charset']} ${options.numbers && styles['active']}`}>0123456789</div>
+                    </div>
+                    
+                    <div className={styles['checkbox-container']}>
+                        <Checkbox
+                            id='symbols'
+                            name='symbols'
+                            checked={options.symbols}
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
+                            label='Symbols'
+                        />
+                        <div className={`${styles['charset']} ${options.symbols && styles['active']}`}>!@#$%^&*()_-+=</div>
+                    </div>
+                    
                 </div>
                 
-                <div className={styles['checkbox-container']}>
-                    <Checkbox
-                        id='numbers'
-                        name='numbers'
-                        checked={options.numbers}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
-                        label='Numbers'
-                    />
-                    <div className={`${styles['charset']} ${options.numbers && styles['active']}`}>0123456789</div>
-                </div>
-                
-                <div className={styles['checkbox-container']}>
-                    <Checkbox
-                        id='symbols'
-                        name='symbols'
-                        checked={options.symbols}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleCheckboxChange(e)}
-                        label='Symbols'
-                    />
-                    <div className={`${styles['charset']} ${options.symbols && styles['active']}`}>!@#$%^&*()_-+=</div>
-                </div>
-                
-            </div>
-            
-            <Range
-                prompt='Length:'
-                min={6}
-                max={24}
-                value={options.length}
-                onChange={handleLengthChange}
-            />
+                <Range
+                    prompt='Length:'
+                    min={6}
+                    max={24}
+                    value={options.length}
+                    onChange={handleLengthChange}
+                />
 
-            <div className={styles['password-container']}>
-                <span>{password}</span>
+                <div className={styles['password-container']}>
+                    <span>{password}</span>
+                </div>
+                
+                <div className={styles['buttons-container']}>
+                    <Button
+                            label='Generate'
+                            color='primary'
+                            onClick={() => setPassword(generatePassword(options.lower, options.upper, options.numbers, options.symbols, options.length))}
+                        />
+                    <Button copyButton copyValue={password} label='Copy' />
+                </div>
             </div>
-            
-            <div className={styles['buttons-container']}>
-                <Button
-                        label='Generate'
-                        color='primary'
-                        onClick={() => setPassword(generatePassword(options.lower, options.upper, options.numbers, options.symbols, options.length))}
-                    />
-                <Button copyButton copyValue={password} label='Copy' />
+            <div className='description-container'>
+                <h2 className='description-title'>Overview</h2>
+                <p className='overview'>{descriptions.random_password_generator.overview}</p>
+                <h2 className='description-title'>How To Use</h2>
+                <ol className='instructions-list'>
+                    {descriptions.random_password_generator.instructions.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ol>
             </div>
-        </div>
+        </>
+        
     )
 }
