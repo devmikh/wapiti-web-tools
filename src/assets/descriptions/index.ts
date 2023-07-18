@@ -155,5 +155,13 @@ export const descriptions = {
             'Alternatively, you can click the "Generate" button to create a new password.',
             'Use the "Copy" button to copy the generated password to the clipboard.'
         ]
+    },
+    dummy_text_generator: {
+        overview: 'The Dummy Text Generator is a utility designed to generate placeholder or dummy text for various design and content purposes.',
+        instructions: [
+            'Select quantity and units. Available options include paragraphs (1-50), sentences (1-250), and words (1-1000).',
+            'Dummy text will be generated as soon as you change any of the settings.',
+            'Use the "Copy" button to copy the generated dummy text to the clipboard.'
+        ]
     }
 }
