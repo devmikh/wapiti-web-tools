@@ -163,5 +163,12 @@ export const descriptions = {
             'Dummy text will be generated as soon as you change any of the settings.',
             'Use the "Copy" button to copy the generated dummy text to the clipboard.'
         ]
+    },
+    date_difference_calculator: {
+        overview: 'The Date Difference Calculator is a utility that calculates number of years, months and days between two dates.',
+        instructions: [
+            'Input first date and second date into the respective input fields.',
+            'Difference between the dates will be calculated automatically and reflected in the display field.'
+        ]
     }
 }
