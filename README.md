@@ -4,7 +4,7 @@
 
 ## Description
 
-Wapiti Web Tools is a collection of various web instruments accessible from a single location and conveniently organized by category. Currently available tools include:
+Wapiti Web Tools is a collection of various web instruments, accessible from a single location and conveniently organized by category. Currently available tools include:
 
 - Text
   - Character Counter
