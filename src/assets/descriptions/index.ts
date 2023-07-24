@@ -170,5 +170,13 @@ export const descriptions = {
             'Input first date and second date into the respective input fields.',
             'Difference between the dates will be calculated automatically and reflected in the display field.'
         ]
+    },
+    unix_timestamp_converter: {
+        overview: 'The Unix Timestamp Converter is a utility that converts unix timestamp into a human-readable date format.',
+        instructions: [
+            'Enter the timestamp into the "Input Timestamp" field.',
+            'The timestamp will be automatically converted and displayed in the "Output Date" field.',
+            'You can also copy the current unix timestamp by clicking the blue icon inside the "Current Unix Time" field.'
+        ]
     }
 }

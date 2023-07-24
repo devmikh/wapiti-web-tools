@@ -3,6 +3,7 @@ import Textfield from '../../../core/Textfield'
 import CopyButton from '../../../core/CopyButton'
 import usePageTitle from '../../../../hooks/usePageTitle'
 import { convertUnixToDate } from '../../../../utils/time'
+import { descriptions } from '../../../../assets/descriptions'
 import styles from './index.module.css'
 
 export default function UnixTimestampConverter() {
@@ -34,7 +35,8 @@ export default function UnixTimestampConverter() {
     usePageTitle('Unix Timestamp Converter | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`}>
+        <>
+         <div className={`tool-container ${styles['container']}`}>
             <h1 className='tool-title'>Unix Timestamp Converter</h1>
             <div className={styles['display-container']}>
                 <span className={styles['display-container-label']}>Current Unix Time</span>
@@ -42,7 +44,6 @@ export default function UnixTimestampConverter() {
                     <span className={styles['display-container-value']}>{currentUnixTime}</span>
                     <div className={styles['display-container-button']}><CopyButton value={currentUnixTime.toString()} /></div>
                 </div>
-                
             </div>
             <div className={styles['form-container']}>
                 <Textfield
@@ -56,5 +57,17 @@ export default function UnixTimestampConverter() {
                 </div>
             </div>
         </div>
+            <div className='description-container'>
+                <h2 className='description-title'>Overview</h2>
+                <p className='overview'>{descriptions.unix_timestamp_converter.overview}</p>
+                <h2 className='description-title'>How To Use</h2>
+                <ol className='instructions-list'>
+                    {descriptions.unix_timestamp_converter.instructions.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ol>
+            </div>
+        </>
+       
     )
 }
