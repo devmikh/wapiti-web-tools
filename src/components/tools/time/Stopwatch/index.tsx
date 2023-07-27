@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import Button from '../../../core/Button'
 import usePageTitle from '../../../../hooks/usePageTitle'
+import { descriptions } from '../../../../assets/descriptions'
 import styles from './index.module.css'
 
 export default function Stopwatch() {
@@ -56,43 +57,56 @@ export default function Stopwatch() {
     usePageTitle('Stopwatch | Wapiti Web Tools')
 
     return (
-        <div className={`tool-container ${styles['container']}`}>
-            <h1 className="tool-title">Stopwatch</h1>
-            <div className={styles['stopwatch-container']}>
-                <div className={styles['time-container']}>
-                    <span className={styles['time-container-value']}>{hours}</span>
-                    <span className={styles['time-container-type']}>h</span>
+        <>
+            <div className={`tool-container ${styles['container']}`}>
+                <h1 className="tool-title">Stopwatch</h1>
+                <div className={styles['stopwatch-container']}>
+                    <div className={styles['time-container']}>
+                        <span className={styles['time-container-value']}>{hours}</span>
+                        <span className={styles['time-container-type']}>h</span>
+                    </div>
+                    <div className={styles['time-container']}>
+                        <span className={styles['time-container-value']}>{minutes}</span>
+                        <span className={styles['time-container-type']}>m</span>
+                    </div>
+                    <div className={styles['time-container']}>
+                        <span className={styles['time-container-value']}>{seconds}</span>
+                        <span className={styles['time-container-type']}>s</span>
+                    </div>
+                    <div className={styles['time-container']}>
+                        <span className={styles['time-container-value-ms']}>{milliseconds}</span>
+                        <span className={styles['time-container-type']}>ms</span>
+                    </div>
                 </div>
-                <div className={styles['time-container']}>
-                    <span className={styles['time-container-value']}>{minutes}</span>
-                    <span className={styles['time-container-type']}>m</span>
-                </div>
-                <div className={styles['time-container']}>
-                    <span className={styles['time-container-value']}>{seconds}</span>
-                    <span className={styles['time-container-type']}>s</span>
-                </div>
-                <div className={styles['time-container']}>
-                    <span className={styles['time-container-value-ms']}>{milliseconds}</span>
-                    <span className={styles['time-container-type']}>ms</span>
+                <div className={styles['button-container']}>
+                    <Button
+                        onClick={startTimer}
+                        label='Start'
+                        disabled={isRunning}
+                        color='primary'
+                    />
+                    <Button
+                        onClick={stopTimer}
+                        label='Pause'
+                        disabled={!isRunning}
+                    />
+                    <Button
+                        onClick={resetTimer}
+                        label='Reset'
+                    />
                 </div>
             </div>
-            <div className={styles['button-container']}>
-                <Button
-                    onClick={startTimer}
-                    label='Start'
-                    disabled={isRunning}
-                    color='primary'
-                />
-                <Button
-                    onClick={stopTimer}
-                    label='Pause'
-                    disabled={!isRunning}
-                />
-                <Button
-                    onClick={resetTimer}
-                    label='Reset'
-                />
+            <div className='description-container'>
+                <h2 className='description-title'>Overview</h2>
+                <p className='overview'>{descriptions.stopwatch.overview}</p>
+                <h2 className='description-title'>How To Use</h2>
+                <ol className='instructions-list'>
+                    {descriptions.stopwatch.instructions.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
+                </ol>
             </div>
-        </div>
+        </>
+        
     )
 }

@@ -178,5 +178,13 @@ export const descriptions = {
             'The timestamp will be automatically converted and displayed in the "Output Date" field.',
             'You can also copy the current unix timestamp by clicking the blue icon inside the "Current Unix Time" field.'
         ]
+    },
+    stopwatch: {
+        overview: 'The Stopwatch is a timekeeping utility designed to measure elapsed time with precision.',
+        instructions: [
+            'To start the stopwatch, click the "Start" button. The timer will begin counting hours, minutes, seconds, and milliseconds.',
+            'To pause the stopwatch, click the "Pause" button.',
+            'To reset the elapsed time, click the "Reset" button.'
+        ]
     }
 }
