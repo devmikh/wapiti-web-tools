@@ -186,5 +186,14 @@ export const descriptions = {
             'To pause the stopwatch, click the "Pause" button.',
             'To reset the elapsed time, click the "Reset" button.'
         ]
+    },
+    json_formatter_validator: {
+        overview: 'The JSON Formatter & Validator is a utility designed to help you format and validate JSON data.',
+        instructions: [
+            'Paste or enter your JSON data into the input field provided.',
+            'In the output field, you will see the formatted JSON or, if input is invalid, the error message.',
+            'Click the "Clear" button to remove input.',
+            'Click the "Copy" button to copy the formatted JSON.'
+        ]
     }
 }
