@@ -195,5 +195,14 @@ export const descriptions = {
             'Click the "Clear" button to remove input.',
             'Click the "Copy" button to copy the formatted JSON.'
         ]
+    },
+    qr_code_generator: {
+        overview: 'The QR Code Generator is a utility for creating QR codes based on the user\'s input.',
+        instructions: [
+            'Enter the desired text or website URL into the input field.',
+            'QR Code will be generated and displayed in the display field.',
+            'Click the "Clear" button to remove the input and reset the QR code.',
+            'Click the "Download" button to download the generated QR code in PNG format.'
+        ]
     }
 }
